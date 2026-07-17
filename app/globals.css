@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts: Inter ────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-shoma-slate bg-white;
+  }
+
+  /* Toegankelijke focus-ring voor toetsenbordnavigatie */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-shoma-teal rounded-sm;
+  }
+
+  /* Smooth scrolling voor anchor-links */
+  * {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer components {
+  /* Herbruikbare sectie-breedte */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Sectie-padding standaard */
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Gradient tekst voor accenten */
+  .gradient-text {
+    @apply bg-gradient-to-r from-shoma-teal to-shoma-teal-light bg-clip-text text-transparent;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar (webkit) */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.shoma.teal.DEFAULT') theme('colors.shoma.sand');
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-shoma-sand rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-shoma-teal rounded-full;
+  }
+}
