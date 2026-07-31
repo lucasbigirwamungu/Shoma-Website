@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import type { B2BLeadInput } from '@/lib/validations';
 
 type FormState = B2BLeadInput & { _state: 'idle' | 'loading' | 'success' | 'error' };
@@ -234,11 +234,9 @@ export default function B2BContactForm() {
 
       <Button
         type="submit"
-        fullWidth
         size="lg"
-        variant="secondary"
-        loading={isLoading}
-        className="mt-6"
+        disabled={isLoading}
+        className="mt-6 w-full bg-shoma-terracotta text-white hover:bg-shoma-terracotta-dark"
       >
         <Send className="w-5 h-5" aria-hidden="true" />
         {isLoading ? 'Versturen…' : 'Aanvraag versturen'}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Heart, ArrowRight, ArrowLeft, Check, Repeat, Gift, BookOpen, GraduationCap } from 'lucide-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import type { DonationFrequency } from '@/types';
 
 // ─── Donatietype ──────────────────────────────────────────────────────────────
@@ -258,7 +258,12 @@ export default function DonationForm() {
               </div>
             </div>
 
-            <Button fullWidth size="lg" onClick={() => setStep(2)} disabled={!isValidAmount}>
+            <Button
+              size="lg"
+              className="w-full bg-shoma-terracotta text-white hover:bg-shoma-terracotta-dark"
+              onClick={() => setStep(2)}
+              disabled={!isValidAmount}
+            >
               Verder <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
@@ -332,8 +337,13 @@ export default function DonationForm() {
             </label>
 
             <div className="flex gap-3 pt-2">
-              <Button variant="outline" size="md" onClick={() => setStep(1)}><ArrowLeft className="w-4 h-4" /></Button>
-              <Button fullWidth size="lg" onClick={() => setStep(3)} disabled={form.donorName.length < 2 || !form.donorEmail.includes('@')}>
+              <Button variant="outline" size="sm" onClick={() => setStep(1)}><ArrowLeft className="w-4 h-4" /></Button>
+              <Button
+                size="lg"
+                className="w-full bg-shoma-terracotta text-white hover:bg-shoma-terracotta-dark"
+                onClick={() => setStep(3)}
+                disabled={form.donorName.length < 2 || !form.donorEmail.includes('@')}
+              >
                 Naar betaling <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
@@ -392,8 +402,13 @@ export default function DonationForm() {
             )}
 
             <div className="flex gap-3">
-              <Button variant="outline" size="md" onClick={() => setStep(2)} disabled={loading}><ArrowLeft className="w-4 h-4" /></Button>
-              <Button fullWidth size="lg" loading={loading} onClick={handleCheckout}>
+              <Button variant="outline" size="sm" onClick={() => setStep(2)} disabled={loading}><ArrowLeft className="w-4 h-4" /></Button>
+              <Button
+                size="lg"
+                className="w-full bg-shoma-terracotta text-white hover:bg-shoma-terracotta-dark"
+                disabled={loading}
+                onClick={handleCheckout}
+              >
                 <Heart className="w-5 h-5" />
                 {loading ? 'Betaling aanmaken…' : 'Betaal nu'}
               </Button>
