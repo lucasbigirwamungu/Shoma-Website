@@ -67,6 +67,7 @@ const annualReports = [
     year: 2020,
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/Jaarrekening-Stichting-Shoma-2020.pdf' },
+      { label: 'Financieel verslag', href: '/jaarrekeningen/2021-01-05-fianancieel-verslag-2020.pdf' },
     ],
   },
   {
@@ -111,6 +112,7 @@ const annualReports = [
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/Jaarrekening_2013_Stichting_Onderwijsbevordering_Noord-West_Tanzania.pdf' },
       { label: 'Financieel verslag', href: '/jaarrekeningen/2013-09-11-financieel-jaarverslag-def.pdf' },
+      { label: 'Jaarverslag (activiteiten)', href: '/jaarrekeningen/2014_0725-definitief-jaarverslag-2013.pdf' },
     ],
   },
 ];
@@ -417,6 +419,21 @@ export default function OverOnsPage() {
                 title: 'Investerings- en dekkingsplan 2026',
                 desc: 'Gedetailleerde projectbegroting: ICT-lokaal, bewakersloge, moestuin & irrigatie.',
                 href: '/documenten/investering-dekkingsplan-2026.pdf',
+              },
+              {
+                title: 'Beleidsplan 2023–2025',
+                desc: 'Vorig beleidsplan, ter archief.',
+                href: '/documenten/Beleidsplan-2023-2025.pdf',
+              },
+              {
+                title: 'Beleidsplan 2021–2023',
+                desc: 'Ouder beleidsplan, ter archief.',
+                href: '/documenten/beleidsplan-shoma-2021-2023.pdf',
+              },
+              {
+                title: 'ANBI standaardformulier publicatieplicht',
+                desc: 'Wettelijk verplichte ANBI-publicatie, RSIN 814390249.',
+                href: '/documenten/2021-06-19-standaardform-pubplicht-anbi-algemeen-ib1101z2fol.pdf',
               },
             ].map((doc) => (
               <div
