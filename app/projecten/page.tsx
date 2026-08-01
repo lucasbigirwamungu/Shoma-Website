@@ -35,6 +35,13 @@ export default function ProjectenPage() {
             Drie pijlers, één missie: onderwijs, schoon water en duurzame energie voor
             de gemeenschap van Rubya. Elk project volledig transparant gefinancierd en lokaal gecontroleerd.
           </p>
+          <Link
+            href="/projecten/verhalen"
+            className="inline-flex items-center gap-1.5 text-sm text-shoma-terracotta-light hover:text-white mt-5 font-medium transition-colors"
+          >
+            Lees de volledige projectverhalen
+            <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+          </Link>
         </div>
       </div>
 
