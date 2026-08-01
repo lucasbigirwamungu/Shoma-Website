@@ -17,36 +17,56 @@ const ALBUMS = [
       'De Kashasha English Medium Primary School (KEMPS) is letterlijk gebouwd door een hele gemeenschap. Deze foto\'s documenteren elk stadium van de bouw: van grondvoorbereiding, fundering, plantwerk tot voltooiing. Een project dat hoop en veerkracht symboliseert.',
     photos: [
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/030.jpg',
+        src: '/images/fotoalbums/bouw-van-kemps/IMG_4604.jpg',
         alt: 'Bouwterrein voorbereiding',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/034.jpg',
+        src: '/images/fotoalbums/bouw-van-kemps/grond.jpg',
         alt: 'Grondwerken fase',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/100_0594.jpg',
+        src: '/images/fotoalbums/bouw-van-kemps/fotos_maken_voor_thuisfront.jpg',
+        alt: 'Rapportage voor thuisfront',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/P1050323.jpg',
         alt: 'Bouwvoortgang',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/100_0700_bearbeitet.jpg',
-        alt: 'Construction progress',
+        src: '/images/fotoalbums/bouw-van-kemps/7D277506-EE2D-452C-A75A-C123FA7C7E86.jpg',
+        alt: 'Constructiewerk',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/01_beplanting_kavel.jpg',
-        alt: 'Plantingswerk',
+        src: '/images/fotoalbums/bouw-van-kemps/93F13772-05BE-4F3F-8C89-391EB224253F.jpg',
+        alt: 'Bouwvoortgang',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/02_beplanting_kavel.jpg',
-        alt: 'Beplanting',
+        src: '/images/fotoalbums/bouw-van-kemps/IMG_0731.jpg',
+        alt: 'Schoolgebouw in aanbouw',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/210D5B35-70B7-476B-B7A1-10D029CE5410.jpg',
+        src: '/images/fotoalbums/bouw-van-kemps/BE36A0CA-803D-4DD4-B774-B362FE5812E6.jpg',
+        alt: 'Bouwvoortgang',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/IMG-20150920-WA0052.jpg',
+        alt: 'Bouwvoortgang',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/IMG-20151104-WA0062.jpg',
+        alt: 'Bouwvoortgang',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/IMG_0837.jpg',
+        alt: 'Bouwvoortgang',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/IMG_1331.jpg',
+        alt: 'Bouwvoortgang',
+      },
+      {
+        src: '/images/fotoalbums/bouw-van-kemps/812B8B39-CF05-4C53-B302-F82DBFB4770D.jpg',
         alt: 'School voortgang',
-      },
-      {
-        src: '/shoma/Geld inzameling voor Kemps/Fundament_school_06-11-15.jpg',
-        alt: 'School fundament',
       },
     ],
     color: 'shoma-teal',
@@ -61,31 +81,31 @@ const ALBUMS = [
       'Dankzij fondsenwerving in Nederland is KEMPS gebouwd. Van cascaderun tot cheque-overhandigingen — deze foto\'s tonen hoe supporters van Shoma in Nederland actief bijdragen aan onderwijs in Tanzania.',
     photos: [
       {
-        src: '/shoma/Geld inzameling voor Kemps/cascaderun.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/cascaderun.jpg',
         alt: 'Cascade Run actie',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/Cascaderun_uitreiking_sponsorgeld_RSGWolfsbos_180417def71964.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/Cascaderun_uitreiking_sponsorgeld_RSGWolfsbos_180417def71964.jpg',
         alt: 'Cascade Run overhandiging',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/DeRanninkkrant.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/DeRanninkkrant.jpg',
         alt: 'Rannink kaasmarkt',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/DeRanninkcheque.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/DeRanninkcheque.jpg',
         alt: 'Rannink cheque',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/02_cheque_Borne.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/02_cheque_Borne.jpg',
         alt: 'Cheque Borne',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/04_cheque_Borne.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/04_cheque_Borne.jpg',
         alt: 'Sponsorgeld',
       },
       {
-        src: '/shoma/Geld inzameling voor Kemps/20140914_1545431.jpg',
+        src: '/images/fotoalbums/geld-inzameling-kemps/20140914_1545431.jpg',
         alt: 'Evenement',
       },
     ],
@@ -101,41 +121,89 @@ const ALBUMS = [
       'Rubya is vol warmte, solidariteit en veerkracht. Deze foto\'s geven inkijk in het dagelijks leven, de mensen, families en gemeenschapsmomenten die Shoma inspireert.',
     photos: [
       {
-        src: '/shoma/Leven in Rubya/P1000364.jpg',
+        src: '/images/fotoalbums/leven-in-rubya/P1000364.jpg',
         alt: 'Gemeenschap Rubya',
       },
       {
-        src: '/shoma/Leven in Rubya/P1000375.jpg',
+        src: '/images/fotoalbums/leven-in-rubya/P1000375.jpg',
         alt: 'Dagelijks leven',
       },
       {
-        src: '/shoma/Leven in Rubya/P1000557.jpg',
-        alt: 'Familie moment',
+        src: '/images/fotoalbums/leven-in-rubya/P1000302.jpg',
+        alt: 'Leven in Rubya',
       },
       {
-        src: '/shoma/Leven in Rubya/P1050323.jpg',
+        src: '/images/fotoalbums/leven-in-rubya/P1000359.jpg',
+        alt: 'Leven in Rubya',
+      },
+      {
+        src: '/images/fotoalbums/leven-in-rubya/P1000366.jpg',
+        alt: 'Leven in Rubya',
+      },
+      {
+        src: '/images/fotoalbums/leven-in-rubya/P1000376.jpg',
+        alt: 'Leven in Rubya',
+      },
+      {
+        src: '/images/fotoalbums/leven-in-rubya/P1000605.jpg',
+        alt: 'Leven in Rubya',
+      },
+      {
+        src: '/images/fotoalbums/leven-in-rubya/P1000771.jpg',
+        alt: 'Leven in Rubya',
+      },
+      {
+        src: '/images/fotoalbums/leven-in-rubya/P1050227.jpg',
         alt: 'Schoolkinderen',
       },
       {
-        src: '/shoma/Leven in Rubya/P1070543.jpg',
+        src: '/images/fotoalbums/leven-in-rubya/P1070543.jpg',
         alt: 'Lokale cultuur',
-      },
-      {
-        src: '/shoma/Leven in Rubya/P1070550.jpg',
-        alt: 'Kinderen Rubya',
-      },
-      {
-        src: '/shoma/Leven in Rubya/P1070553.jpg',
-        alt: 'Gemeenschap moment',
-      },
-      {
-        src: '/shoma/Leven in Rubya/P1070561.jpg',
-        alt: 'Rubya leven',
       },
     ],
     color: 'amber',
     accent: 'bg-amber-500',
     tag: 'Gemeenschap',
+  },
+  {
+    id: 'klaar-nieuw-schooljaar',
+    title: 'Klaar voor een nieuw schooljaar!',
+    subtitle: 'Een nieuwe start, vol verwachting',
+    description:
+      'Elk jaar begint met dezelfde hoop en energie: schone klaslokalen, nieuwe schoolspullen en kinderen die klaarstaan om weer te leren. Deze foto\'s vangen die jaarlijkse nieuwe start in Rubya.',
+    photos: [
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya20111.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201131.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201141.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201151.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201161.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201171.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201181.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+      { src: '/images/fotoalbums/klaar-voor-nieuw-schooljaar/Rubya201191.jpg', alt: 'Klaar voor het nieuwe schooljaar' },
+    ],
+    color: 'shoma-teal',
+    accent: 'bg-shoma-teal',
+    tag: 'Schooljaar',
+  },
+  {
+    id: 'ontwikkeling-keuken',
+    title: 'Ontwikkeling keuken',
+    subtitle: 'Een plek om warme maaltijden te bereiden',
+    description:
+      'De keuken van KEMPS is essentieel: hier wordt dagelijks voor honderden leerlingen een warme maaltijd bereid. Deze foto\'s tonen de ontwikkeling van deze belangrijke voorziening.',
+    photos: [
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-1.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-2.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-3.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-4.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-5.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-6.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-7.jpg', alt: 'Ontwikkeling van de keuken' },
+      { src: '/images/fotoalbums/ontwikkeling-keuken/keuken-foto-8.jpg', alt: 'Ontwikkeling van de keuken' },
+    ],
+    color: 'shoma-terracotta',
+    accent: 'bg-shoma-terracotta',
+    tag: 'Voorziening',
   },
 ];
 
