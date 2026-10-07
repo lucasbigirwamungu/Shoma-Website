@@ -1,6 +1,6 @@
 /**
  * Complete newsletter database for Stichting Shoma
- * All 23 newsletters from 2012-2025
+ * All 26 newsletters from 2012-2026
  * Source: shoma.nl/nieuwsbrieven/
  */
 
@@ -17,7 +17,38 @@ export interface Newsletter {
 }
 
 export const allNewsletters: Newsletter[] = [
+  // 2026
+  {
+    id: 26,
+    date: 'September 2026',
+    month: 'September',
+    year: 2026,
+    title: 'Nieuwsbrief september 2026',
+    summary: 'De mooiste mijlpalen van de afgelopen periode op KEMPS: een nieuw ICT-lokaal met 40 laptops dankzij het Baarns Lyceum, stagiaires van de Hanzehogeschool, de Sinterklaasactie voor nieuwe speeltoestellen en verbeterde infrastructuur rond de school.',
+    url: 'https://www.shoma.nl/algemeen/nieuwsbrief-september-2026/',
+    category: 'Nieuws',
+  },
+  {
+    id: 25,
+    date: 'April 2026',
+    month: 'April',
+    year: 2026,
+    title: 'Nieuwsbrief april 2026',
+    summary: 'De nieuwsbrief van april 2026, als mosterd na de maaltijd alsnog gepubliceerd.',
+    url: 'https://www.shoma.nl/nieuwsbrieven/nieuwsbrief-april-2026/',
+    category: 'Nieuws',
+  },
   // 2025
+  {
+    id: 24,
+    date: 'December 2025',
+    month: 'December',
+    year: 2025,
+    title: 'Nieuwsbrief december 2025',
+    summary: 'In de nieuwsbrief van Shoma van december vindt u weer mooie berichten.',
+    url: 'https://www.shoma.nl/algemeen/in-de-nieuwsbrief-van-shoma-van-december-vindt-u-weer-mooie-berichten/',
+    category: 'Nieuws',
+  },
   {
     id: 1,
     date: 'Oktober 2025',

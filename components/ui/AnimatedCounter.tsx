@@ -29,6 +29,15 @@ export default function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
+
+          const prefersReduced = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+          ).matches;
+          if (prefersReduced) {
+            setCurrent(to);
+            return;
+          }
+
           const start = performance.now();
 
           const tick = (now: number) => {

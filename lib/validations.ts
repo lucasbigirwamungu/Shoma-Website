@@ -67,3 +67,13 @@ export const b2bLeadSchema = z.object({
 });
 
 export type B2BLeadInput = z.infer<typeof b2bLeadSchema>;
+
+// ─── Algemeen contactformulier validatie ──────────────────────────────────────
+export const contactSchema = z.object({
+  name: z.string().trim().min(2, 'Uw naam is verplicht').max(400),
+  email: z.string().trim().email('Voer een geldig e-mailadres in').max(400),
+  subject: z.string().trim().max(400).optional().or(z.literal('')),
+  message: z.string().trim().min(10, 'Uw bericht is te kort (minimaal 10 tekens)').max(2000),
+});
+
+export type ContactInput = z.infer<typeof contactSchema>;

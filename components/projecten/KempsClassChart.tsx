@@ -24,7 +24,7 @@ export default function KempsClassChart() {
           <h3 className="text-lg font-bold text-shoma-slate">
             Gesponsorde KEMPS-leerlingen per klas
           </h3>
-          <p className="text-sm text-shoma-slate/55 mt-0.5">Schooljaar 2025 — door Shoma gesponsord</p>
+          <p className="text-sm text-shoma-slate/55 mt-0.5">Schooljaar 2025: door Shoma gesponsord</p>
         </div>
         <div className="bg-shoma-teal text-white rounded-xl px-4 py-2 text-center shrink-0">
           <span className="text-2xl font-extrabold leading-none block">{TOTAL}</span>

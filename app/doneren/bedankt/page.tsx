@@ -39,7 +39,7 @@ export default function BedanktPage() {
             </div>
             <div className="flex items-start gap-2.5">
               <span className="text-shoma-terracotta mt-0.5">✓</span>
-              <span>0% overhead — elke cent wordt ingezet voor onderwijs</span>
+              <span>Het bestuur werkt onbezoldigd en verantwoordt elke besteding in de jaarrekening</span>
             </div>
             <div className="flex items-start gap-2.5">
               <span className="text-shoma-terracotta mt-0.5">✓</span>

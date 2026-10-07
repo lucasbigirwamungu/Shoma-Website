@@ -1,6 +1,11 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { BookOpen, Droplets, Sun, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import { TextAnimate } from '@/components/ui/text-animate';
+import { staggerContainer, staggerItem } from '@/components/ui/animated-section';
 
 const SDG_COLORS: Record<number, string> = {
   1: 'bg-red-500',
@@ -17,8 +22,8 @@ const projects = [
     category: 'Onderwijs',
     title: 'KEMPS Basisschool',
     summary:
-      'Engelstalig onderwijs als sleutel tot de toekomst. 257 kinderen bezochten KEMPS in 2025 — voor €30 per maand.',
-    image: '/shoma/Leven in Rubya/P1050323.jpg',
+      'Engelstalig onderwijs als sleutel tot de toekomst. 257 kinderen bezochten KEMPS in 2025, voor €30 per maand.',
+    image: '/shoma/projecten/kemps-basisschool.jpg',
     sdgGoals: [1, 4],
     stat: { value: '257', label: 'kinderen op KEMPS (2025)' },
     accentColor: 'from-shoma-terracotta/90',
@@ -29,8 +34,8 @@ const projects = [
     category: 'Schoon Water',
     title: 'Drinkwater Project',
     summary:
-      'Met steun van Stichting BAENT verdubbelden we de opslagcapaciteit naar 20.000 liter — schoon water voor school én buurt.',
-    image: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/210D5B35-70B7-476B-B7A1-10D029CE5410.jpg',
+      'Met steun van Stichting BAENT verdubbelden we de opslagcapaciteit naar 20.000 liter: schoon water voor school én buurt.',
+    image: '/shoma/projecten/drinkwater-project.jpeg',
     sdgGoals: [6],
     stat: { value: '20.000L', label: 'dagelijkse opslagcapaciteit' },
     accentColor: 'from-blue-600/90',
@@ -51,7 +56,7 @@ const projects = [
 
 export default function ImpactGrid() {
   return (
-    <section className="bg-shoma-sand py-20">
+    <section className="bg-shoma-cream py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
@@ -59,9 +64,15 @@ export default function ImpactGrid() {
             <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-2">
               Onze projecten in Rubya
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-shoma-slate">
+            <TextAnimate
+              as="h2"
+              by="word"
+              animation="blurInUp"
+              once
+              className="text-3xl sm:text-4xl font-bold text-shoma-slate"
+            >
               Drie pijlers, één missie
-            </h2>
+            </TextAnimate>
           </div>
           <Link
             href="/projecten"
@@ -73,12 +84,19 @@ export default function ImpactGrid() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {projects.map((project) => {
             const Icon = project.icon;
             return (
-              <article
+              <motion.article
                 key={project.slug}
+                variants={staggerItem}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-gray-100 hover:-translate-y-1"
               >
                 {/* Image */}
@@ -138,10 +156,10 @@ export default function ImpactGrid() {
                     </Link>
                   </div>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

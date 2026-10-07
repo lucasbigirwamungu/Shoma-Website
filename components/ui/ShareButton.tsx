@@ -8,11 +8,11 @@ export default function ShareButton() {
       try {
         await navigator.share({
           title: 'Stichting Shoma – Onderwijs voor Tanzania',
-          text: 'Ik steun onderwijs voor kinderen in Rubya, Tanzania via Stichting Shoma. 0% overhead – elke euro gaat direct naar een kind. Doe jij ook mee?',
+          text: 'Ik steun onderwijs voor kinderen in Rubya, Tanzania via Stichting Shoma. ANBI erkend en volledig transparant. Doe jij ook mee?',
           url: 'https://shoma.nl',
         });
       } catch {
-        // Gebruiker annuleerde het deelscherm — geen actie nodig
+        // Gebruiker annuleerde het deelscherm, geen actie nodig
       }
     } else {
       // Fallback: kopieer URL naar klembord

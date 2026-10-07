@@ -52,7 +52,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
       'In januari 2015 is besloten te starten met de bouw van een Engelstalige lagere school (zie voor het waarom "de bouw van KEMPS").',
       'De school is casco gebouwd. In januari 2016 (start schooljaar in Tanzania) zijn de eerste 3 groepen van start gegaan. Twee klaslokalen, voldoende toiletten en een lerarenkamer waren klaar voor gebruik. De helft van de school was op dat moment voorzien van een dak. Er moest nog veel gebeuren, maar in april 2016 waren alle lokalen onderdak.',
       'In september 2019 was de stand van zaken zo, dat er 6 lokalen klaar waren voor het onderwijs. Er waren toen 6 groepen en dus voldoende ruimte. Voor januari 2020, wanneer het nieuwe schooljaar begint, moest er nog minimaal één lokaal afgebouwd worden.',
-      'Inmiddels was met de bouw van de keuken begonnen. De verwachting was dat de keuken eind 2019 in gebruik genomen kon worden — hard nodig, omdat er met de start van het nieuwe schooljaar voor ca. 150 kinderen gekookt moest gaan worden.',
+      'Inmiddels was met de bouw van de keuken begonnen. De verwachting was dat de keuken eind 2019 in gebruik genomen kon worden. Dat was hard nodig, omdat er met de start van het nieuwe schooljaar voor ca. 150 kinderen gekookt moest gaan worden.',
     ],
     photos: [
       { src: '/images/projectverhalen/voortgang-bouw-school/IMG_4604.jpg', alt: 'Bouw van KEMPS' },
@@ -85,7 +85,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     period: '2012',
     excerpt: 'Veldwerkverslag van twee studenten die de voorbereidingen voor de nieuwe Shoma-school onderzochten.',
     body: [
-      'Wij, Joey Willemsen en Inge-Loes Vredegoor, hebben veldwerk verricht in Rubya, Tanzania, in de maanden oktober en november 2012. Dit verrichte veldwerk had betrekking op een project van Stichting Shoma. In Nederland kwamen we tijdens onze studie in contact met deze stichting en wilden we graag ons steentje bijdragen — door te helpen bij de voorbereidingen voor het bouwen van de nieuwe Shoma-school. Dit vrijwilligerswerk bestond globaal uit twee delen: schoolonderzoek en grondonderzoek.',
+      'Wij, Joey Willemsen en Inge-Loes Vredegoor, hebben veldwerk verricht in Rubya, Tanzania, in de maanden oktober en november 2012. Dit verrichte veldwerk had betrekking op een project van Stichting Shoma. In Nederland kwamen we tijdens onze studie in contact met deze stichting en wilden we graag ons steentje bijdragen, door te helpen bij de voorbereidingen voor het bouwen van de nieuwe Shoma-school. Dit vrijwilligerswerk bestond globaal uit twee delen: schoolonderzoek en grondonderzoek.',
       'Om een goed beeld te krijgen van het huidige onderwijs in en rondom Rubya, hebben wij samen scholen in Rubya en omgeving bezocht: lessen, lesmethodieken, faciliteiten en problemen waar scholen tegenaan lopen. Zo probeerden we te voorkomen dat de nieuwe Shoma-school dezelfde problemen zou ondervinden.',
       'We hebben 8 overheidsscholen bezocht in Rubya en omgeving. Op elke school spraken we met hoofdonderwijzers en docenten, gaven we de scholen de gelegenheid vragen aan ons te stellen, en werd communicatie waar nodig ondersteund door Simon, die toelichting gaf in het Kiswahili.',
       'Tijdens deze gesprekken kregen we ook inzage in lesplannen, roosters en organisatiestructuren, plus een rondleiding op elke school om een goed beeld te krijgen van faciliteiten en ruimtes.',
@@ -103,7 +103,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     period: '2010 – heden',
     excerpt: 'Basisbehoeften eerst: waterplaatsen en veilige toiletten rond de scholen.',
     body: [
-      'Om naar school te kunnen, moet eerst in een aantal andere basisbehoeften voorzien worden. Water is één van de belangrijkste — om te drinken, koken, wassen. Dit moet gehaald worden uit bronnen; waterleidingen zijn er in Rubya niet. Bij één van de natuurlijke bronnen hebben we in 2010 een waterplaats gemaakt om makkelijker water te kunnen halen. Verder hebben we in de loop der jaren bij meerdere scholen wc\'s gebouwd. De oude wc\'s waren vaak in zeer slechte staat en vormden een gevaar voor de kinderen, zowel instortingsgevaar als gevaar van de uitbraak van ziektes.',
+      'Om naar school te kunnen, moet eerst in een aantal andere basisbehoeften voorzien worden. Water is één van de belangrijkste: om te drinken, koken, wassen. Dit moet gehaald worden uit bronnen; waterleidingen zijn er in Rubya niet. Bij één van de natuurlijke bronnen hebben we in 2010 een waterplaats gemaakt om makkelijker water te kunnen halen. Verder hebben we in de loop der jaren bij meerdere scholen wc\'s gebouwd. De oude wc\'s waren vaak in zeer slechte staat en vormden een gevaar voor de kinderen, zowel instortingsgevaar als gevaar van de uitbraak van ziektes.',
     ],
     photos: [
       { src: '/images/projectverhalen/leefomgeving/Rubya201121.jpg', alt: 'Waterplaats Rubya' },
@@ -120,11 +120,11 @@ export const PROJECT_STORIES: ProjectStory[] = [
     excerpt: 'Zonnepanelen voor school en bibliotheek, in samenwerking met Wilde Ganzen en Our Energy Foundation.',
     body: [
       'Door een unieke samenwerking tussen Wilde Ganzen, Our Energy Foundation uit Hardenberg en Shoma werd het mogelijk om de school (KEMPS) in Rubya, Tanzania, van elektriciteit te voorzien.',
-      'Het landelijke energienet van Tanzania is ver verwijderd van de school. Daarom is gezocht naar een mogelijkheid om zonnepanelen te laten installeren en daarmee zowel school als bibliotheek te "verlichten". Het project werd uitgevoerd door Green Link Tanzania en stond onder toezicht van Our Energy Foundation, die expertise heeft in energieprojecten op basis van zonne-energie. Een projectaanvraag bij Wilde Ganzen werd goedgekeurd — alle drie partijen namen ieder een derde deel van de kosten voor hun rekening.',
+      'Het landelijke energienet van Tanzania is ver verwijderd van de school. Daarom is gezocht naar een mogelijkheid om zonnepanelen te laten installeren en daarmee zowel school als bibliotheek te "verlichten". Het project werd uitgevoerd door Green Link Tanzania en stond onder toezicht van Our Energy Foundation, die expertise heeft in energieprojecten op basis van zonne-energie. Een projectaanvraag bij Wilde Ganzen werd goedgekeurd. Alle drie partijen namen ieder een derde deel van de kosten voor hun rekening.',
       'De fondsenwerving was gereed, zodat de realisatie van het project eind 2019 gereed kon zijn.',
       'Tezamen met dit project werden ook twee waterpompen, aangedreven door zonne-energie, geleverd en geïnstalleerd.',
     ],
-    photos: [],
+    photos: [{ src: '/images/projectverhalen/school-bijna-klaar/IMG_1775.jpg', alt: 'Verlichting in een lokaal van KEMPS' }],
     sourceUrl: 'https://www.shoma.nl/projecten/licht-in-de-school/',
   },
   {
@@ -135,11 +135,11 @@ export const PROJECT_STORIES: ProjectStory[] = [
     period: 'doorlopend',
     excerpt: 'Waarom en hoe de schoolmoestuin van KEMPS is opgezet, met hulp van ouders.',
     body: [
-      'De kinderen op KEMPS krijgen iedere dag een warme maaltijd. De kosten hiervan zijn enorm gestegen — al het voedsel moet van de lokale markt gehaald worden. Door zelf te gaan verbouwen willen we de kosten van voedsel drukken. Voor het opzetten van de moestuin krijgen we veel ondersteuning van de ouders van de door ons gesponsorde kinderen. Het voordeel is niet alleen kostenbesparing, maar ook een voorbeeldfunctie: men ziet hoe men producten zelf kan verbouwen, en onze helpers vragen graag zelf wat zaad voor hun eigen moestuin.',
+      'De kinderen op KEMPS krijgen iedere dag een warme maaltijd. De kosten hiervan zijn enorm gestegen. Al het voedsel moet van de lokale markt gehaald worden. Door zelf te gaan verbouwen willen we de kosten van voedsel drukken. Voor het opzetten van de moestuin krijgen we veel ondersteuning van de ouders van de door ons gesponsorde kinderen. Het voordeel is niet alleen kostenbesparing, maar ook een voorbeeldfunctie: men ziet hoe men producten zelf kan verbouwen, en onze helpers vragen graag zelf wat zaad voor hun eigen moestuin.',
       'De start van zo\'n moestuin levert extra kosten op: de grond moet bewerkt worden, er moet mest komen en de gewassen moeten voldoende water krijgen om tot wasdom te komen.',
-      'Voor de watervoorziening is een systeem van putten voorzien die met elkaar in verbinding staan en gevoed worden vanuit de 10.000 liter tank (onze "watertoren"). Bij de watervoorziening worden ook de bewakers ingezet, die daarnaast kleine onderhoudswerkzaamheden verzorgen — waardoor hun werk gevarieerder wordt en zij wat meer kunnen verdienen dan als bewaker alleen.',
+      'Voor de watervoorziening is een systeem van putten voorzien die met elkaar in verbinding staan en gevoed worden vanuit de 10.000 liter tank (onze "watertoren"). Bij de watervoorziening worden ook de bewakers ingezet, die daarnaast kleine onderhoudswerkzaamheden verzorgen, waardoor hun werk gevarieerder wordt en zij wat meer kunnen verdienen dan als bewaker alleen.',
     ],
-    photos: [],
+    photos: [{ src: '/images/projectverhalen/moestuin/IMG_1974.jpg', alt: 'Pomphuis met watertank in het landschap bij KEMPS' }],
     sourceUrl: 'https://www.shoma.nl/projecten/moestuin-moet-de-exploitatiekosten-drukken/',
   },
   {
@@ -150,9 +150,9 @@ export const PROJECT_STORIES: ProjectStory[] = [
     period: 'doorlopend',
     excerpt: 'Waarom kinderen in Rubya solarlampen nodig hebben om huiswerk te kunnen maken.',
     body: [
-      'Rubya ligt vlakbij de evenaar, wat betekent dat het al rond 18.30 uur donker wordt. Aangezien kinderen na schooltijd vaak eerst hun ouders helpen (op het land werken, water halen, hout sprokkelen, kleren wassen) is er niet meteen tijd voor huiswerk. Daarna wordt er gegeten en is de zon al onder. De meeste mensen hebben geen elektriciteit en moeten het doen met kerosinelampen, die niet veel licht geven en gevaarlijk kunnen zijn — bovendien zijn kinderen vaak niet degenen met het eerste recht op licht. We hebben van Electrabel geld gekregen om solarlampen aan te schaffen, zodat de kinderen ook \'s avonds nog de gelegenheid hebben om huiswerk te doen.',
+      'Rubya ligt vlakbij de evenaar, wat betekent dat het al rond 18.30 uur donker wordt. Aangezien kinderen na schooltijd vaak eerst hun ouders helpen (op het land werken, water halen, hout sprokkelen, kleren wassen) is er niet meteen tijd voor huiswerk. Daarna wordt er gegeten en is de zon al onder. De meeste mensen hebben geen elektriciteit en moeten het doen met kerosinelampen, die niet veel licht geven en gevaarlijk kunnen zijn. Bovendien zijn kinderen vaak niet degenen met het eerste recht op licht. We hebben van Electrabel geld gekregen om solarlampen aan te schaffen, zodat de kinderen ook \'s avonds nog de gelegenheid hebben om huiswerk te doen.',
     ],
-    photos: [],
+    photos: [{ src: '/images/projectverhalen/solarlampen/P1000605.jpg', alt: 'Weg door de bananenplantages bij Rubya' }],
     sourceUrl: 'https://www.shoma.nl/projecten/solarlampen/',
   },
   {
@@ -164,14 +164,66 @@ export const PROJECT_STORIES: ProjectStory[] = [
     excerpt: 'Van natuurlijke bron tot centraal opvangreservoir: schoon drinkwater voor school en gemeenschap.',
     body: [
       'In de bedrijfsvoering van de school speelt de watervoorziening een belangrijke rol. Water is nodig voor de bereiding van de maaltijden, het drinken dat de kinderen krijgen en voor het schoonhouden van toiletten en gebouwen.',
-      'In de directe omgeving van de school is één natuurlijke bron, die meer of minder water geeft afhankelijk van de periode. Het halen van water van deze bron vergt veel tijd — voor de school kostbaar, voor de omwonenden een zware belasting. Het water wordt meestal door kinderen gehaald.',
+      'In de directe omgeving van de school is één natuurlijke bron, die meer of minder water geeft afhankelijk van de periode. Het halen van water van deze bron vergt veel tijd: voor de school kostbaar, voor de omwonenden een zware belasting. Het water wordt meestal door kinderen gehaald.',
       'Omdat de school altijd over voldoende schoon water moet kunnen beschikken, is een project gedefinieerd waarbij het verkrijgen van schoon drinkwater zowel voor de school als voor de omwonenden sterk verbeterd wordt.',
       'Het water van de bron wordt met pompen omhoog gebracht naar de school. De school vangt ook regenwater op. Beide stromen komen in een centraal ondergronds opvangreservoir, vanwaar het water gedistribueerd wordt naar een tank voor de gemeenschap en naar de verbruikspunten van de school.',
       'Vervuild regenwater wordt apart opgevangen en gebruikt voor het schoonhouden van de toiletten en, in een later stadium, voor het bevloeien van de schoolmoestuin.',
       'De tank voor het water van de gemeenschap komt op het terrein net naast het schoolterrein. Verstrekking van het water aan de omwonenden wordt in de gemeenschap zelf georganiseerd; de school zorgt alleen voor voldoende aanvoer zolang de bron voldoende water geeft. De kosten van het project zijn begroot op ca. € 28.000.',
     ],
-    photos: [],
+    photos: [{ src: '/images/projectverhalen/waterproject/IMG_1859.jpg', alt: '10.000-liter watertank bij KEMPS' }],
     sourceUrl: 'https://www.shoma.nl/projecten/waterproject/',
+  },
+  {
+    id: 'story-afbouw-school',
+    slug: 'de-afbouw-van-de-school',
+    title: 'De afbouw van de school',
+    category: 'education',
+    period: '2023 – heden',
+    excerpt: 'Acht lokalen en een eetzaal zijn klaar; toiletten, een bewakersonderkomen en de moestuinbewatering wachten nog op financiering.',
+    body: [
+      'De afbouw van de school nadert zijn voltooiing. De 8 klaslokalen zijn afgebouwd en ingericht.',
+      'Onder de school is een permanente eetzaal bouwrijp gemaakt en afgewerkt. Voor de aanschaf van het benodigde meubilair zijn de middelen ontvangen. Sinds de vakantieperiode van september 2023 worden daar de maaltijden verstrekt: de tafels en stoelen zijn beschikbaar en de organisatie voor de uitgifte van eten en het verzamelen van borden en bestek is opgezet. De kinderen eten nu niet meer in de klaslokalen.',
+      'Het aantal beschikbare toiletten is onvoldoende. Besloten is om twee dames- en twee herentoiletten te realiseren in de omgeving van de eetzaal. Hiervoor moeten nog fondsen worden geworven.',
+      'De bewakers zitten nog in de oorspronkelijke metalen bouwkeet. Een ontwerp voor een redelijk onderkomen is gereed; de fondsenwerving hiervoor moet nog plaatsvinden.',
+      'De moestuin heeft veel water nodig. Een systeem voor de watervoorziening is op papier gereed: een serie putten moet gebouwd en met elkaar verbonden worden. De aanvoer van water vindt plaats vanuit de 10.000-litertank (onze zogeheten watertoren), die gevoed wordt vanuit de nieuw geslagen bron. De fondsenwerving hiervoor is nog niet afgerond.',
+      'Er zijn nog een aantal projecten die in de loop van de tijd aandacht zullen vragen en waarvoor nog geld bijeengebracht moet worden, zoals het verharden van een parkeerplaats, het egaliseren van de sportvelden en het opzetten van een speelplaats voor de kleintjes.',
+    ],
+    photos: [],
+    sourceUrl: 'https://www.shoma.nl/de-afbouw-van-de-school/',
+  },
+  {
+    id: 'story-onderwijsondersteuning',
+    slug: 'onderwijsondersteuning-vanuit-nederland',
+    title: 'Onderwijsondersteuning vanuit Nederland',
+    category: 'education',
+    period: '2023',
+    excerpt: 'Vrijwilligers Inger en Pytrik werkten ruim twee maanden op KEMPS aan gymlessen, bewegend leren en leesonderwijs.',
+    body: [
+      'Op 21 september 2023 vertrokken Inger, student Social Work in Groningen en dansdocent, en Pytrik, afgestudeerd aan de PABO en leerkracht in Friesland, samen naar Tanzania voor vrijwilligerswerk op KEMPS. De eerste week stond in het teken van observeren en kennismaken met de school, het team en de kinderen.',
+      'Inger richtte zich op het ondersteunen van de leerkrachten van de nursery en P1 (vergelijkbaar met de kleuters en groep 3): differentiatie in de lessen, met extra uitleg voor kinderen die moeilijk leren en extra werk voor kinderen die snel leren. De nursery-lokalen waren kaal ingericht. Samen met de leerkracht en de kinderen van nursery 2 maakte zij de klas schoon en hing ze posters op; in de dagen erna deden de andere leerkrachten hetzelfde.',
+      'Gymles werd op de school niet gegeven. Inger begon daarom met gewone gymlessen voor alle klassen van KEMPS, met tikkertje, estafette en ander eenvoudig spel, en met gymmateriaal dat zij uit Nederland had meegenomen. Het doel: de leerkrachten van nursery en P1 geven de gymlessen straks zelf, voor de andere klassen komt er één dag per week een gymdocent, en daarna volgt het bewegend leren.',
+      'Pytrik werkte aan het leesonderwijs, aan "klaarwerk" en aan de opbouw van een les in stappen. Zij gaf de leerkrachten een presentatie over de voordelen van lezen en over werkvormen als voorlezen, duo-lezen en stil lezen. Voorlezen en duo-lezen waren voor de leerkrachten geheel nieuw; samen hebben ze het voorgedaan en geoefend.',
+    ],
+    photos: [],
+    sourceUrl: 'https://www.shoma.nl/algemeen/onderwijsondersteuning-vanuit-nederland/',
+  },
+  {
+    id: 'story-schoolkeuken',
+    slug: 'schoolkeuken-en-energietransitie',
+    title: 'Schoolkeuken en de energietransitie',
+    category: 'energy',
+    period: '2024 – heden',
+    excerpt: 'Van open vuur naar dubbelwandige kookpotten, en nu op zoek naar een alternatief voor hout.',
+    body: [
+      'Omdat niet alle kinderen thuis een ontbijt krijgen, is besloten dat alle kinderen op onze Engelstalige school zowel een ontbijt als een warme maaltijd tussen de middag krijgen. In eerste instantie werd er gestookt op open vuren.',
+      'Toen het aantal kinderen op school groter werd, was die methode onhoudbaar. Na lang zoeken kwamen we uit bij een Tanzaniaanse firma die dubbelwandige kookpotten verkoopt. Er is toen besloten een goede keuken te bouwen waarin minimaal 4 van zulke potten geplaatst konden worden. Het houtverbruik nam met 80% af en de hygiëne is sterk verbeterd.',
+      'Inmiddels heeft de Tanzaniaanse overheid bepaald dat instanties die voor meer dan 100 personen koken, niet meer op hout mogen koken. Er moet dus gezocht worden naar een alternatieve brandstof. Daarvoor is in Tanzania in feite alleen gas beschikbaar; ook wordt onderzocht of het verhogen van het elektriciteitsvermogen een optie is. Met de leverancier van de kookpotten wordt daarna naar een optimum gezocht. Energietransitie geldt dus niet alleen voor West-Europa.',
+    ],
+    photos: [
+      { src: '/images/projectverhalen/schoolkeuken/foto-2.jpg', alt: 'Koken op open vuur bij de school' },
+      { src: '/images/projectverhalen/schoolkeuken/foto-7.jpg', alt: 'Dubbelwandige kookpotten in de schoolkeuken' },
+    ],
+    sourceUrl: 'https://www.shoma.nl/algemeen/shoma-en-de-energietransitie/',
   },
 ];
 

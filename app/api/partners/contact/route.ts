@@ -43,7 +43,7 @@ export async function POST(request: Request) {
       });
     } catch (dbError) {
       console.error('[Shoma B2B] Supabase insert mislukt:', dbError);
-      // Ga door met e-mail — DB-fout blokkeert niet
+      // Ga door met e-mail, DB-fout blokkeert niet
     }
 
     // ─── Stuur notificatie naar partners@shoma.nl ─────────────────────────────

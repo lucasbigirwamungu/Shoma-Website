@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, Mail, ExternalLink } from 'lucide-react';
+import SocialButton from '@/components/ui/SocialButton';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,8 @@ export default function Footer() {
       <div className="bg-shoma-terracotta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-bold text-white">Iedere euro telt — direct naar Rubya.</h3>
-            <p className="text-white/80 mt-1">0% overhead. 100% impact. Fiscaal aftrekbaar als ANBI.</p>
+            <h3 className="text-xl font-bold text-white">Iedere euro telt: direct naar Rubya.</h3>
+            <p className="text-white/80 mt-1">Onbezoldigd bestuur. Volledig transparant. Fiscaal aftrekbaar als ANBI.</p>
           </div>
           <Link
             href="/doneren"
@@ -30,13 +31,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              {/* Logo in wit (brightness filter maakt het zichtbaar op donkere achtergrond) */}
+              {/* Lichte variant: tekst in wit, broodmerk in kleur, leesbaar op donkere achtergrond */}
               <Image
-                src="/shoma-logo.svg"
+                src="/shoma-logo-light.png"
                 alt="Stichting Shoma"
-                width={180}
-                height={50}
-                className="h-11 w-auto brightness-0 invert opacity-90"
+                width={2000}
+                height={818}
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
@@ -63,8 +64,8 @@ export default function Footer() {
                 { href: '/projecten', label: 'Onze Projecten' },
                 { href: '/voor-bedrijven', label: 'Voor Bedrijven' },
                 { href: '/doneren', label: 'Doneer Nu' },
-                { href: '/fotoalbums', label: "Foto's & Albums" },
-                { href: '/nieuws', label: 'Nieuws & Updates' },
+                { href: '/nieuws', label: "Nieuws & Foto's" },
+                { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -109,18 +110,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-white/50 text-xs space-y-1 text-center md:text-left">
             <p>© {currentYear} Stichting Onderwijsbevordering Noordwest Tanzania (Shoma)</p>
             <p>KvK: geregistreerd te Nederland &bull; RSIN: 8143.90.249 &bull; IBAN: NL55 ABNA 0501 3541 58</p>
           </div>
           <div className="flex items-center gap-1.5 text-white/40 text-xs">
-            <span>0% overhead</span>
+            <span>Onbezoldigd bestuur</span>
             <span>&bull;</span>
             <span className="text-shoma-terracotta-light font-medium">ANBI erkend</span>
             <span>&bull;</span>
             <span>Fiscaal aftrekbaar</span>
           </div>
+          <SocialButton />
         </div>
       </div>
     </footer>

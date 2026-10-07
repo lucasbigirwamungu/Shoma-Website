@@ -6,14 +6,14 @@ import { ShieldCheck, BadgeCheck, Users } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Doneer – Stichting Shoma',
   description:
-    'Doneer direct aan Stichting Shoma via iDEAL, Apple Pay of creditcard. 0% overhead – elke euro gaat naar een kind in Rubya.',
+    'Doneer direct aan Stichting Shoma via iDEAL, Apple Pay of creditcard. ANBI erkend, onbezoldigd bestuur en volledige transparantie.',
 };
 
 const trustSignals = [
   {
     icon: ShieldCheck,
-    title: '0% overhead',
-    body: 'Alle bestuur werkt onbezoldigd. Operationele kosten worden extern gesponsord.',
+    title: 'Onbezoldigd bestuur',
+    body: 'Alle bestuurders werken onbezoldigd. De jaarrekeningen staan openbaar op onze transparantiepagina.',
   },
   {
     icon: BadgeCheck,
@@ -41,8 +41,7 @@ export default function DonatiePage() {
               Uw donatie. Direct naar Rubya.
             </h1>
             <p className="mt-4 text-white/70 leading-relaxed">
-              Geen tussenpersonen, geen overhead. Elke euro die u doneert wordt direct
-              omgezet in onderwijs, schoon water of energie voor kinderen in Tanzania.
+              Geen tussenpersonen. Uw donatie wordt in Rubya omgezet in onderwijs, schoon water of energie voor kinderen in Tanzania.
             </p>
           </div>
         </div>

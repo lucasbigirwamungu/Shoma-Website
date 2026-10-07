@@ -1,4 +1,4 @@
-import type { B2BLeadInput } from '@/lib/validations';
+import type { B2BLeadInput, ContactInput } from '@/lib/validations';
 
 // ─── B2B Lead Notificatie E-mail ──────────────────────────────────────────────
 // Stuurt een gestructureerde notificatie naar partners@shoma.nl wanneer
@@ -109,6 +109,67 @@ export async function sendB2BLeadNotification(lead: B2BLeadInput): Promise<void>
       reply_to: lead.corporateEmail,
       subject,
       html: buildEmailHtml(lead),
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    console.error('Resend API fout:', error);
+    throw new Error(`E-mail verzending mislukt: ${response.status}`);
+  }
+}
+
+// ─── Contactformulier Notificatie E-mail ──────────────────────────────────────
+// Stuurt een bericht uit het algemene contactformulier door naar info@shoma.nl.
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+export async function sendContactNotification(contact: ContactInput): Promise<void> {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'noreply@shoma.nl';
+  const toEmail = process.env.CONTACT_EMAIL ?? 'info@shoma.nl';
+
+  const subject = `Contactformulier: ${contact.subject || `bericht van ${contact.name}`}`;
+
+  if (!resendApiKey) {
+    // Development fallback: log naar console
+    console.log('─── [DEV] Contact E-mail (geen RESEND_API_KEY gevonden) ───');
+    console.log(`Aan:     ${toEmail}`);
+    console.log(`Onderwerp: ${subject}`);
+    console.log('Payload:', JSON.stringify(contact, null, 2));
+    console.log('────────────────────────────────────────────────────────────');
+    return;
+  }
+
+  const html = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; max-width: 600px; margin: 0 auto; color: #3d2807;">
+      <h1 style="font-size: 20px; color: #6e4d1c;">Nieuw bericht via het contactformulier</h1>
+      <p><strong>Naam:</strong> ${escapeHtml(contact.name)}</p>
+      <p><strong>E-mail:</strong> <a href="mailto:${escapeHtml(contact.email)}">${escapeHtml(contact.email)}</a></p>
+      ${contact.subject ? `<p><strong>Onderwerp:</strong> ${escapeHtml(contact.subject)}</p>` : ''}
+      <div style="background: #faf6ee; border-radius: 8px; padding: 16px; line-height: 1.6;">
+        ${escapeHtml(contact.message).replace(/\n/g, '<br />')}
+      </div>
+    </div>
+  `;
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${resendApiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: fromEmail,
+      to: [toEmail],
+      reply_to: contact.email,
+      subject,
+      html,
     }),
   });
 

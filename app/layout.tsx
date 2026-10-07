@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import SideNavbar from '@/components/layout/SideNavbar';
+import MorphicNavbar from '@/components/layout/MorphicNavbar';
 import Footer from '@/components/layout/Footer';
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: {
@@ -9,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | Stichting Shoma',
   },
   description:
-    'Stichting Shoma bevordert onderwijs voor kansarme kinderen in Rubya, Noordwest-Tanzania. ANBI erkend, 0% overhead – elke euro gaat direct naar een kind.',
+    'Stichting Shoma bevordert onderwijs voor kansarme kinderen in Rubya, Noordwest-Tanzania. ANBI erkend, onbezoldigd bestuur en volledige transparantie via de jaarrekeningen.',
   keywords: [
     'Stichting Shoma',
     'Tanzania onderwijs',
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Stichting Shoma',
     title: 'Stichting Shoma – Onderwijs voor kinderen in Tanzania',
     description:
-      '0% overhead · ANBI erkend · Elke euro direct naar Rubya. Sponsor een kind voor slechts €40 per jaar.',
+      'ANBI erkend · Onbezoldigd bestuur · Volledig transparant. Sponsor een kind voor slechts €40 per jaar.',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80',
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Stichting Shoma – Onderwijs voor kinderen in Tanzania',
-    description: '0% overhead · ANBI erkend · Elke euro direct naar Rubya.',
+    description: 'ANBI erkend · Onbezoldigd bestuur · Volledig transparant.',
   },
   robots: {
     index: true,
@@ -65,9 +69,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl">
+    <html lang="nl" className={cn("font-sans", geist.variable)}>
       <body className="flex flex-col min-h-screen antialiased">
-        <SideNavbar />
+        <MorphicNavbar />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

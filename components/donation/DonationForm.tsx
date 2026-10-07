@@ -274,7 +274,7 @@ export default function DonationForm() {
           <div className="space-y-5">
             <div>
               <h2 className="text-xl font-bold text-shoma-slate">Uw gegevens</h2>
-              <p className="text-sm text-shoma-slate/55 mt-1">Alleen het hoognodige — voor uw fiscale ANBI-kwitantie.</p>
+              <p className="text-sm text-shoma-slate/55 mt-1">Alleen het hoognodige: voor uw fiscale ANBI-kwitantie.</p>
             </div>
 
             {/* Samenvatting */}

@@ -22,7 +22,7 @@ export default function CompenseerEnLeerPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-shoma-cream">
         <IndividualDonationForm />
       </section>
 
@@ -109,7 +109,7 @@ export default function CompenseerEnLeerPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white">
+      <section className="py-12 px-4 bg-shoma-clay">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-shoma-teal mb-8 text-center">
             Veelgestelde vragen
@@ -136,7 +136,7 @@ export default function CompenseerEnLeerPage() {
             ].map((faq, idx) => (
               <details
                 key={idx}
-                className="group bg-shoma-sand rounded-lg border border-gray-200"
+                className="group bg-white rounded-lg border border-gray-200"
               >
                 <summary className="px-6 py-4 cursor-pointer font-medium text-gray-800 hover:bg-orange-100 transition">
                   {faq.q}

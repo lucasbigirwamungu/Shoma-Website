@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { animate } from 'animejs';
 import { BookOpen, Droplets, GraduationCap } from 'lucide-react';
 
 // ─── Impact-rekenfuncties (gebaseerd op werkelijke projectkosten Rubya) ─────
@@ -49,6 +50,23 @@ interface Props {
 export default function ImpactCalculator({ initialAmount = 40 }: Props) {
   const [amount, setAmount] = useState<number>(initialAmount);
   const [rawInput, setRawInput] = useState<string>(String(initialAmount));
+  const valueRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    if (prefersReduced) return;
+
+    valueRefs.current.forEach((el) => {
+      if (!el) return;
+      animate(el, {
+        scale: [1, 1.08, 1],
+        duration: 280,
+        ease: 'outQuad',
+      });
+    });
+  }, [amount]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value;
@@ -93,7 +111,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
 
       {/* Impact rows */}
       <div className="space-y-3">
-        {rows.map((row) => {
+        {rows.map((row, i) => {
           const Icon = row.icon;
           return (
             <div
@@ -104,8 +122,13 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
                 <Icon className={`w-4 h-4 ${row.color}`} aria-hidden="true" />
                 <span className="text-sm text-shoma-slate">{row.label}:</span>
               </div>
-              <span className={`font-bold text-base ${row.color}`}>
-                {amount > 0 ? row.value(amount) : '—'}
+              <span
+                ref={(el) => {
+                  valueRefs.current[i] = el;
+                }}
+                className={`inline-block font-bold text-base ${row.color}`}
+              >
+                {amount > 0 ? row.value(amount) : '-'}
               </span>
             </div>
           );

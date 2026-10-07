@@ -3,7 +3,7 @@ import { getMollieClient } from '@/lib/mollie';
 import { createServerClient } from '@/lib/supabase';
 
 // Mollie stuurt een POST naar deze URL zodra een betaalstatus verandert.
-// De body bevat uitsluitend de payment `id` — de status moet ALTIJD opgehaald
+// De body bevat uitsluitend de payment `id`, de status moet ALTIJD opgehaald
 // worden via de Mollie API om tampering te voorkomen.
 export async function POST(request: Request) {
   try {
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error('[Shoma Webhook] Supabase update mislukt:', error);
-      // Stuur 200 terug aan Mollie zodat het niet blijft retrying —
+      // Stuur 200 terug aan Mollie zodat het niet blijft retrying,
       // we loggen de fout en kunnen later herstellen
     }
 
