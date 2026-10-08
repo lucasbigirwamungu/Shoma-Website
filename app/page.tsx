@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import TrustDashboard from '@/components/home/TrustDashboard';
 import ImpactGrid from '@/components/home/ImpactGrid';
-import MissionReveal from '@/components/home/MissionReveal';
 import ImpactCalculatorSection from '@/components/home/ImpactCalculatorSection';
 import { AnimatedSection } from '@/components/ui/animated-section';
 import { MorphingText } from '@/components/ui/morphing-text';
@@ -23,9 +22,6 @@ export default function HomePage() {
 
       {/* 3. Impact grid – drie projectkaarten */}
       <ImpactGrid />
-
-      {/* Missie-statement – scroll-reveal tussen projecten en cijfers */}
-      <MissionReveal />
 
       {/* 4. Impact calculator – interactieve donatie-convertor */}
       <AnimatedSection as="section" className="bg-white py-20">

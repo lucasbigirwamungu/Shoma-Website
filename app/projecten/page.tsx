@@ -141,8 +141,8 @@ export default function ProjectenPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-shoma-teal/20 hover:border-shoma-teal/40 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80"
-                  alt="KEMPS basisschool Tanzania"
+                  src="/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg"
+                  alt="Leerlingen van KEMPS in schooluniform voor het schoolgebouw"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -204,8 +204,8 @@ export default function ProjectenPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-shoma-terracotta/20 hover:border-shoma-terracotta/40 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80"
-                  alt="Regulier onderwijs Tanzania"
+                  src="/images/fotoalbums/leven-in-rubya/P1050227.jpg"
+                  alt="Volle klas in een overheidsschool in Rubya"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

@@ -61,6 +61,8 @@ const b2bTiers = [
     sdgName: 'Betaalbare en duurzame energie',
     sdgColor: 'bg-yellow-400',
     glowColor: 'rgba(250,204,21,0.5)',
+    image: '/images/zonnepaneel.jpg',
+    imageAlt: 'Zonnepanelen op een dak',
   },
 ];
 

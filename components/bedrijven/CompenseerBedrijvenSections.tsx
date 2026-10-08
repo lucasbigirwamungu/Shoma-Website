@@ -117,8 +117,8 @@ export default function CompenseerBedrijvenSections() {
       <div className="relative bg-gradient-to-br from-shoma-teal to-shoma-teal-dark text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"
-            alt="Team planting trees"
+            src="/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-3.webp"
+            alt="Het KEMPS-schoolcomplex in de heuvels van Rubya"
             fill
             className="object-cover opacity-15"
             sizes="100vw"

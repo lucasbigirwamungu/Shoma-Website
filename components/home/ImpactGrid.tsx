@@ -23,7 +23,7 @@ const projects = [
     title: 'KEMPS Basisschool',
     summary:
       'Engelstalig onderwijs als sleutel tot de toekomst. 257 kinderen bezochten KEMPS in 2025, voor €30 per maand.',
-    image: '/shoma/projecten/kemps-basisschool.jpg',
+    image: '/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg',
     sdgGoals: [1, 4],
     stat: { value: '257', label: 'kinderen op KEMPS (2025)' },
     accentColor: 'from-shoma-terracotta/90',
@@ -35,7 +35,7 @@ const projects = [
     title: 'Drinkwater Project',
     summary:
       'Met steun van Stichting BAENT verdubbelden we de opslagcapaciteit naar 20.000 liter: schoon water voor school én buurt.',
-    image: '/shoma/projecten/drinkwater-project.jpeg',
+    image: '/images/projectverhalen/waterproject/IMG_1859.jpg',
     sdgGoals: [6],
     stat: { value: '20.000L', label: 'dagelijkse opslagcapaciteit' },
     accentColor: 'from-blue-600/90',
@@ -47,7 +47,7 @@ const projects = [
     title: 'Solar & Moestuin',
     summary:
       'Solarlampen voor studeren na zonsondergang en een moestuin die de exploitatiekosten met ~30% verlaagt.',
-    image: '/shoma/Geld inzameling voor Kemps/Bouw van KEMPS/02_beplanting_kavel.jpg',
+    image: '/images/zonnepaneel.jpg',
     sdgGoals: [7, 13],
     stat: { value: '~30%', label: 'minder operationele kosten' },
     accentColor: 'from-amber-600/90',

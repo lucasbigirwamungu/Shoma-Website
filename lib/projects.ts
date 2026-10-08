@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
     targetFunding: 25000,
     impactMultiplier: 350,
     imageUrl:
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80',
+      '/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg',
     sdgGoals: [1, 4],
     stats: [
       { label: 'Leerlingen op KEMPS', value: '257', unit: 'totaal' },
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     targetFunding: 20000,
     impactMultiplier: 1,
     imageUrl:
-      'https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?w=800&q=80',
+      '/images/projectverhalen/waterproject/IMG_1859.jpg',
     sdgGoals: [6],
     stats: [
       { label: 'Opslagcapaciteit', value: '20.000', unit: 'liter' },
@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     targetFunding: 15000,
     impactMultiplier: 50,
     imageUrl:
-      'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
+      '/images/zonnepaneel.jpg',
     sdgGoals: [7, 13],
     stats: [
       { label: 'Solarlampen geïnstalleerd', value: '24', unit: 'stuks' },
