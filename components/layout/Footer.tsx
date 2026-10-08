@@ -87,7 +87,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { href: '/over-ons#anbi', label: 'ANBI Status' },
-                { href: '/over-ons#jaarrekeningen', label: 'Jaarrekeningen 2013–2025' },
+                { href: '/over-ons#jaarrekeningen', label: 'Jaarrekeningen 2012–2025' },
                 { href: '/over-ons#bestuur', label: 'Bestuur & Organisatie' },
                 { href: '/over-ons#beleidsplan', label: 'Beleidsplan 2026–2028' },
                 { href: '/over-ons#statuten', label: 'Statuten' },

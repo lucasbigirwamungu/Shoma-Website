@@ -210,7 +210,7 @@ export default function VoorBedrijvenPage() {
                   {
                     icon: Globe,
                     title: 'Lokale monitoring',
-                    body: 'Professioneel lokaal team (Faisal, Dorothea, Erica) rapporteert direct aan het Nederlandse bestuur. Nul corruptierisico.',
+                    body: 'Professioneel lokaal team (Faisal, Amani, Erica) rapporteert direct aan het Nederlandse bestuur. Nul corruptierisico.',
                   },
                   {
                     icon: FileText,

@@ -8,7 +8,7 @@ import FiscalBanner from '@/components/over-ons/FiscalBanner';
 export const metadata: Metadata = {
   title: 'Over Ons – Stichting Shoma',
   description:
-    'Leer meer over Stichting Shoma: onze oprichting in 2005, het onbezoldigde bestuur, ANBI-status en 20 jaar jaarrekeningen.',
+    'Leer meer over Stichting Shoma: onze oprichting in 2005, het onbezoldigde bestuur, ANBI-status en alle jaarrekeningen sinds 2012.',
 };
 
 const boardMembers = [
@@ -27,36 +27,36 @@ const ambassadors = [
 
 const localTeam = [
   { name: 'Faisal Katela', role: 'Lokale coördinator Tanzania' },
-  { name: 'Dorothea Laurenti', role: 'Lokale coördinator Tanzania' },
+  { name: 'Amani Peter', role: 'Headmaster KEMPS' },
   { name: 'Erica Frank', role: 'Lokale coördinator Tanzania' },
 ];
 
-// Jaarrekeningen: alles beschikbaar
+// Jaarrekeningen en jaarverslagen per boekjaar, gelijk aan shoma.nl/ambi-informatie
 const annualReports = [
   {
     year: 2025,
     docs: [
-      { label: 'Rapport 2024', href: '/jaarrekeningen/2025-01-19-Rapport-inzake-de-jaarrekening-2024.pdf' },
-      { label: 'Financieel verslag', href: '/jaarrekeningen/Financieel-jaarverslag-Shoma-2025.pdf' },
+      { label: 'Jaarrekening 2025 (gewijzigd)', href: '/jaarrekeningen/Rapport-inzake-de-jaarrekening-2025-gewijzigd.pdf' },
+      { label: 'Financieel jaarverslag 2025', href: '/jaarrekeningen/Financieel-jaarverslag-Shoma-2025.pdf' },
     ],
   },
   {
     year: 2024,
     docs: [
-      { label: 'Financieel verslag 2023', href: '/jaarrekeningen/2024-01-01-financieel-verslag-2023-stichting-Shoma.pdf' },
-      { label: 'Rapport 2023', href: '/jaarrekeningen/2024-01-06-Rapport-inzake-de-jaarrekening-2023.pdf' },
+      { label: 'Jaarrekening', href: '/jaarrekeningen/2025-01-19-Rapport-inzake-de-jaarrekening-2024.pdf' },
     ],
   },
   {
     year: 2023,
     docs: [
-      { label: 'Rapport 2022', href: '/jaarrekeningen/Rapport-inzake-de-jaarrekening-2022.pdf' },
+      { label: 'Jaarrekening', href: '/jaarrekeningen/2024-01-06-Rapport-inzake-de-jaarrekening-2023.pdf' },
+      { label: 'Financieel verslag', href: '/jaarrekeningen/2024-01-01-financieel-verslag-2023-stichting-Shoma.pdf' },
     ],
   },
   {
     year: 2022,
     docs: [
-      { label: 'Rapport 2025', href: '/jaarrekeningen/Rapport-inzake-de-jaarrekening-2025.pdf' },
+      { label: 'Jaarrekening', href: '/jaarrekeningen/Rapport-inzake-de-jaarrekening-2022.pdf' },
     ],
   },
   {
@@ -77,25 +77,28 @@ const annualReports = [
     year: 2019,
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/jaarrekening-shoma-2019.pdf' },
-      { label: 'Jaarrekening (alt)', href: '/jaarrekeningen/2019-03-01-jaarrekening-2018.pdf' },
     ],
   },
   {
     year: 2018,
     docs: [
-      { label: 'Jaarrekening', href: '/jaarrekeningen/Jaarrekening-2018-getekend.pdf' },
+      { label: 'Jaarrekening (getekend)', href: '/jaarrekeningen/Jaarrekening-2018-getekend.pdf' },
+      { label: 'Jaarrekening (versie 1 maart 2019)', href: '/jaarrekeningen/2019-03-01-jaarrekening-2018.pdf' },
+      { label: 'Jaarverslag', href: '/jaarrekeningen/Jaarverslag-2018-als-nieuwsbrief.pdf' },
     ],
   },
   {
     year: 2017,
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/jaarrekening-Shoma-2017.pdf' },
+      { label: 'Jaarverslag', href: '/jaarrekeningen/JAARVERSLAG-2017.pdf' },
     ],
   },
   {
     year: 2016,
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/Jaarrekening-Shoma-2016.pdf' },
+      { label: 'Jaarverslag', href: '/jaarrekeningen/Jaarverslag-Stichting-Shoma-2016.pdf' },
     ],
   },
   {
@@ -114,8 +117,13 @@ const annualReports = [
     year: 2013,
     docs: [
       { label: 'Jaarrekening', href: '/jaarrekeningen/Jaarrekening_2013_Stichting_Onderwijsbevordering_Noord-West_Tanzania.pdf' },
-      { label: 'Financieel verslag', href: '/jaarrekeningen/2013-09-11-financieel-jaarverslag-def.pdf' },
-      { label: 'Jaarverslag (activiteiten)', href: '/jaarrekeningen/2014_0725-definitief-jaarverslag-2013.pdf' },
+      { label: 'Jaarverslag', href: '/jaarrekeningen/2014_0725-definitief-jaarverslag-2013.pdf' },
+    ],
+  },
+  {
+    year: 2012,
+    docs: [
+      { label: 'Kort financieel verslag', href: '/jaarrekeningen/2013-09-11-financieel-jaarverslag-def.pdf' },
     ],
   },
 ];
@@ -297,11 +305,10 @@ export default function OverOnsPage() {
         <section id="jaarrekeningen">
           <Reveal>
             <h2 className="text-2xl font-bold text-shoma-slate mb-2">
-              Jaarrekeningen 2013–2025
+              Jaarrekeningen 2012–2025
             </h2>
             <p className="text-shoma-slate/55 mb-6">
-              De meest recente jaarrekeningen zijn direct downloadbaar als PDF. Oudere versies worden
-              op aanvraag beschikbaar gesteld.
+              Alle jaarrekeningen en jaarverslagen zijn direct downloadbaar als PDF.
             </p>
 
             {/* 2025: echte bestanden */}
@@ -328,21 +335,31 @@ export default function OverOnsPage() {
           </Reveal>
 
           {/* Overige jaren */}
-          <StaggerContainer className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-2">
-            {annualReports.slice(1).map(({ year }) => (
+          <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            {annualReports.slice(1).map(({ year, docs }) => (
               <StaggerItem
                 key={year}
-                className="flex items-center justify-between bg-shoma-sand/60 rounded-xl px-3 py-2.5 text-shoma-slate/50 text-sm border border-transparent cursor-default"
+                className="flex items-start gap-4 bg-shoma-sand/60 rounded-xl px-4 py-3 border border-shoma-teal/10"
               >
-                <span title="Beschikbaar op aanvraag: info@shoma.nl" className="font-medium">{year}</span>
-                <Download className="w-3 h-3 opacity-30" aria-hidden="true" />
+                <span className="font-semibold text-shoma-slate text-sm pt-1.5 w-10 shrink-0">{year}</span>
+                <div className="flex flex-wrap gap-2">
+                  {docs.map((doc) => (
+                    <a
+                      key={doc.href}
+                      href={doc.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${doc.label} ${year} (PDF)`}
+                      className="inline-flex items-center gap-1.5 bg-white hover:bg-shoma-teal hover:text-white text-shoma-slate border border-shoma-teal/20 hover:border-shoma-teal rounded-lg px-3 py-1.5 text-xs font-medium transition-all duration-150 active:scale-[0.97] group"
+                    >
+                      <Download className="w-3 h-3 text-shoma-teal group-hover:text-white" aria-hidden="true" />
+                      {doc.label}
+                    </a>
+                  ))}
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
-          <p className="text-xs text-shoma-slate/40 mt-3">
-            Jaarrekeningen 2013–2024 zijn beschikbaar op aanvraag via{' '}
-            <a href="mailto:info@shoma.nl" className="underline hover:text-shoma-teal">info@shoma.nl</a>.
-          </p>
         </section>
         </div>
       </div>
@@ -385,7 +402,7 @@ export default function OverOnsPage() {
               {
                 title: 'Beleidsplan 2026–2028',
                 desc: 'Strategisch beleid: consolidatie, kwaliteitsversterking en lokale zelfredzaamheid.',
-                href: '/documenten/beleidsplan-2026-2028.pdf',
+                href: '/documenten/Beleidsplan-stichting-shoma-2026-2028-1.pdf',
               },
               {
                 title: 'Investerings- en dekkingsplan 2026',
@@ -438,26 +455,38 @@ export default function OverOnsPage() {
         <Reveal>
           <section id="statuten">
             <h2 className="text-2xl font-bold text-shoma-slate mb-4">Statuten</h2>
-            <div className="bg-shoma-sand rounded-2xl p-6 border border-shoma-teal/10 flex items-center justify-between gap-4 flex-wrap">
-              <div>
-                <p className="font-medium text-shoma-slate">Statutenwijziging Stichting Shoma 2025</p>
-                <p className="text-sm text-shoma-slate/55 mt-0.5">
-                  Addendum op de statuten (concept juli 2025), inclusief nieuw artikel 6 lid 8
-                  over tegenstrijdig belang. KvK-nummer: 04076887.
-                </p>
-                <p className="text-xs text-amber-600 mt-1.5 font-medium">
-                  ⚠ Concept: nog niet definitief gepasseerd bij de notaris
-                </p>
-              </div>
-              <a
-                href="/documenten/statuten-2025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-shoma-teal hover:bg-shoma-teal-dark text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-150 active:scale-[0.97]"
-              >
-                <Download className="w-4 h-4" aria-hidden="true" />
-                Download Statuten
-              </a>
+            <div className="space-y-3">
+              {[
+                {
+                  title: 'Afschrift statutenwijziging Stichting Shoma 2026',
+                  desc: 'Notarieel afschrift van de statutenwijziging. KvK-nummer: 04076887.',
+                  href: '/documenten/Afschrijft-Statutenwijziging-Stichting-Shoma-2026.pdf',
+                },
+                {
+                  title: 'Doorlopende tekst statuten Stichting Shoma 2026',
+                  desc: 'De volledige, geldende statuten na de wijziging.',
+                  href: '/documenten/Doorlopende-tekst-statuten-Stichting-Shoma-2026.pdf',
+                },
+              ].map((doc) => (
+                <div
+                  key={doc.title}
+                  className="bg-shoma-sand rounded-2xl p-6 border border-shoma-teal/10 flex items-center justify-between gap-4 flex-wrap"
+                >
+                  <div>
+                    <p className="font-medium text-shoma-slate">{doc.title}</p>
+                    <p className="text-sm text-shoma-slate/55 mt-0.5">{doc.desc}</p>
+                  </div>
+                  <a
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-shoma-teal hover:bg-shoma-teal-dark text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-150 active:scale-[0.97] shrink-0"
+                  >
+                    <Download className="w-4 h-4" aria-hidden="true" />
+                    Download PDF
+                  </a>
+                </div>
+              ))}
             </div>
           </section>
         </Reveal>
