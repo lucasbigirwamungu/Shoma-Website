@@ -23,6 +23,8 @@ const boardMembers = [
 const ambassadors = [
   { name: 'Jaap Bargeman', role: 'Ambassadeur' },
   { name: 'Jellie Bargeman', role: 'Ambassadeur' },
+  { name: 'Klaas Alko Niestijl', role: 'Ambassadeur' },
+  { name: 'Betsy Niestijl-Posthuma', role: 'Ambassadeur' },
 ];
 
 const localTeam = [
