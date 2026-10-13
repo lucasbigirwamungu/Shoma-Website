@@ -13,7 +13,7 @@ type Partner = {
   name: string;
   // Tekst in het logovak zolang er geen logo-afbeelding is
   initials: string;
-  // Pad naar een logo in /public, bv. '/images/partners/wilde-ganzen.png'
+  // Pad naar een logo in /public, bv. '/images/partners/wilde-ganzen.svg'
   logo?: string;
   color: string;
   contribution: string;
@@ -39,10 +39,10 @@ const partners: Partner[] = [
     quote:
       'Als detacheerder zochten wij naar een concreet project dat onze MVO-ambities waarmaakte. Shoma leverde precies dat.',
   },
-  // Vul `logo` in zodra het logo van Wilde Ganzen beschikbaar is
   {
     name: 'Wilde Ganzen',
     initials: 'Wilde Ganzen',
+    logo: '/images/partners/wilde-ganzen.svg',
     color: 'bg-shoma-teal',
     contribution: 'Premie op 6 projecten sinds 2016',
     description:
@@ -64,16 +64,19 @@ function PartnerLogo({ partner, size }: { partner: Partner; size: 'sm' | 'lg' })
   const box = size === 'sm' ? 'h-9 w-9 rounded-lg' : 'h-14 w-14 rounded-xl';
 
   if (partner.logo) {
+    // Logo's zijn meestal liggend, dus een breder vak dan het vierkante initialenvak
+    const logoBox = size === 'sm' ? 'h-9 w-16 rounded-lg' : 'h-14 w-24 rounded-xl';
+
     return (
       <div
-        className={`${box} relative shrink-0 overflow-hidden border border-shoma-teal/10 bg-white`}
+        className={`${logoBox} relative shrink-0 overflow-hidden border border-shoma-teal/10 bg-white`}
       >
         <Image
           src={partner.logo}
           alt={`Logo ${partner.name}`}
           fill
-          sizes="56px"
-          className="object-contain p-1"
+          sizes="96px"
+          className="object-contain p-1.5"
         />
       </div>
     );
