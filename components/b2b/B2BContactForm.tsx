@@ -119,10 +119,12 @@ export default function B2BContactForm() {
       <div className="space-y-4">
         {/* Bedrijfsnaam */}
         <div>
-          <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+          <label htmlFor="b2b-bedrijfsnaam" className="block text-sm font-medium text-shoma-slate mb-1.5">
             Bedrijfsnaam <span className="text-red-400">*</span>
           </label>
           <input
+            id="b2b-bedrijfsnaam"
+            name="companyName" autoComplete="organization"
             type="text"
             value={form.companyName}
             onChange={(e) => set('companyName', e.target.value)}
@@ -137,10 +139,12 @@ export default function B2BContactForm() {
 
         {/* Naam contactpersoon */}
         <div>
-          <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+          <label htmlFor="b2b-contactpersoon" className="block text-sm font-medium text-shoma-slate mb-1.5">
             Naam contactpersoon <span className="text-red-400">*</span>
           </label>
           <input
+            id="b2b-contactpersoon"
+            name="contactName" autoComplete="name"
             type="text"
             value={form.contactName}
             onChange={(e) => set('contactName', e.target.value)}
@@ -156,10 +160,12 @@ export default function B2BContactForm() {
         {/* 2-koloms rij: e-mail + telefoon */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+            <label htmlFor="b2b-email" className="block text-sm font-medium text-shoma-slate mb-1.5">
               Zakelijk e-mailadres <span className="text-red-400">*</span>
             </label>
             <input
+              id="b2b-email"
+              name="corporateEmail" autoComplete="email"
               type="email"
               value={form.corporateEmail}
               onChange={(e) => set('corporateEmail', e.target.value)}
@@ -172,10 +178,12 @@ export default function B2BContactForm() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+            <label htmlFor="b2b-telefoon" className="block text-sm font-medium text-shoma-slate mb-1.5">
               Telefoonnummer <span className="text-shoma-slate/40 text-xs font-normal">(optioneel)</span>
             </label>
             <input
+              id="b2b-telefoon"
+              name="phoneNumber" autoComplete="tel"
               type="tel"
               value={form.phoneNumber}
               onChange={(e) => set('phoneNumber', e.target.value)}
@@ -187,10 +195,12 @@ export default function B2BContactForm() {
 
         {/* MVO Interessegebied */}
         <div>
-          <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+          <label htmlFor="b2b-interessegebied" className="block text-sm font-medium text-shoma-slate mb-1.5">
             MVO Interessegebied <span className="text-red-400">*</span>
           </label>
           <select
+            id="b2b-interessegebied"
+            name="mvoInterestArea"
             value={form.mvoInterestArea}
             onChange={(e) => set('mvoInterestArea', e.target.value)}
             className={`${inputClass('mvoInterestArea')} appearance-none cursor-pointer`}
@@ -206,11 +216,13 @@ export default function B2BContactForm() {
 
         {/* Vrij tekstveld */}
         <div>
-          <label className="block text-sm font-medium text-shoma-slate mb-1.5">
+          <label htmlFor="b2b-bericht" className="block text-sm font-medium text-shoma-slate mb-1.5">
             Uw MVO-doelstellingen of vragen
             <span className="text-shoma-slate/40 text-xs font-normal ml-1">(optioneel)</span>
           </label>
           <textarea
+            id="b2b-bericht"
+            name="message"
             rows={4}
             value={form.message}
             onChange={(e) => set('message', e.target.value)}

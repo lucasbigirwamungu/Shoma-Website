@@ -203,9 +203,7 @@ export default function TrustCardStack({ className }: TrustCardStackProps) {
 
       <button
         aria-expanded={isExpanded}
-        aria-label={
-          isExpanded ? 'Klap de cijferstack weer in' : 'Klik om alle cijfers te bekijken'
-        }
+        aria-describedby="cijferstack-hint"
         ref={stackRef}
         className={cn(
           'relative mx-auto hidden cursor-pointer appearance-none border-0 bg-transparent p-0',
@@ -227,7 +225,7 @@ export default function TrustCardStack({ className }: TrustCardStackProps) {
         ))}
       </button>
 
-      <p className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/70 lg:block">
+      <p id="cijferstack-hint" className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/70 lg:block">
         {isExpanded ? 'Klik om de kaarten in te klappen' : 'Klik op de kaarten om alle cijfers te zien'}
       </p>
     </div>

@@ -206,10 +206,12 @@ export default function IndividualDonationForm() {
 
           {/* Flight hours */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="voetafdruk-vlieguren" className="block text-sm font-medium text-gray-700 mb-2">
               ✈️ Vlieguren (retour)
             </label>
             <input
+              id="voetafdruk-vlieguren"
+              name="flightHours"
               type="range"
               min="0"
               max="24"
@@ -243,10 +245,12 @@ export default function IndividualDonationForm() {
 
           {/* Distance km */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="voetafdruk-km" className="block text-sm font-medium text-gray-700 mb-2">
               🚗 Gereden km (per jaar)
             </label>
             <input
+              id="voetafdruk-km"
+              name="distanceKm"
               type="range"
               min="0"
               max="20000"
@@ -267,10 +271,12 @@ export default function IndividualDonationForm() {
 
           {/* Annual footprint */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="voetafdruk-jaar" className="block text-sm font-medium text-gray-700 mb-2">
               Jaarlijkse voetafdruk (kg CO₂)
             </label>
             <input
+              id="voetafdruk-jaar"
+              name="annualFootprintKg"
               type="range"
               min="0"
               max="10000"
@@ -364,10 +370,12 @@ export default function IndividualDonationForm() {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="donateur-naam" className="block text-sm font-medium text-gray-700 mb-2">
                 Naam
               </label>
               <input
+                id="donateur-naam"
+                name="donorName" autoComplete="name"
                 type="text"
                 value={donorName}
                 onChange={(e) => setDonorName(e.target.value)}
@@ -377,10 +385,12 @@ export default function IndividualDonationForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="donateur-email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email
               </label>
               <input
+                id="donateur-email"
+                name="donorEmail" autoComplete="email"
                 type="email"
                 value={donorEmail}
                 onChange={(e) => setDonorEmail(e.target.value)}

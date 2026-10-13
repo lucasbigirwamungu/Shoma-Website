@@ -10,7 +10,7 @@ import CompenseerBedrijvenSections from '@/components/bedrijven/CompenseerBedrij
 export const metadata: Metadata = {
   title: 'Voor Bedrijven – MVO Partnerschap | Stichting Shoma',
   description:
-    'Realiseer uw CSR-doelen met 100% transparantie. Investeer in onderwijs en schoon water in Tanzania, of laat uw team CO₂ compenseren met Compenseer & Leer. Directe SDG-bijdrage in uw duurzaamheidsrapportage.',
+    'Word MVO-partner van Stichting Shoma: investeer in onderwijs en schoon water in Tanzania, of laat uw team CO₂ compenseren met Compenseer & Leer.',
 };
 
 const sdgItems = [
@@ -83,6 +83,7 @@ export default function VoorBedrijvenPage() {
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1400&q=80"
             alt="Solar energie Tanzania"
             fill
+            priority
             className="object-cover opacity-20"
             sizes="100vw"
           />

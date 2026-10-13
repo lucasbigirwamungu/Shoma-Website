@@ -150,7 +150,7 @@ export default function ImpactGrid() {
                     <Link
                       href="/projecten"
                       className="flex items-center gap-1 text-sm font-semibold text-shoma-teal hover:text-shoma-teal-dark transition-colors"
-                      aria-label={`Meer over ${project.title}`}
+                      aria-label={`Meer info over ${project.title}`}
                     >
                       Meer info
                       <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />

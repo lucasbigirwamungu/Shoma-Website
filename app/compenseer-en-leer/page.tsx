@@ -4,7 +4,7 @@ import IndividualDonationForm from '@/components/compenseer/IndividualDonationFo
 export const metadata: Metadata = {
   title: 'Compenseer & Leer | Shoma',
   description:
-    'Compenseer je CO₂ voetafdruk en plant bomen in Tanzania. Je donatie steunt lokale schooltuinen en onderwijs.',
+    'Compenseer je CO₂-voetafdruk en plant bomen in Tanzania. Je donatie steunt lokale schooltuinen en onderwijs in Rubya via Stichting Shoma.',
 };
 
 export default function CompenseerEnLeerPage() {

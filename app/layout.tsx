@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s | Stichting Shoma',
   },
   description:
-    'Stichting Shoma bevordert onderwijs voor kansarme kinderen in Rubya, Noordwest-Tanzania. ANBI erkend, onbezoldigd bestuur en volledige transparantie via de jaarrekeningen.',
+    'Stichting Shoma bevordert onderwijs voor kansarme kinderen in Rubya, Noordwest-Tanzania. ANBI erkend, onbezoldigd bestuur en openbare jaarrekeningen.',
   keywords: [
     'Stichting Shoma',
     'Tanzania onderwijs',
@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Stichting Shoma' }],
   creator: 'Stichting Shoma',
   metadataBase: new URL(siteUrl),
+  // './' wordt per route opgelost, zodat elke pagina naar zichzelf verwijst
+  alternates: { canonical: './' },
   openGraph: {
     type: 'website',
     locale: 'nl_NL',

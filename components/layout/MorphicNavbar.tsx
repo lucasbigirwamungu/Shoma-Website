@@ -159,7 +159,7 @@ export default function MorphicNavbar() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Menu sluiten' : 'Menu openen'}
             aria-expanded={menuOpen}
-            aria-controls="mobiel-menu"
+            aria-controls={menuOpen ? 'mobiel-menu' : undefined}
             className="glass flex h-11 w-11 items-center justify-center rounded-xl text-shoma-slate transition-colors hover:bg-white xl:hidden"
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

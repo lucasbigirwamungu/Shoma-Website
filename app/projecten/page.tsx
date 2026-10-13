@@ -10,7 +10,7 @@ import KempsClassChartToggle from '@/components/projecten/KempsClassChartToggle'
 export const metadata: Metadata = {
   title: 'Onze Projecten – Stichting Shoma',
   description:
-    'Bekijk alle projecten van Stichting Shoma in Rubya, Tanzania: de bouw van KEMPS, regulier onderwijs, drinkwater, solarlampen, de schoolmoestuin en de schoolkeuken.',
+    'Alle projecten van Stichting Shoma in Rubya, Tanzania: de bouw van KEMPS, regulier onderwijs, drinkwater, solarlampen, de schoolmoestuin en de schoolkeuken.',
 };
 
 const SDG_COLORS: Record<number, string> = {
@@ -118,6 +118,7 @@ export default function ProjectenPage() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
+                  priority
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 25vw"
                 />

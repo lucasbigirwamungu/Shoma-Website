@@ -5,7 +5,7 @@ import ContactForm from '@/components/contact/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact – Stichting Shoma',
   description:
-    'Neem contact op met Stichting Shoma. Stel uw vraag via het contactformulier of gebruik onze contactgegevens.',
+    'Neem contact op met Stichting Shoma. Stel uw vraag via het contactformulier, of gebruik ons adres, telefoonnummer, e-mailadres of IBAN.',
 };
 
 const CONTACT_DETAILS = [

@@ -17,7 +17,7 @@ export default function KempsClassChartToggle() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          aria-controls="kemps-klasgrafiek"
+          aria-controls={open ? 'kemps-klasgrafiek' : undefined}
           className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all"
         >
           {open ? 'Verberg informatie' : 'Klik voor meer informatie'}

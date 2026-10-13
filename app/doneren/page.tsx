@@ -62,7 +62,7 @@ export default function DonatiePage() {
                       <Icon className="w-5 h-5 text-shoma-teal" aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-shoma-slate text-sm">{signal.title}</h3>
+                      <h2 className="font-semibold text-shoma-slate text-sm">{signal.title}</h2>
                       <p className="text-sm text-shoma-slate/60 mt-0.5 leading-relaxed">{signal.body}</p>
                     </div>
                   </div>

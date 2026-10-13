@@ -158,11 +158,13 @@ export default function CompenseerB2BForm() {
       <div className="space-y-5">
         {/* Company name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-bedrijfsnaam" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
             <Building2 className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Bedrijfsnaam
           </label>
           <input
+            id="co2-bedrijfsnaam"
+            autoComplete="organization"
             type="text"
             name="company_name"
             value={form.company_name}
@@ -175,11 +177,13 @@ export default function CompenseerB2BForm() {
 
         {/* Contact name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-naam" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
             <Users className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Uw naam
           </label>
           <input
+            id="co2-naam"
+            autoComplete="name"
             type="text"
             name="contact_name"
             value={form.contact_name}
@@ -192,11 +196,13 @@ export default function CompenseerB2BForm() {
 
         {/* Email */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-email" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
             <Mail className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             E-mailadres
           </label>
           <input
+            id="co2-email"
+            autoComplete="email"
             type="email"
             name="email"
             value={form.email}
@@ -209,11 +215,13 @@ export default function CompenseerB2BForm() {
 
         {/* Phone */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-telefoon" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
             <Phone className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Telefoonnummer
           </label>
           <input
+            id="co2-telefoon"
+            autoComplete="tel"
             type="tel"
             name="phone"
             value={form.phone}
@@ -225,10 +233,11 @@ export default function CompenseerB2BForm() {
 
         {/* Team size */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-teamgrootte" className="block text-sm font-medium text-gray-700 mb-2">
             Team-grootte
           </label>
           <select
+            id="co2-teamgrootte"
             name="team_size"
             value={form.team_size}
             onChange={handleChange}
@@ -246,10 +255,11 @@ export default function CompenseerB2BForm() {
 
         {/* CO2 scope */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-scope" className="block text-sm font-medium text-gray-700 mb-2">
             CO₂-scope voorkeur
           </label>
           <select
+            id="co2-scope"
             name="co2_scope"
             value={form.co2_scope}
             onChange={handleChange}
@@ -266,10 +276,11 @@ export default function CompenseerB2BForm() {
 
         {/* Message */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-opmerkingen" className="block text-sm font-medium text-gray-700 mb-2">
             Opmerkingen (optioneel)
           </label>
           <textarea
+            id="co2-opmerkingen"
             name="message"
             value={form.message}
             onChange={handleChange}
