@@ -76,7 +76,7 @@ export function getDonationConfirmationEmail(
 
       <p style="font-size: 12px; color: #999;">
         Deze email is verzonden naar uw e-mailadres. Niet door u aangevraagd?
-        <a href="https://www.shoma.nl/privacy" style="color: #6e4d1c;">Privacy</a>
+        <a href="https://www.shoma.nl/privacyverklaring" style="color: #6e4d1c;">Privacy</a>
       </p>
     </div>
 

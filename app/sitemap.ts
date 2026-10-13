@@ -11,6 +11,7 @@ const ROUTES = [
   '/nieuws',
   '/contact',
   '/doneren',
+  '/privacyverklaring',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
