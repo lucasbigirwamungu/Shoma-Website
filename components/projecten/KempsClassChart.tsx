@@ -2,11 +2,11 @@
 // Data gebaseerd op het schooloverzicht (schooljaar 2025)
 
 const CLASSES = [
-  { name: 'Nursery',  dutchName: 'Kleuterklas', pages: 'P1 + P2 + P3', count: 17, color: 'bg-shoma-terracotta',      textColor: 'text-shoma-terracotta-dark' },
+  { name: 'Nursery',  dutchName: 'Kleuterklas', pages: 'P1 + P2 + P3', count: 17, color: 'bg-shoma-terracotta',      textColor: 'text-shoma-terracotta-ink' },
   { name: 'Klas 1',  dutchName: 'Class 1',      pages: 'P4',           count: 4,  color: 'bg-shoma-teal-light',      textColor: 'text-shoma-teal-dark' },
   { name: 'Klas 2',  dutchName: 'Class 2',      pages: 'P5',           count: 9,  color: 'bg-shoma-teal',            textColor: 'text-shoma-teal-dark' },
   { name: 'Klas 3',  dutchName: 'Class 3',      pages: 'P6',           count: 11, color: 'bg-amber-500',             textColor: 'text-amber-800' },
-  { name: 'Klas 4',  dutchName: 'Class 4',      pages: 'P7',           count: 14, color: 'bg-shoma-terracotta-dark', textColor: 'text-shoma-terracotta-dark' },
+  { name: 'Klas 4',  dutchName: 'Class 4',      pages: 'P7',           count: 14, color: 'bg-shoma-terracotta-dark', textColor: 'text-shoma-terracotta-ink' },
   { name: 'Klas 5',  dutchName: 'Class 5',      pages: 'P8',           count: 8,  color: 'bg-blue-500',              textColor: 'text-blue-800' },
   { name: 'Klas 6',  dutchName: 'Class 6',      pages: 'P9',           count: 6,  color: 'bg-purple-500',            textColor: 'text-purple-800' },
   { name: 'Klas 7',  dutchName: 'Class 7',      pages: 'P10',          count: 5,  color: 'bg-pink-500',              textColor: 'text-pink-800' },

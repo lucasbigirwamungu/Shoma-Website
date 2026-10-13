@@ -2,10 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import MorphicNavbar from '@/components/layout/MorphicNavbar';
 import Footer from '@/components/layout/Footer';
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { siteUrl } from "@/lib/site-url";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+
 
 export const metadata: Metadata = {
   title: {
@@ -25,9 +27,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Stichting Shoma' }],
   creator: 'Stichting Shoma',
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shoma.nl'
-  ),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     type: 'website',
     locale: 'nl_NL',
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
       'ANBI erkend · Onbezoldigd bestuur · Volledig transparant. Sponsor een kind voor slechts €40 per jaar.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80',
-        width: 1200,
-        height: 630,
-        alt: 'Kinderen op school in Rubya, Tanzania',
+        url: '/images/hero-kemps.jpg',
+        width: 1600,
+        height: 1201,
+        alt: 'Leerlingen en team van KEMPS voor het schoolgebouw in Rubya, Tanzania',
       },
     ],
   },
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stichting Shoma – Onderwijs voor kinderen in Tanzania',
     description: 'ANBI erkend · Onbezoldigd bestuur · Volledig transparant.',
+    images: ['/images/hero-kemps.jpg'],
   },
   robots: {
     index: true,
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0D5C63',
+  themeColor: '#4a3010',
 };
 
 export default function RootLayout({
@@ -69,10 +70,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={cn("font-sans", geist.variable)}>
+    <html lang="nl" className={cn("font-sans", inter.variable)}>
       <body className="flex flex-col min-h-screen antialiased">
+        <a
+          href="#inhoud"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-shoma-slate focus:shadow-lg"
+        >
+          Ga naar de inhoud
+        </a>
         <MorphicNavbar />
-        <main className="flex-1">{children}</main>
+        <main id="inhoud" tabIndex={-1} className="flex-1 outline-none">{children}</main>
         <Footer />
       </body>
     </html>

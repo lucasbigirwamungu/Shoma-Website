@@ -56,7 +56,7 @@ export default function CompenseerEnLeerPage() {
               },
             ].map((step) => (
               <div key={step.num} className="text-center">
-                <div className="w-12 h-12 bg-shoma-terracotta text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                <div className="w-12 h-12 bg-shoma-terracotta text-shoma-slate rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
                   {step.num}
                 </div>
                 <h3 className="font-bold text-gray-800 mb-2">{step.title}</h3>

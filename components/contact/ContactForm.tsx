@@ -203,7 +203,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full inline-flex items-center justify-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:opacity-60 text-white px-6 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
+          className="w-full inline-flex items-center justify-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:opacity-60 text-shoma-slate px-6 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
         >
           <Send className="w-4 h-4" aria-hidden="true" />
           {isLoading ? 'Bezig met verzenden…' : 'Verzenden'}

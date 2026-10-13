@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Google Fonts: Inter ────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -21,7 +19,22 @@
 
   /* Toegankelijke focus-ring voor toetsenbordnavigatie */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-shoma-teal rounded-sm;
+    @apply outline outline-2 outline-offset-2 outline-shoma-teal rounded-sm;
+  }
+
+  /* Op donkere vlakken valt de bruine ring weg: daar een lichte ring */
+  .bg-shoma-teal-dark :focus-visible,
+  .bg-shoma-slate :focus-visible,
+  .bg-shoma-slate\/95 :focus-visible {
+    @apply outline-shoma-terracotta-light;
+  }
+
+  ::selection {
+    @apply bg-shoma-terracotta/30 text-shoma-slate;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
   }
 
   /* Smooth scrolling voor anchor-links */
@@ -29,8 +42,6 @@
     scroll-margin-top: 80px;
   }
   .theme {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
     --animate-aurora: aurora 8s ease-in-out infinite alternate;

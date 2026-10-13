@@ -8,8 +8,8 @@ const ALBUMS = albums;
 
 const ACCENT_CLASSES: Record<string, string> = {
   teal: 'bg-shoma-teal',
-  terracotta: 'bg-shoma-terracotta',
-  amber: 'bg-amber-500',
+  terracotta: 'bg-shoma-teal-light',
+  amber: 'bg-amber-700',
 };
 
 // Elk album krijgt een eigen achtergrondkleur, zodat de albums duidelijk van elkaar gescheiden zijn

@@ -162,12 +162,12 @@ export default function BusinessDonationForm() {
           {['input', 'impact', 'checkout'].map((s, idx) => (
             <div key={s} className="flex items-center">
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
                   step === s
-                    ? 'bg-shoma-terracotta'
+                    ? 'bg-shoma-terracotta text-shoma-slate'
                     : idx < ['input', 'impact', 'checkout'].indexOf(step)
-                      ? 'bg-green-600'
-                      : 'bg-gray-300'
+                      ? 'bg-green-700 text-white'
+                      : 'bg-gray-200 text-shoma-slate/70'
                 }`}
               >
                 {idx + 1}
@@ -211,7 +211,7 @@ export default function BusinessDonationForm() {
                     onClick={() => handlePreset(key as keyof typeof PRESETS.business)}
                     className={`p-3 rounded-lg text-sm font-medium transition ${
                       footprint.category === presetData.category
-                        ? 'bg-shoma-terracotta text-white'
+                        ? 'bg-shoma-terracotta text-shoma-slate'
                         : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                     }`}
                   >
@@ -238,7 +238,7 @@ export default function BusinessDonationForm() {
                 className="w-full"
               />
               <div className="flex justify-between items-center mt-2">
-                <span className="text-lg font-bold text-shoma-terracotta">
+                <span className="text-lg font-bold text-shoma-terracotta-ink">
                   {footprint.employees || 20}
                 </span>
                 <span className="text-sm text-gray-600">
@@ -264,7 +264,7 @@ export default function BusinessDonationForm() {
                 className="w-full"
               />
               <div className="flex justify-between items-center mt-2">
-                <span className="text-lg font-bold text-shoma-terracotta">
+                <span className="text-lg font-bold text-shoma-terracotta-ink">
                   {footprint.vehicles || 5}
                 </span>
                 <span className="text-sm text-gray-600">
@@ -298,7 +298,7 @@ export default function BusinessDonationForm() {
           <button
             onClick={handleNextStep}
             disabled={co2Kg === 0}
-            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-white font-bold py-3 rounded-lg transition"
+            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
           >
             Volgende: Impact zien →
           </button>
@@ -330,7 +330,7 @@ export default function BusinessDonationForm() {
             </button>
             <button
               onClick={handleNextStep}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               MVO Certificaat aanvragen →
             </button>
@@ -356,7 +356,7 @@ export default function BusinessDonationForm() {
               </div>
               <div>
                 <span className="text-gray-600">Donatie bedrag:</span>
-                <p className="font-bold text-shoma-terracotta">
+                <p className="font-bold text-shoma-terracotta-ink">
                   {formatPrice(calculation.amountEur)}
                 </p>
               </div>
@@ -418,7 +418,7 @@ export default function BusinessDonationForm() {
             <button
               onClick={handleSubmitDonation}
               disabled={!companyName || !companyEmail || isLoading}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-white font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               {isLoading ? 'Verwerking...' : 'Betalen (iDEAL / Creditcard)'}
             </button>

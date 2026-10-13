@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 const CATEGORY_META: Record<ProjectCategory, { label: string; accent: string; tag: string }> = {
   education: { label: 'Onderwijs & KEMPS', accent: 'bg-shoma-teal', tag: 'Onderwijs' },
-  water: { label: 'Water', accent: 'bg-blue-500', tag: 'Water' },
-  energy: { label: 'Energie', accent: 'bg-shoma-terracotta', tag: 'Energie' },
+  water: { label: 'Water', accent: 'bg-blue-600', tag: 'Water' },
+  energy: { label: 'Energie', accent: 'bg-shoma-teal-light', tag: 'Energie' },
 };
 
 const CATEGORY_ORDER: ProjectCategory[] = ['education', 'water', 'energy'];

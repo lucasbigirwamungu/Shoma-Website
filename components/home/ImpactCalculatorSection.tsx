@@ -18,7 +18,7 @@ export default function ImpactCalculatorSection() {
     >
       {/* Tekst */}
       <motion.div variants={staggerItem} className="lg:w-1/2">
-        <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-3">
+        <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
           Uw impact in cijfers
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold text-shoma-slate leading-tight">
@@ -40,14 +40,14 @@ export default function ImpactCalculatorSection() {
             <div key={item.amount} className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-shoma-terracotta shrink-0" />
               <span className="text-sm text-shoma-slate">
-                <strong className="text-shoma-terracotta">{item.amount}</strong> {item.effect}
+                <strong className="text-shoma-terracotta-ink">{item.amount}</strong> {item.effect}
               </span>
             </div>
           ))}
         </div>
         <Link
           href="/doneren"
-          className="mt-8 inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-7 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
+          className="mt-8 inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-7 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
         >
           <Heart className="w-4 h-4" aria-hidden="true" />
           Doneer direct

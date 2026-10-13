@@ -51,7 +51,7 @@ export default function StoryBadge() {
         Shoma
       </span>
       <span className="text-shoma-slate/60 text-sm">is het Kihaya-woord voor</span>
-      <span className="text-lg font-bold text-shoma-terracotta-dark">&ldquo;onderwijs&rdquo;</span>
+      <span className="text-lg font-bold text-shoma-terracotta-ink">&ldquo;onderwijs&rdquo;</span>
     </div>
   );
 }

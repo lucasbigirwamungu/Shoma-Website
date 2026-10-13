@@ -25,8 +25,8 @@ const SDG_NAMES: Record<number, string> = {
 
 const CATEGORY_META: Record<ProjectCategory, { tag: string; accent: string; icon: LucideIcon }> = {
   education: { tag: 'Onderwijs', accent: 'bg-shoma-teal', icon: GraduationCap },
-  water: { tag: 'Water', accent: 'bg-blue-500', icon: Droplets },
-  energy: { tag: 'Energie', accent: 'bg-shoma-terracotta', icon: Sun },
+  water: { tag: 'Water', accent: 'bg-blue-600', icon: Droplets },
+  energy: { tag: 'Energie', accent: 'bg-shoma-teal-light', icon: Sun },
 };
 
 // Openstaande wensen, overgenomen van shoma.nl ("De afbouw van de school" en
@@ -168,7 +168,7 @@ export default function ProjectenPage() {
                     <p className="text-xs text-shoma-slate/55 mt-0.5">leerlingen totaal</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
-                    <p className="font-extrabold text-shoma-terracotta text-xl">55</p>
+                    <p className="font-extrabold text-shoma-terracotta-ink text-xl">55</p>
                     <p className="text-xs text-shoma-slate/55 mt-0.5">door Shoma gesponsord</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center col-span-2">
@@ -226,18 +226,18 @@ export default function ProjectenPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
-                    <p className="font-extrabold text-shoma-terracotta text-xl">155</p>
+                    <p className="font-extrabold text-shoma-terracotta-ink text-xl">155</p>
                     <p className="text-xs text-shoma-slate/55 mt-0.5">kinderen (2025)</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
-                    <p className="font-extrabold text-shoma-terracotta text-xl">€ 40</p>
+                    <p className="font-extrabold text-shoma-terracotta-ink text-xl">€ 40</p>
                     <p className="text-xs text-shoma-slate/55 mt-0.5">per kind per jaar</p>
                   </div>
                   {/* Financiële voortgang */}
                   <div className="col-span-2 mt-3 space-y-2">
                     <div className="flex justify-between text-xs text-shoma-slate/55 mb-1.5">
                       <span>Financieringsvoortgang</span>
-                      <span className="font-semibold text-shoma-terracotta">97%</span>
+                      <span className="font-semibold text-shoma-terracotta-ink">97%</span>
                     </div>
                     <div className="w-full h-2 bg-shoma-sand rounded-full overflow-hidden">
                       <div className="h-full bg-shoma-terracotta rounded-full" style={{ width: '97%' }} />
@@ -250,7 +250,7 @@ export default function ProjectenPage() {
                 </div>
                 <Link
                   href="/doneren?type=regular"
-                  className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all w-full justify-center"
+                  className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-5 py-2.5 rounded-xl font-semibold text-sm transition-all w-full justify-center"
                 >
                   Sponsor een schoolkind
                   <ArrowRight className="w-4 h-4" />
@@ -337,7 +337,7 @@ export default function ProjectenPage() {
 
                     <Link
                       href="/doneren"
-                      className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-sm self-start"
+                      className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-sm self-start"
                     >
                       Ondersteun dit project <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -432,7 +432,7 @@ export default function ProjectenPage() {
               </p>
               <Link
                 href="/doneren"
-                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all self-start"
+                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-5 py-2.5 rounded-xl font-semibold text-sm transition-all self-start"
               >
                 Doneer nu <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>

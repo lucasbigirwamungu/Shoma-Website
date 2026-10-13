@@ -8,11 +8,11 @@ import { TextAnimate } from '@/components/ui/text-animate';
 import { staggerContainer, staggerItem } from '@/components/ui/animated-section';
 
 const SDG_COLORS: Record<number, string> = {
-  1: 'bg-red-500',
-  4: 'bg-yellow-500',
-  6: 'bg-blue-500',
-  7: 'bg-yellow-400',
-  13: 'bg-green-600',
+  1: 'bg-red-600',
+  4: 'bg-red-800',
+  6: 'bg-blue-600',
+  7: 'bg-amber-700',
+  13: 'bg-green-700',
 };
 
 const projects = [
@@ -61,7 +61,7 @@ export default function ImpactGrid() {
         {/* Section header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
           <div>
-            <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-2">
               Onze projecten in Rubya
             </p>
             <TextAnimate
@@ -123,6 +123,7 @@ export default function ImpactGrid() {
                         className={`${SDG_COLORS[sdg] ?? 'bg-gray-500'} text-white text-xs font-bold rounded-md px-1.5 py-0.5`}
                         title={`SDG ${sdg}`}
                       >
+                        <span className="sr-only">Duurzaam ontwikkelingsdoel </span>
                         {sdg}
                       </span>
                     ))}
@@ -141,13 +142,13 @@ export default function ImpactGrid() {
                   {/* Stat */}
                   <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
                     <div>
-                      <span className="text-xl font-extrabold text-shoma-terracotta">
+                      <span className="text-xl font-extrabold text-shoma-terracotta-ink">
                         {project.stat.value}
                       </span>
                       <span className="text-xs text-shoma-slate/50 ml-1.5">{project.stat.label}</span>
                     </div>
                     <Link
-                      href={`/projecten/${project.slug}`}
+                      href="/projecten"
                       className="flex items-center gap-1 text-sm font-semibold text-shoma-teal hover:text-shoma-teal-dark transition-colors"
                       aria-label={`Meer over ${project.title}`}
                     >

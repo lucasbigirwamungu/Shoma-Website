@@ -2,13 +2,13 @@
 
 /**
  * Trust metrics als interactieve card stack (kokonutui "Card Stack"-patroon):
- * in rust zie je alleen de bovenste kaart, een klik/tik waaiert de overige
- * drie uit. Op mobiel (te weinig breedte om te waaieren) tonen we alle vier
- * meteen in een leesbaar grid.
+ * de stapel waaiert vanzelf uit zodra hij in beeld komt, zodat alle vier de
+ * cijfers leesbaar zijn zonder klik; klikken klapt hem in en uit. Onder lg
+ * (te weinig breedte om te waaieren) tonen we alle vier in een leesbaar grid.
  */
 
-import { motion, useReducedMotion } from 'motion/react';
-import { useState } from 'react';
+import { motion, useInView, useReducedMotion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 import { CalendarCheck, GraduationCap, Droplets, BadgeCheck, type LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
@@ -138,7 +138,7 @@ function MetricCard({ metric, index, totalCards, isExpanded, reducedMotion }: Me
         <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
       </div>
       <div className="mt-5">
-        <div className="text-3xl font-extrabold text-shoma-teal sm:text-4xl">
+        <div className="whitespace-nowrap text-[1.75rem] font-extrabold leading-tight tracking-tight tabular-nums text-shoma-teal">
           <MetricValue metric={metric} />
         </div>
         <p className="mt-2 font-semibold text-shoma-slate">{metric.label}</p>
@@ -152,7 +152,7 @@ function MetricCard({ metric, index, totalCards, isExpanded, reducedMotion }: Me
 function MobileMetricGrid() {
   return (
     <motion.div
-      className="grid grid-cols-2 gap-4 md:hidden"
+      className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
@@ -170,7 +170,7 @@ function MobileMetricGrid() {
               <Icon className="h-4 w-4" aria-hidden="true" strokeWidth={1.75} />
             </div>
             <div className="mt-4">
-              <div className="text-2xl font-extrabold text-shoma-teal">
+              <div className="whitespace-nowrap text-2xl font-extrabold tracking-tight tabular-nums text-shoma-teal">
                 <MetricValue metric={metric} />
               </div>
               <p className="mt-1.5 text-sm font-semibold text-shoma-slate">{metric.label}</p>
@@ -190,6 +190,12 @@ interface TrustCardStackProps {
 export default function TrustCardStack({ className }: TrustCardStackProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const reducedMotion = useReducedMotion() ?? false;
+  const stackRef = useRef<HTMLButtonElement>(null);
+  const inView = useInView(stackRef, { once: true, amount: 0.6 });
+
+  useEffect(() => {
+    if (inView) setIsExpanded(true);
+  }, [inView]);
 
   return (
     <div className={cn('mb-6', className)}>
@@ -200,10 +206,11 @@ export default function TrustCardStack({ className }: TrustCardStackProps) {
         aria-label={
           isExpanded ? 'Klap de cijferstack weer in' : 'Klik om alle cijfers te bekijken'
         }
+        ref={stackRef}
         className={cn(
           'relative mx-auto hidden cursor-pointer appearance-none border-0 bg-transparent p-0',
           'min-h-[230px] w-full max-w-[860px]',
-          'md:flex md:items-center md:justify-center'
+          'lg:flex lg:items-center lg:justify-center'
         )}
         onClick={() => setIsExpanded((v) => !v)}
         type="button"
@@ -220,8 +227,8 @@ export default function TrustCardStack({ className }: TrustCardStackProps) {
         ))}
       </button>
 
-      <p className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/45 md:block">
-        {isExpanded ? 'Klik om weer in te klappen' : 'Klik op de kaarten om alle cijfers te zien →'}
+      <p className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/70 lg:block">
+        {isExpanded ? 'Klik om de kaarten in te klappen' : 'Klik op de kaarten om alle cijfers te zien'}
       </p>
     </div>
   );

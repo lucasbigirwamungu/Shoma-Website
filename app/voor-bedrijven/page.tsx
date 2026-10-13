@@ -103,7 +103,7 @@ export default function VoorBedrijvenPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-7 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
+                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-7 py-3.5 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
               >
                 Neem contact op
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -142,7 +142,7 @@ export default function VoorBedrijvenPage() {
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#compenseer-en-leer"
-                  className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-6 py-3 rounded-xl font-semibold transition-all"
+                  className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-6 py-3 rounded-xl font-semibold transition-all"
                 >
                   Ontdek Compenseer & Leer
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -194,7 +194,7 @@ export default function VoorBedrijvenPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
-              <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
                 Waarom Shoma?
               </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-6">
@@ -359,7 +359,7 @@ export default function VoorBedrijvenPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Tekst */}
             <div>
-              <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
                 Contact opnemen
               </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-5">

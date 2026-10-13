@@ -140,7 +140,7 @@ export default function CompenseerBedrijvenSections() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-8 py-4 rounded-xl font-bold text-base transition-all shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-8 py-4 rounded-xl font-bold text-base transition-all shadow-md hover:shadow-lg"
               >
                 Zie Pricing
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
@@ -355,7 +355,7 @@ export default function CompenseerBedrijvenSections() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
-              <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
                 Aan de slag
               </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-5">

@@ -24,7 +24,7 @@ const rows: ImpactRow[] = [
       const v = calcRegularSchoolYears(a);
       return `${v} ${v === 1 ? 'jaar' : 'jaar'}`;
     },
-    color: 'text-shoma-terracotta',
+    color: 'text-shoma-terracotta-ink',
   },
   {
     icon: BookOpen,
@@ -39,7 +39,7 @@ const rows: ImpactRow[] = [
     icon: Droplets,
     label: 'Liters schoon drinkwater',
     value: (a) => `${calcCleanWaterLiters(a).toLocaleString('nl-NL')} L`,
-    color: 'text-blue-500',
+    color: 'text-blue-700',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
       <h3 className="text-xl font-bold text-shoma-slate mb-1">
         Bereken uw directe impact
       </h3>
-      <p className="text-sm text-shoma-slate/55 mb-5">
+      <p className="text-sm text-shoma-slate/70 mb-5">
         Dankzij onze 100% vrijwilligersstructuur gaat elke euro rechtstreeks naar Rubya.
       </p>
 
@@ -135,7 +135,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
         })}
       </div>
 
-      <p className="text-xs text-shoma-slate/50 mt-5 text-center leading-relaxed">
+      <p className="text-xs text-shoma-slate/70 mt-5 text-center leading-relaxed">
         Gebaseerd op werkelijke kosten: €40/jaar regulier onderwijs · €30/maand KEMPS ·
         €1 = 50 liter drinkwater via het BAENT-pompstation.
       </p>

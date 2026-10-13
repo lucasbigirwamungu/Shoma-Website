@@ -217,7 +217,7 @@ export default function OverOnsPage() {
           <Reveal className="mt-5 bg-shoma-sand border border-shoma-terracotta/20 rounded-2xl p-5 flex items-start gap-4">
             <span className="text-2xl">📄</span>
             <div>
-              <p className="font-semibold text-shoma-terracotta-dark mb-1">Wilt u meer informatie over de fiscale aftrek?</p>
+              <p className="font-semibold text-shoma-terracotta-ink mb-1">Wilt u meer informatie over de fiscale aftrek?</p>
               <p className="text-sm text-shoma-slate/70 leading-relaxed">
                 Als ANBI-instelling kunt u uw donatie aan Stichting Shoma aftrekken van uw
                 inkomstenbelasting. Bij een periodieke schenking (5 jaar vastgelegd via een
@@ -227,7 +227,7 @@ export default function OverOnsPage() {
                 href="https://www.belastingdienst.nl/wps/wcm/connect/nl/aftrek-en-kortingen/content/kosten-voor-anbi-aftrekken-als-gift"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 mt-3 text-shoma-terracotta font-semibold text-sm hover:text-shoma-terracotta-dark underline underline-offset-2"
+                className="inline-flex items-center gap-1.5 mt-3 text-shoma-terracotta-ink font-semibold text-sm hover:text-shoma-terracotta-ink underline underline-offset-2"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 Klik hier voor meer informatie over de fiscale aftrek
@@ -268,7 +268,7 @@ export default function OverOnsPage() {
             {ambassadors.map((a) => (
               <StaggerItem key={a.name} className="flex items-center gap-2 bg-shoma-sand/60 border border-shoma-teal/10 rounded-xl px-4 py-2">
                 <div className="w-7 h-7 bg-shoma-terracotta/20 rounded-full flex items-center justify-center">
-                  <span className="text-shoma-terracotta-dark font-bold text-xs">{a.name.charAt(0)}</span>
+                  <span className="text-shoma-terracotta-ink font-bold text-xs">{a.name.charAt(0)}</span>
                 </div>
                 <div>
                   <p className="font-semibold text-shoma-slate text-xs">{a.name}</p>
@@ -279,14 +279,14 @@ export default function OverOnsPage() {
           </StaggerContainer>
 
           <div className="flex items-center gap-3 mb-4">
-            <Heart className="w-5 h-5 text-shoma-terracotta" aria-hidden="true" />
+            <Heart className="w-5 h-5 text-shoma-terracotta-ink" aria-hidden="true" />
             <h3 className="text-lg font-bold text-shoma-slate">Lokaal team Tanzania</h3>
           </div>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {localTeam.map((member) => (
               <StaggerItem key={member.name} className="bg-shoma-sand rounded-xl p-4 flex items-center gap-3 border border-shoma-teal/10">
                 <div className="w-9 h-9 bg-shoma-terracotta rounded-full flex items-center justify-center shrink-0">
-                  <span className="text-white font-bold text-xs">{member.name.charAt(0)}</span>
+                  <span className="text-shoma-slate font-bold text-xs">{member.name.charAt(0)}</span>
                 </div>
                 <div>
                   <p className="font-semibold text-shoma-slate text-sm">{member.name}</p>
@@ -505,7 +505,7 @@ export default function OverOnsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/doneren"
-              className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-7 py-3.5 rounded-xl font-semibold transition-all duration-150 active:scale-[0.97]"
+              className="inline-flex items-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-7 py-3.5 rounded-xl font-semibold transition-all duration-150 active:scale-[0.97]"
             >
               <Heart className="w-4 h-4" aria-hidden="true" />
               Doneer nu

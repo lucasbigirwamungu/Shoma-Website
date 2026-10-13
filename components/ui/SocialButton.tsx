@@ -83,7 +83,7 @@ export default function SocialButton({
               'w-10',
               'flex items-center justify-center',
               'bg-shoma-terracotta',
-              'text-white',
+              'text-shoma-slate',
               i === 0 && 'rounded-l-md',
               i === items.length - 1 && 'rounded-r-md',
               'border-white/10 border-r last:border-r-0',

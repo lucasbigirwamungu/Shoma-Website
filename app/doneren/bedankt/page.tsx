@@ -34,15 +34,15 @@ export default function BedanktPage() {
           <h3 className="font-semibold text-shoma-slate mb-3">Wat uw donatie betekent</h3>
           <div className="space-y-2.5 text-sm text-shoma-slate/70">
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta mt-0.5">✓</span>
+              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
               <span>Uw geld gaat direct naar een kind in Rubya, Tanzania</span>
             </div>
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta mt-0.5">✓</span>
+              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
               <span>Het bestuur werkt onbezoldigd en verantwoordt elke besteding in de jaarrekening</span>
             </div>
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta mt-0.5">✓</span>
+              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
               <span>U ontvangt maximaal 4× per jaar updates als u zich aanmeldde</span>
             </div>
           </div>

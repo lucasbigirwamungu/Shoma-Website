@@ -33,7 +33,7 @@ const partners: Partner[] = [
   {
     name: 'Inextern',
     initials: 'INX',
-    color: 'bg-shoma-terracotta',
+    color: 'bg-shoma-teal-light',
     contribution: 'Detacherings-partner',
     quote:
       'Als detacheerder zochten wij naar een concreet project dat onze MVO-ambities waarmaakte. Shoma leverde precies dat.',
@@ -140,7 +140,7 @@ export default function PartnerSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
-          <p className="text-shoma-terracotta font-semibold text-sm uppercase tracking-wider mb-2">
+          <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-2">
             Zakelijk partnerschap
           </p>
           <TextAnimate

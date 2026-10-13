@@ -33,12 +33,15 @@ export default function HomePage() {
       {/* 5. Nieuwsbrief CTA strip */}
       <AnimatedSection as="section" className="bg-shoma-clay py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <MorphingText
-            texts={['Blijf op de hoogte.', 'Mis geen update.', 'Volg ons verhaal.']}
-            className="mb-3 h-9 text-2xl text-shoma-slate md:h-9 lg:text-2xl"
-          />
-          <p className="text-shoma-slate/60 mb-6">
-            Maximaal 4 nieuwsbrieven per jaar met fotoreportages en voortgangsuppdates
+          <h2 className="sr-only">Blijf op de hoogte</h2>
+          <div aria-hidden="true">
+            <MorphingText
+              texts={['Blijf op de hoogte.', 'Mis geen update.', 'Volg ons verhaal.']}
+              className="mb-3 h-9 text-2xl text-shoma-slate md:h-9 lg:text-2xl"
+            />
+          </div>
+          <p className="text-shoma-slate/75 mb-6">
+            Maximaal 4 nieuwsbrieven per jaar met fotoreportages en voortgangsupdates
             rechtstreeks vanuit Rubya.
           </p>
           <Link

@@ -68,6 +68,8 @@ const config: Config = {
             DEFAULT: '#ef9403',
             light: '#fbd101',
             dark: '#c19b11',
+            // Leesbare tekstvariant van het oranje op lichte vlakken (≥4.5:1 op wit, sand en cream)
+            ink: '#8f5200',
           },
           // Tekstkleur: zeer donkerbruin
           slate: '#3d2807',
@@ -83,7 +85,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -149,7 +149,7 @@ export default function TierCardFlip({
                 <div className="absolute inset-[-8px] rounded-lg bg-gradient-to-br from-shoma-terracotta/20 via-shoma-terracotta/10 to-transparent transition-opacity duration-300" />
                 <Repeat2
                   aria-hidden="true"
-                  className="relative z-10 h-4 w-4 text-shoma-terracotta transition-transform duration-300 group-hover/icon:-rotate-12 group-hover/icon:scale-110"
+                  className="relative z-10 h-4 w-4 text-shoma-terracotta-ink transition-transform duration-300 group-hover/icon:-rotate-12 group-hover/icon:scale-110"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function TierCardFlip({
                       transitionDelay: `${index * 60 + 150}ms`,
                     }}
                   >
-                    <ArrowRight aria-hidden="true" className="h-3 w-3 shrink-0 text-shoma-terracotta" />
+                    <ArrowRight aria-hidden="true" className="h-3 w-3 shrink-0 text-shoma-terracotta-ink" />
                     <span>{fact}</span>
                   </div>
                 )
@@ -212,12 +212,12 @@ export default function TierCardFlip({
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-shoma-terracotta focus-visible:ring-offset-2'
               )}
             >
-              <span className="font-semibold text-sm text-shoma-slate transition-colors duration-300 group-hover/start:text-shoma-terracotta-dark">
+              <span className="font-semibold text-sm text-shoma-slate transition-colors duration-300 group-hover/start:text-shoma-terracotta-ink">
                 Interesse tonen
               </span>
               <ArrowRight
                 aria-hidden="true"
-                className="relative z-10 h-4 w-4 text-shoma-terracotta transition-transform duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110"
+                className="relative z-10 h-4 w-4 text-shoma-terracotta-ink transition-transform duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110"
               />
             </Link>
           </div>

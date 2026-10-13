@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart, Mail, ExternalLink } from 'lucide-react';
+import { Heart, Mail } from 'lucide-react';
 import SocialButton from '@/components/ui/SocialButton';
 
 export default function Footer() {
@@ -12,12 +12,12 @@ export default function Footer() {
       <div className="bg-shoma-terracotta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-bold text-white">Iedere euro telt: direct naar Rubya.</h3>
-            <p className="text-white/80 mt-1">Onbezoldigd bestuur. Volledig transparant. Fiscaal aftrekbaar als ANBI.</p>
+            <p className="text-xl font-bold text-shoma-slate">Iedere euro telt: direct naar Rubya.</p>
+            <p className="text-shoma-slate/85 mt-1">Onbezoldigd bestuur. Volledig transparant. Fiscaal aftrekbaar als ANBI.</p>
           </div>
           <Link
             href="/doneren"
-            className="flex items-center gap-2 bg-white text-shoma-terracotta-dark px-6 py-3 rounded-xl font-bold hover:bg-shoma-sand transition-colors whitespace-nowrap shadow-sm"
+            className="flex items-center gap-2 bg-white text-shoma-slate px-6 py-3 rounded-xl font-bold hover:bg-shoma-sand transition-colors whitespace-nowrap shadow-sm"
           >
             <Heart className="w-4 h-4" aria-hidden="true" />
             Doneer nu
@@ -45,7 +45,7 @@ export default function Footer() {
               Wij bevorderen onderwijs en levenskwaliteit voor kansarme kinderen in
               Noordwest-Tanzania.
             </p>
-            <div className="mt-5 flex items-center gap-2 text-sm text-white/60">
+            <div className="mt-5 flex items-center gap-2 text-sm text-white/75">
               <Mail className="w-4 h-4 shrink-0" aria-hidden="true" />
               <a href="mailto:info@shoma.nl" className="hover:text-white transition-colors">
                 info@shoma.nl
@@ -55,9 +55,9 @@ export default function Footer() {
 
           {/* Navigatie */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70 mb-4">
               Navigatie
-            </h4>
+            </h2>
             <ul className="space-y-2.5">
               {[
                 { href: '/over-ons', label: 'Over Ons' },
@@ -81,9 +81,9 @@ export default function Footer() {
 
           {/* Transparantie */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70 mb-4">
               Transparantie
-            </h4>
+            </h2>
             <ul className="space-y-2.5">
               {[
                 { href: '/over-ons#anbi', label: 'ANBI Status' },
@@ -96,12 +96,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-white text-sm transition-colors flex items-center gap-1.5"
+                    className="text-white/70 hover:text-white text-sm transition-colors"
                   >
                     {link.label}
-                    {link.href.includes('#') && (
-                      <ExternalLink className="w-3 h-3 opacity-50" aria-hidden="true" />
-                    )}
                   </Link>
                 </li>
               ))}
@@ -111,11 +108,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-white/50 text-xs space-y-1 text-center md:text-left">
+          <div className="text-white/70 text-xs space-y-1 text-center md:text-left">
             <p>© {currentYear} Stichting Onderwijsbevordering Noordwest Tanzania (Shoma)</p>
-            <p>KvK: geregistreerd te Nederland &bull; RSIN: 8143.90.249 &bull; IBAN: NL55 ABNA 0501 3541 58</p>
+            <p>KvK: 04076887 &bull; RSIN: 8143.90.249 &bull; IBAN: NL55 ABNA 0501 3541 58</p>
           </div>
-          <div className="flex items-center gap-1.5 text-white/40 text-xs">
+          <div className="flex items-center gap-1.5 text-white/70 text-xs">
             <span>Onbezoldigd bestuur</span>
             <span>&bull;</span>
             <span className="text-shoma-terracotta-light font-medium">ANBI erkend</span>

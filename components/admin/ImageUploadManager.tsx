@@ -177,7 +177,7 @@ export default function ImageUploadManager({
             <button
               onClick={handleUpload}
               disabled={uploading}
-              className="w-full bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white py-3 rounded-xl font-semibold transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate py-3 rounded-xl font-semibold transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {uploading ? (
                 <>

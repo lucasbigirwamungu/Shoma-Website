@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="max-w-2xl">
           {/* ANBI badge */}
           <div className="inline-flex items-center gap-2 bg-shoma-teal border border-shoma-teal-light rounded-full px-4 py-1.5 mb-8">
-            <div className="w-2 h-2 rounded-full bg-shoma-terracotta-light animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-shoma-terracotta-light animate-pulse motion-reduce:animate-none" aria-hidden="true" />
             <span className="text-white/90 text-sm font-medium">
               ANBI erkend · Onbezoldigd bestuur · Opgericht 2005
             </span>
@@ -48,8 +48,8 @@ export default function HeroSection() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <motion.div
               className="relative"
-              initial={reducedMotion ? false : { opacity: 0, scale: 0.8, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
+              initial={reducedMotion ? false : { scale: 0.92, y: 8 }}
+              animate={{ scale: 1, y: 0 }}
               transition={
                 reducedMotion
                   ? { duration: 0.3 }
@@ -66,7 +66,7 @@ export default function HeroSection() {
               )}
               <Link
                 href="/doneren"
-                className="relative inline-flex items-center justify-center gap-2 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="relative flex w-full items-center justify-center gap-2 sm:inline-flex sm:w-auto bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 <Heart className="w-5 h-5" aria-hidden="true" />
                 Doneer direct

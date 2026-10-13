@@ -236,7 +236,7 @@ export default function B2BContactForm() {
         type="submit"
         size="lg"
         disabled={isLoading}
-        className="mt-6 w-full bg-shoma-terracotta text-white hover:bg-shoma-terracotta-dark"
+        className="mt-6 w-full bg-shoma-terracotta text-shoma-slate hover:bg-shoma-terracotta-dark"
       >
         <Send className="w-5 h-5" aria-hidden="true" />
         {isLoading ? 'Versturen…' : 'Aanvraag versturen'}

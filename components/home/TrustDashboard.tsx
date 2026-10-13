@@ -12,7 +12,7 @@ export default function TrustDashboard() {
           </h2>
           <p className="mt-3 text-shoma-slate/60 max-w-xl mx-auto">
             Al meer dan 20 jaar bewijzen we dat elke euro telt. Bekijk de getekende
-            jaarrekeningen van 2013 tot 2025 op onze transparantiepagina.
+            jaarrekeningen van 2012 tot 2025 op onze transparantiepagina.
           </p>
         </AnimatedSection>
 
@@ -25,7 +25,7 @@ export default function TrustDashboard() {
             href="/over-ons#jaarrekeningen"
             className="inline-flex items-center gap-2 text-sm text-shoma-teal hover:text-shoma-teal-dark font-medium underline-offset-2 hover:underline transition-colors"
           >
-            Bekijk alle jaarrekeningen (2013–2025) →
+            Bekijk alle jaarrekeningen (2012–2025) →
           </a>
         </div>
       </div>

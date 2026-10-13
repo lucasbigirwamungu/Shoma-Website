@@ -177,12 +177,12 @@ export default function IndividualDonationForm() {
           {['input', 'impact', 'checkout'].map((s, idx) => (
             <div key={s} className="flex items-center">
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
                   step === s
-                    ? 'bg-shoma-terracotta'
+                    ? 'bg-shoma-terracotta text-shoma-slate'
                     : idx < ['input', 'impact', 'checkout'].indexOf(step)
-                      ? 'bg-green-600'
-                      : 'bg-gray-300'
+                      ? 'bg-green-700 text-white'
+                      : 'bg-gray-200 text-shoma-slate/70'
                 }`}
               >
                 {idx + 1}
@@ -219,7 +219,7 @@ export default function IndividualDonationForm() {
               className="w-full"
             />
             <div className="flex justify-between items-center mt-2">
-              <span className="text-lg font-bold text-shoma-terracotta">
+              <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.flightHours || 0} uur
               </span>
               <span className="text-sm text-gray-600">
@@ -256,7 +256,7 @@ export default function IndividualDonationForm() {
               className="w-full"
             />
             <div className="flex justify-between items-center mt-2">
-              <span className="text-lg font-bold text-shoma-terracotta">
+              <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.distanceKm || 0} km
               </span>
               <span className="text-sm text-gray-600">
@@ -280,7 +280,7 @@ export default function IndividualDonationForm() {
               className="w-full"
             />
             <div className="flex justify-between items-center mt-2">
-              <span className="text-lg font-bold text-shoma-terracotta">
+              <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.annualFootprintKg || 0} kg
               </span>
               <span className="text-sm text-gray-600">
@@ -299,7 +299,7 @@ export default function IndividualDonationForm() {
           <button
             onClick={handleNextStep}
             disabled={co2Kg === 0}
-            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-white font-bold py-3 rounded-lg transition"
+            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
           >
             Volgende: Impact zien →
           </button>
@@ -323,7 +323,7 @@ export default function IndividualDonationForm() {
             </button>
             <button
               onClick={handleNextStep}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               Doneren →
             </button>
@@ -349,7 +349,7 @@ export default function IndividualDonationForm() {
               </div>
               <div>
                 <span className="text-gray-600">Donatie bedrag:</span>
-                <p className="font-bold text-shoma-terracotta">
+                <p className="font-bold text-shoma-terracotta-ink">
                   {formatPrice(calculation.amountEur)}
                 </p>
               </div>
@@ -400,7 +400,7 @@ export default function IndividualDonationForm() {
             <button
               onClick={handleSubmitDonation}
               disabled={!donorName || !donorEmail || isLoading}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-white font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               {isLoading ? 'Verwerking...' : 'Betalen met iDEAL'}
             </button>

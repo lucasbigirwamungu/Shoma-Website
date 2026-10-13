@@ -118,11 +118,11 @@ export default function MorphicNavbar() {
                   href={item.href}
                   aria-current={active ? 'page' : undefined}
                   className={cn(
-                    'flex items-center justify-center whitespace-nowrap px-3.5 py-2 text-[13px] transition-all duration-300',
+                    'flex items-center justify-center whitespace-nowrap px-3.5 py-2.5 text-sm transition-all duration-300',
                     active
                       ? 'mx-1 rounded-xl font-semibold text-shoma-terracotta-light'
                       : cn(
-                          'text-shoma-sand/75 hover:text-white',
+                          'text-shoma-sand/85 hover:text-white',
                           (prevActive || isFirst) && 'rounded-l-xl',
                           (nextActive || isLast) && 'rounded-r-xl'
                         )
@@ -138,20 +138,19 @@ export default function MorphicNavbar() {
         {/* CTA + mobiel menu toggle */}
         <div className="flex shrink-0 items-center gap-2">
           <motion.div
-            initial={reducedMotion ? false : { opacity: 0, scale: 0.5, y: -8 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            initial={reducedMotion ? false : { scale: 0.85, y: -6 }}
+            animate={{ scale: 1, y: 0 }}
             transition={
               reducedMotion
                 ? { duration: 0.3 }
                 : { type: 'spring', stiffness: 260, damping: 18, delay: 0.9 }
             }
-            className="hidden sm:block"
           >
             <Link
               href="/doneren"
-              className="flex items-center gap-2 overflow-visible rounded-xl bg-shoma-terracotta px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-shoma-terracotta-dark hover:shadow-md"
+              className="flex h-11 items-center gap-2 overflow-visible rounded-xl bg-shoma-terracotta px-3.5 text-sm font-semibold text-shoma-slate shadow-sm transition-all duration-200 hover:bg-shoma-terracotta-dark hover:shadow-md sm:px-5"
             >
-              <Heart className="h-4 w-4" aria-hidden="true" />
+              <Heart className="hidden h-4 w-4 sm:block" aria-hidden="true" />
               <span id="donate-cta-text">Doneer nu</span>
             </Link>
           </motion.div>
@@ -160,6 +159,7 @@ export default function MorphicNavbar() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Menu sluiten' : 'Menu openen'}
             aria-expanded={menuOpen}
+            aria-controls="mobiel-menu"
             className="glass flex h-11 w-11 items-center justify-center rounded-xl text-shoma-slate transition-colors hover:bg-white xl:hidden"
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -188,6 +188,7 @@ export default function MorphicNavbar() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="glass fixed inset-x-4 top-[76px] z-40 max-h-[calc(100vh-96px)] overflow-y-auto rounded-2xl p-2 xl:hidden"
+              id="mobiel-menu"
               role="navigation"
               aria-label="Mobiele navigatie"
             >
@@ -208,7 +209,7 @@ export default function MorphicNavbar() {
               ))}
               <Link
                 href="/doneren"
-                className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-shoma-terracotta px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-shoma-terracotta-dark"
+                className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-shoma-terracotta px-4 py-3 text-sm font-semibold text-shoma-slate transition-colors hover:bg-shoma-terracotta-dark"
               >
                 <Heart className="h-4 w-4" aria-hidden="true" />
                 Doneer nu

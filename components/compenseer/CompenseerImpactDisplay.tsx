@@ -69,7 +69,7 @@ export default function CompenseerImpactDisplay({
           </div>
           <div className="flex justify-between">
             <span className="text-gray-700">Donatie bedrag:</span>
-            <span className="font-bold text-shoma-terracotta text-lg">
+            <span className="font-bold text-shoma-terracotta-ink text-lg">
               €{calculation.amountEur.toFixed(2)}
             </span>
           </div>
