@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Quote } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -8,7 +9,20 @@ import { Marquee } from '@/components/ui/marquee';
 import { staggerContainer, staggerItem } from '@/components/ui/animated-section';
 import TierCardFlip from '@/components/home/TierCardFlip';
 
-const partners = [
+type Partner = {
+  name: string;
+  // Tekst in het logovak zolang er geen logo-afbeelding is
+  initials: string;
+  // Pad naar een logo in /public, bv. '/images/partners/wilde-ganzen.png'
+  logo?: string;
+  color: string;
+  contribution: string;
+  quote?: string;
+  // Feitelijke toelichting, getoond zonder aanhalingsteken als er geen quote is
+  description?: string;
+};
+
+const partners: Partner[] = [
   {
     name: 'Stichting BAENT',
     initials: 'BAENT',
@@ -25,7 +39,58 @@ const partners = [
     quote:
       'Als detacheerder zochten wij naar een concreet project dat onze MVO-ambities waarmaakte. Shoma leverde precies dat.',
   },
+  // Vul `logo` in zodra het logo van Wilde Ganzen beschikbaar is
+  {
+    name: 'Wilde Ganzen',
+    initials: 'Wilde Ganzen',
+    color: 'bg-shoma-teal',
+    contribution: 'Premie op 6 projecten sinds 2016',
+    description:
+      'Wilde Ganzen kende een premie toe aan zes Shoma-projecten in Tanzania: van drinkwater en waterdistributie voor school en gemeenschap tot zonnepanelen, een bibliotheek en een schoolbus.',
+  },
 ];
+
+const tickerPartners: Partner[] = [
+  ...partners,
+  {
+    name: 'Uw bedrijf hier?',
+    initials: '?',
+    color: 'bg-shoma-slate',
+    contribution: 'Word onze volgende partner',
+  },
+];
+
+function PartnerLogo({ partner, size }: { partner: Partner; size: 'sm' | 'lg' }) {
+  const box = size === 'sm' ? 'h-9 w-9 rounded-lg' : 'h-14 w-14 rounded-xl';
+
+  if (partner.logo) {
+    return (
+      <div
+        className={`${box} relative shrink-0 overflow-hidden border border-shoma-teal/10 bg-white`}
+      >
+        <Image
+          src={partner.logo}
+          alt={`Logo ${partner.name}`}
+          fill
+          sizes="56px"
+          className="object-contain p-1"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${partner.color} ${box} flex shrink-0 items-center justify-center`}>
+      <span
+        className={`text-center font-bold leading-tight text-white ${
+          size === 'sm' ? 'px-0.5 text-[9px]' : 'px-1 text-xs'
+        }`}
+      >
+        {partner.initials}
+      </span>
+    </div>
+  );
+}
 
 const b2bTiers = [
   {
@@ -92,26 +157,18 @@ export default function PartnerSection() {
 
         {/* Partner ticker */}
         <Marquee pauseOnHover className="mb-14 [--duration:28s]">
-          {[...partners, { name: 'Uw bedrijf hier?', initials: '?', color: 'bg-shoma-slate', contribution: 'Word onze volgende partner', quote: '' }].map(
-            (partner) => (
-              <div
-                key={partner.name}
-                className="mx-3 flex items-center gap-3 rounded-xl border border-shoma-teal/10 bg-shoma-sand/60 px-5 py-3"
-              >
-                <div
-                  className={`${partner.color} flex h-9 w-9 shrink-0 items-center justify-center rounded-lg`}
-                >
-                  <span className="px-0.5 text-center text-[9px] font-bold leading-tight text-white">
-                    {partner.initials}
-                  </span>
-                </div>
-                <div className="whitespace-nowrap">
-                  <p className="text-sm font-semibold text-shoma-slate">{partner.name}</p>
-                  <p className="text-xs text-shoma-teal">{partner.contribution}</p>
-                </div>
+          {tickerPartners.map((partner) => (
+            <div
+              key={partner.name}
+              className="mx-3 flex items-center gap-3 rounded-xl border border-shoma-teal/10 bg-shoma-sand/60 px-5 py-3"
+            >
+              <PartnerLogo partner={partner} size="sm" />
+              <div className="whitespace-nowrap">
+                <p className="text-sm font-semibold text-shoma-slate">{partner.name}</p>
+                <p className="text-xs text-shoma-teal">{partner.contribution}</p>
               </div>
-            )
-          )}
+            </div>
+          ))}
         </Marquee>
 
         {/* Partnership tiers */}
@@ -142,7 +199,7 @@ export default function PartnerSection() {
 
         {/* Partner quotes */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -154,22 +211,22 @@ export default function PartnerSection() {
               variants={staggerItem}
               className="flex gap-5 bg-shoma-sand/60 rounded-2xl p-6 border border-shoma-teal/10"
             >
-              {/* Logo placeholder */}
-              <div
-                className={`${partner.color} w-14 h-14 rounded-xl flex items-center justify-center shrink-0`}
-              >
-                <span className="text-white font-bold text-xs text-center leading-tight px-1">
-                  {partner.initials}
-                </span>
-              </div>
+              <PartnerLogo partner={partner} size="lg" />
               <div className="flex-1">
-                <div className="flex items-start gap-2 mb-2">
-                  <Quote className="w-4 h-4 text-shoma-teal/40 shrink-0 mt-0.5" aria-hidden="true" />
-                  <p className="text-sm text-shoma-slate/75 leading-relaxed italic">
-                    {partner.quote}
+                {partner.quote && (
+                  <div className="flex items-start gap-2 mb-2">
+                    <Quote className="w-4 h-4 text-shoma-teal/40 shrink-0 mt-0.5" aria-hidden="true" />
+                    <p className="text-sm text-shoma-slate/75 leading-relaxed italic">
+                      {partner.quote}
+                    </p>
+                  </div>
+                )}
+                {!partner.quote && partner.description && (
+                  <p className="mb-2 text-sm text-shoma-slate/75 leading-relaxed">
+                    {partner.description}
                   </p>
-                </div>
-                <div className="mt-3">
+                )}
+                <div className={partner.quote || partner.description ? 'mt-3' : ''}>
                   <p className="font-semibold text-shoma-slate text-sm">{partner.name}</p>
                   <p className="text-xs text-shoma-teal">{partner.contribution}</p>
                 </div>

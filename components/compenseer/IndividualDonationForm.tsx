@@ -157,6 +157,21 @@ export default function IndividualDonationForm() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      {step === 'input' && (
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-shoma-teal mb-3">
+            Bereken jouw CO₂ uitstoot
+          </h2>
+          <p className="text-shoma-slate/75 leading-relaxed">
+            Vul in hoeveel uur je vliegt, hoeveel kilometer je per jaar met de auto rijdt, of wat
+            je jaarlijkse voetafdruk is. Wij tellen dat op tot je CO₂-uitstoot in kilo&apos;s. Daar
+            hoort een compensatiebedrag bij: 1,5 tot 2,5 cent per kilo CO₂, afhankelijk van je
+            totaal. Met je donatie planten lokale teams bomen op schoolterreinen in Rubya,
+            Tanzania, een project van Stichting Shoma dat ook het onderwijs daar steunt.
+          </p>
+        </div>
+      )}
+
       <div className="mb-8">
         <div className="flex justify-between items-center">
           {['input', 'impact', 'checkout'].map((s, idx) => (
@@ -183,10 +198,6 @@ export default function IndividualDonationForm() {
 
       {step === 'input' && (
         <div className="space-y-8">
-          <h2 className="text-2xl font-bold text-shoma-teal mb-6">
-            Bereken jouw CO₂ uitstoot
-          </h2>
-
           <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
             <p className="text-sm text-blue-900">
               💡 Kies één optie hieronder, of voeg meerdere in voor totaal:
