@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
-  CheckCircle, ArrowRight, BarChart3, Globe, FileText, Building2
+  CheckCircle, ArrowRight, BarChart3, Globe, FileText, Building2, Download
 } from 'lucide-react';
 import B2BContactForm from '@/components/b2b/B2BContactForm';
 import PartnerSection from '@/components/home/PartnerSection';
@@ -22,14 +22,14 @@ const sdgItems = [
 const tiers = [
   {
     tier: 'Tier 1',
-    title: 'Klaslokaal Sponsor',
+    title: 'Slaapzaal voor 40 leerlingen',
     amount: '€ 1.500,-',
     sdg: '4',
     sdgColor: 'bg-yellow-500',
     perks: [
       'Naamsvermelding op de KEMPS-school',
       'Logo op shoma.nl + sociale media',
-      'Jaarlijks fotoverslag van uw lokaal',
+      'Jaarlijks fotoverslag van uw slaapzaal',
       'SDG 4 certificaat voor uw jaarverslag',
     ],
     highlight: false,
@@ -325,6 +325,30 @@ export default function VoorBedrijvenPage() {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Beleidsplan 2026–2028 */}
+          <div className="mt-10 bg-white rounded-2xl p-6 border border-shoma-teal/10 flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-shoma-teal/10 flex items-center justify-center shrink-0">
+                <FileText className="w-5 h-5 text-shoma-teal" aria-hidden="true" />
+              </div>
+              <div>
+                <p className="font-semibold text-shoma-slate">Beleidsplan 2026–2028</p>
+                <p className="text-sm text-shoma-slate/55 mt-0.5 max-w-xl">
+                  Lees waar Shoma de komende jaren op inzet en hoe uw partnerschap daarin past.
+                </p>
+              </div>
+            </div>
+            <a
+              href="/documenten/Beleidsplan-stichting-shoma-2026-2028-1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-shoma-teal hover:bg-shoma-teal-dark text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-150 active:scale-[0.97] shrink-0"
+            >
+              <Download className="w-4 h-4" aria-hidden="true" />
+              Download PDF
+            </a>
           </div>
         </div>
       </section>

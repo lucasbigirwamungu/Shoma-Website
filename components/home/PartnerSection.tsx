@@ -50,8 +50,9 @@ const partners: Partner[] = [
   },
 ];
 
+// Stichting BAENT staat al bij de ervaringen hieronder, dus niet ook in de ticker
 const tickerPartners: Partner[] = [
-  ...partners,
+  ...partners.filter((partner) => partner.name !== 'Stichting BAENT'),
   {
     name: 'Uw bedrijf hier?',
     initials: '?',
@@ -98,9 +99,9 @@ function PartnerLogo({ partner, size }: { partner: Partner; size: 'sm' | 'lg' })
 const b2bTiers = [
   {
     tier: 'Tier 1',
-    title: 'Klaslokaal Sponsor',
+    title: 'Slaapzaal voor 40 leerlingen',
     amount: '€ 1.500,-',
-    description: 'Directe bijdrage aan de fysieke inrichting van de KEMPS-school',
+    description: 'Directe bijdrage aan een slaapzaal voor 40 leerlingen op de KEMPS-school',
     sdg: '4',
     sdgName: 'Kwaliteitsonderwijs',
     sdgColor: 'bg-yellow-500',
