@@ -72,6 +72,26 @@
         "file": "812B8B39-CF05-4C53-B302-F82DBFB4770D.jpg",
         "alt": "School voortgang",
         "caption": ""
+      },
+      {
+        "file": "P1130373.jpg",
+        "alt": "Het stuk grond in het heuvellandschap waar de school is gebouwd",
+        "caption": ""
+      },
+      {
+        "file": "Schoolnieuw.jpg",
+        "alt": "Ontwerptekening van het schoolcomplex met rode daken",
+        "caption": ""
+      },
+      {
+        "file": "P1000557.jpg",
+        "alt": "Twee mannen duwen een fiets beladen met bakstenen over een zandweg",
+        "caption": ""
+      },
+      {
+        "file": "foto-school.jpg",
+        "alt": "Het schoolcomplex met rode daken, gezien vanaf de heuvel",
+        "caption": ""
       }
     ]
   },
@@ -117,6 +137,41 @@
       {
         "file": "20140914_1545431.jpg",
         "alt": "Evenement",
+        "caption": ""
+      },
+      {
+        "file": "Christiaanflessen3.jpg",
+        "alt": "Jongen met een kar vol statiegeldflessen voor de flessenactie",
+        "caption": ""
+      },
+      {
+        "file": "Flessen.jpg",
+        "alt": "Ingezamelde flessen van de flessenactie",
+        "caption": ""
+      },
+      {
+        "file": "Nieuwe-afbeelding-2.jpg",
+        "alt": "Overhandiging van een cheque van € 2865,18 aan Stichting Shoma",
+        "caption": ""
+      },
+      {
+        "file": "Roelof-van-Echten-31-3.jpg",
+        "alt": "Leerlingen met een cheque van Wilde Ganzen van € 2.995,00",
+        "caption": ""
+      },
+      {
+        "file": "foto-wereldwinkel-de-oare-wrald.jpg",
+        "alt": "Overhandiging tijdens een presentatie over de bouw van KEMPS in Rubya",
+        "caption": ""
+      },
+      {
+        "file": "samuel-1.jpg",
+        "alt": "Schoolgebouw in aanbouw met een naambord 'Samuel' als dank",
+        "caption": ""
+      },
+      {
+        "file": "samuel-2.jpg",
+        "alt": "Leerlingen in schooluniform met een bord 'Samuel' als dank",
         "caption": ""
       }
     ]
@@ -178,6 +233,31 @@
       {
         "file": "P1070543.jpg",
         "alt": "Lokale cultuur",
+        "caption": ""
+      },
+      {
+        "file": "P1050164.jpg",
+        "alt": "Bezoek uit Nederland in een klaslokaal vol leerlingen",
+        "caption": ""
+      },
+      {
+        "file": "P1130329.jpg",
+        "alt": "Dorpsbewoners bijeen op het gras",
+        "caption": ""
+      },
+      {
+        "file": "P1130349.jpg",
+        "alt": "Man op het land bij Rubya",
+        "caption": ""
+      },
+      {
+        "file": "P1070563.jpg",
+        "alt": "Kinderen dragen jerrycans met water op hun hoofd over een bospad",
+        "caption": ""
+      },
+      {
+        "file": "P1070737.jpg",
+        "alt": "Twee kinderen voor een lemen huis",
         "caption": ""
       }
     ]
@@ -280,6 +360,103 @@
       {
         "file": "keuken-foto-8.jpg",
         "alt": "Ontwikkeling van de keuken",
+        "caption": ""
+      }
+    ]
+  },
+  {
+    "id": "kemps-in-gebruik",
+    "title": "KEMPS in gebruik",
+    "subtitle": "Les, licht en een eigen bibliotheek",
+    "description": "De school staat er en wordt volop gebruikt. Deze foto's tonen het voltooide complex, de klaslokalen met leerlingen, de bibliotheek en de zonnepanelen die 's avonds voor licht zorgen.",
+    "tag": "School",
+    "accent": "teal",
+    "folder": "kemps-in-gebruik",
+    "photos": [
+      {
+        "file": "GYVT3318.jpg",
+        "alt": "Het voltooide schoolcomplex met rode daken in het heuvellandschap",
+        "caption": ""
+      },
+      {
+        "file": "ELOW3176.jpg",
+        "alt": "Binnenplaats van de school met bestraat pad",
+        "caption": ""
+      },
+      {
+        "file": "IMG_1732.jpg",
+        "alt": "Leerlingen aan hun tafels in een klaslokaal",
+        "caption": ""
+      },
+      {
+        "file": "foto-14.jpg",
+        "alt": "Leraar geeft les aan leerlingen in schooluniform",
+        "caption": ""
+      },
+      {
+        "file": "CIZT0731.jpg",
+        "alt": "De bibliotheek met leestafels en boekenkasten",
+        "caption": ""
+      },
+      {
+        "file": "MQNT1402.jpg",
+        "alt": "Boekenkast vol kinderboeken in de bibliotheek",
+        "caption": ""
+      },
+      {
+        "file": "CHFJ0071.jpg",
+        "alt": "Nieuwe, afgewerkte ruimte in het schoolgebouw",
+        "caption": ""
+      },
+      {
+        "file": "IMG_1856.jpg",
+        "alt": "Installatie van zonnepanelen op het dak van de school",
+        "caption": ""
+      },
+      {
+        "file": "IMG_1863.jpg",
+        "alt": "De verlichte school in het donker",
+        "caption": ""
+      },
+      {
+        "file": "IMG-20171024-WA0000.jpg",
+        "alt": "Wegwijzer naar K.E.M.P.S. langs de weg",
+        "caption": ""
+      }
+    ]
+  },
+  {
+    "id": "water-leefomgeving",
+    "title": "Water en leefomgeving",
+    "subtitle": "Schoon water en betere hygiëne",
+    "description": "Naast onderwijs werkt Shoma aan de leefomgeving rond de school: wateropslag voor de school en de moestuin, en nieuwe toiletten ter vervanging van de oude latrines.",
+    "tag": "Water & hygiëne",
+    "accent": "amber",
+    "folder": "water-en-leefomgeving",
+    "photos": [
+      {
+        "file": "IMG_1859.jpg",
+        "alt": "Watertank van 10.000 liter op een stenen fundering",
+        "caption": ""
+      },
+      {
+        "file": "IMG_1974.jpg",
+        "alt": "Watertank in het heuvellandschap rond de school",
+        "caption": ""
+      },
+      {
+        "file": "P1000367.jpg",
+        "alt": "Nieuw gebouwd toiletgebouw",
+        "caption": ""
+      },
+      {
+        "file": "P1000369.jpg",
+        "alt": "Het nieuwe toiletgebouw naast de oude latrine",
+        "caption": ""
+      },
+      {
+        "file": "P1000368.jpg",
+        "alt": "De oude latrine van golfplaten",
         "caption": ""
       }
     ]

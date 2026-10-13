@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { ArrowRight, Quote } from 'lucide-react';
 import { motion } from 'motion/react';
 import { TextAnimate } from '@/components/ui/text-animate';
-import { Marquee } from '@/components/ui/marquee';
 import { staggerContainer, staggerItem } from '@/components/ui/animated-section';
 import TierCardFlip from '@/components/home/TierCardFlip';
 
@@ -50,9 +49,9 @@ const partners: Partner[] = [
   },
 ];
 
-// Stichting BAENT staat al bij de ervaringen hieronder, dus niet ook in de ticker
-const tickerPartners: Partner[] = [
-  ...partners.filter((partner) => partner.name !== 'Stichting BAENT'),
+// Elke partner precies één keer, plus een uitnodiging voor nieuwe partners
+const stripPartners: Partner[] = [
+  ...partners,
   {
     name: 'Uw bedrijf hier?',
     initials: '?',
@@ -159,12 +158,12 @@ export default function PartnerSection() {
           </p>
         </div>
 
-        {/* Partner ticker */}
-        <Marquee pauseOnHover className="mb-14 [--duration:28s]">
-          {tickerPartners.map((partner) => (
+        {/* Partnerstrook */}
+        <div className="mb-14 flex flex-wrap justify-center gap-4">
+          {stripPartners.map((partner) => (
             <div
               key={partner.name}
-              className="mx-3 flex items-center gap-3 rounded-xl border border-shoma-teal/10 bg-shoma-sand/60 px-5 py-3"
+              className="flex items-center gap-3 rounded-xl border border-shoma-teal/10 bg-shoma-sand/60 px-5 py-3"
             >
               <PartnerLogo partner={partner} size="sm" />
               <div className="whitespace-nowrap">
@@ -173,7 +172,7 @@ export default function PartnerSection() {
               </div>
             </div>
           ))}
-        </Marquee>
+        </div>
 
         {/* Partnership tiers */}
         <motion.div
