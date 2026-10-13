@@ -101,7 +101,7 @@ export default function ContactForm() {
         {/* Naam */}
         <div>
           <label htmlFor="contact-name" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            Uw naam <span className="text-red-400">*</span>
+            Uw naam <span className="text-red-700">*</span>
           </label>
           <input
             id="contact-name"
@@ -122,7 +122,7 @@ export default function ContactForm() {
         {/* E-mail */}
         <div>
           <label htmlFor="contact-email" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            Uw e-mail <span className="text-red-400">*</span>
+            Uw e-mail <span className="text-red-700">*</span>
           </label>
           <input
             id="contact-email"
@@ -159,7 +159,7 @@ export default function ContactForm() {
         {/* Bericht */}
         <div>
           <label htmlFor="contact-message" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            Uw bericht <span className="text-red-400">*</span>
+            Uw bericht <span className="text-red-700">*</span>
           </label>
           <textarea
             id="contact-message"

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const sdgItems = [
-  { sdg: 'SDG 1', label: 'Geen Armoede', color: 'bg-red-500', description: 'Scholing doorbreekt de armoedesyclus in Rubya' },
-  { sdg: 'SDG 4', label: 'Kwaliteitsonderwijs', color: 'bg-yellow-500', description: 'KEMPS biedt Engels, hoogwaardig onderwijs aan 62+ kinderen' },
-  { sdg: 'SDG 6', label: 'Schoon Water', color: 'bg-blue-500', description: '20.000 liter drinkwater per dag, voor school én gemeenschap' },
+  { sdg: 'SDG 1', label: 'Geen Armoede', color: 'bg-red-600', description: 'Scholing doorbreekt de armoedesyclus in Rubya' },
+  { sdg: 'SDG 4', label: 'Kwaliteitsonderwijs', color: 'bg-red-800', description: 'KEMPS biedt Engels, hoogwaardig onderwijs aan 62+ kinderen' },
+  { sdg: 'SDG 6', label: 'Schoon Water', color: 'bg-blue-600', description: '20.000 liter drinkwater per dag, voor school én gemeenschap' },
 ];
 
 const tiers = [
@@ -25,7 +25,7 @@ const tiers = [
     title: 'Slaapzaal voor 40 leerlingen',
     amount: '€ 1.500,-',
     sdg: '4',
-    sdgColor: 'bg-yellow-500',
+    sdgColor: 'bg-red-800',
     perks: [
       'Naamsvermelding op de KEMPS-school',
       'Logo op shoma.nl + sociale media',
@@ -39,7 +39,7 @@ const tiers = [
     title: 'Schoon Water Partner',
     amount: '€ 3.500,-',
     sdg: '6',
-    sdgColor: 'bg-blue-500',
+    sdgColor: 'bg-blue-600',
     perks: [
       'Naambordje op de waterinstallatie',
       'Persbericht & PR-content op maat',
@@ -54,7 +54,7 @@ const tiers = [
     title: 'Duurzame Energie Supporter',
     amount: '€ 2.500,-',
     sdg: '7',
-    sdgColor: 'bg-yellow-400',
+    sdgColor: 'bg-amber-700',
     perks: [
       'Logo op de solar-installatie',
       'Mediacoverage inclusief fotomateriaal',
@@ -245,7 +245,7 @@ export default function VoorBedrijvenPage() {
                 </div>
                 <div>
                   <p className="font-bold text-shoma-slate">{caseStudy.partner}</p>
-                  <span className="text-xs text-blue-600 font-semibold bg-blue-100 rounded-full px-2 py-0.5">
+                  <span className="text-xs text-blue-800 font-semibold bg-blue-100 rounded-full px-2 py-0.5">
                     {caseStudy.sdg}
                   </span>
                 </div>
@@ -389,7 +389,7 @@ export default function VoorBedrijvenPage() {
                 <p className="text-sm font-medium text-shoma-slate mb-1">Direct bellen?</p>
                 <p className="text-xs text-shoma-slate/75">
                   Stuur een e-mail naar{' '}
-                  <a href="mailto:secretariaat@shoma.nl" className="text-shoma-teal hover:underline font-medium">
+                  <a href="mailto:secretariaat@shoma.nl" className="text-shoma-teal underline underline-offset-2 font-medium">
                     secretariaat@shoma.nl
                   </a>{' '}
                   met uw telefoonnummer en gewenste belmoment.

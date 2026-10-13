@@ -7,6 +7,8 @@
     "tag": "Bouwproject",
     "accent": "teal",
     "folder": "bouw-van-kemps",
+    "yearFrom": 2015,
+    "yearTo": 2015,
     "photos": [
       {
         "file": "P1130373.jpg",
@@ -98,6 +100,8 @@
     "tag": "Fundraising",
     "accent": "terracotta",
     "folder": "geld-inzameling-kemps",
+    "yearFrom": 2013,
+    "yearTo": 2019,
     "photos": [
       {
         "file": "cascaderun.jpg",
@@ -179,6 +183,8 @@
     "tag": "Gemeenschap",
     "accent": "amber",
     "folder": "leven-in-rubya",
+    "yearFrom": 2007,
+    "yearTo": 2007,
     "photos": [
       {
         "file": "P1130329.jpg",
@@ -334,6 +340,8 @@
     "tag": "Schooljaar",
     "accent": "teal",
     "folder": "klaar-voor-nieuw-schooljaar",
+    "yearFrom": 2011,
+    "yearTo": 2011,
     "photos": [
       {
         "file": "Rubya20111.jpg",
@@ -386,6 +394,8 @@
     "tag": "Voorziening",
     "accent": "terracotta",
     "folder": "ontwikkeling-keuken",
+    "yearFrom": 2016,
+    "yearTo": 2019,
     "photos": [
       {
         "file": "keuken-foto-1.jpg",
@@ -437,6 +447,8 @@
     "tag": "School",
     "accent": "teal",
     "folder": "kemps-in-gebruik",
+    "yearFrom": 2018,
+    "yearTo": 2019,
     "photos": [
       {
         "file": "GYVT3318.jpg",
@@ -592,6 +604,8 @@
     "tag": "Water & hygiëne",
     "accent": "amber",
     "folder": "water-en-leefomgeving",
+    "yearFrom": 2007,
+    "yearTo": 2019,
     "photos": [
       {
         "file": "IMG_1859.jpg",
@@ -668,6 +682,8 @@
     "tag": "Bibliotheek",
     "accent": "terracotta",
     "description": "In de schoolbibliotheek lezen leerlingen samen aan tafel en doen ze mee aan een lees- en vertelwedstrijd. Deze foto's laten zien hoe de boekenkasten dagelijks worden gebruikt.",
+    "yearFrom": 2025,
+    "yearTo": 2025,
     "photos": [
       {
         "file": "2026-01.jpg",
@@ -722,6 +738,8 @@
     "tag": "Digitaal onderwijs",
     "accent": "teal",
     "description": "Laptops op de tafels en leerlingen die er voor het eerst mee werken. Deze foto's tonen het klaarzetten van de apparatuur en de eerste computerlessen op KEMPS.",
+    "yearFrom": 2026,
+    "yearTo": 2026,
     "photos": [
       {
         "file": "2026-01.jpg",
@@ -808,6 +826,8 @@
     "tag": "Bouwproject",
     "accent": "amber",
     "description": "Steen voor steen is het terrein voor de school verhard: eerst een laag breukstenen, daarna beton. Deze foto's volgen het werk van de eerste stenen tot het plein waar de schoolbussen op staan.",
+    "yearFrom": 2026,
+    "yearTo": 2026,
     "photos": [
       {
         "file": "2026-01.jpg",
@@ -1014,6 +1034,8 @@
     "tag": "Bouwproject",
     "accent": "teal",
     "description": "Op het schoolterrein is een nieuw bijgebouw opgetrokken, van fundering en metselwerk tot dak, deur en ramen. Ook de nieuwe betonnen trappen en paden langs de school zijn hier te zien.",
+    "yearFrom": 2026,
+    "yearTo": 2026,
     "photos": [
       {
         "file": "2026-02.jpg",
@@ -1120,6 +1142,8 @@
     "tag": "Bezoek",
     "accent": "terracotta",
     "description": "Bezoekers ontmoeten leerlingen, leerkrachten en de mensen rond de school. Deze foto's tonen de gesprekken in de bibliotheek, de lessen in de klas en de momenten daaromheen.",
+    "yearFrom": 2025,
+    "yearTo": 2025,
     "photos": [
       {
         "file": "2026-01.jpg",
@@ -1238,6 +1262,8 @@
     "tag": "Omgeving",
     "accent": "amber",
     "description": "Het landschap rond Rubya: groene heuvels, bananenplanten, een waterval en het meer.",
+    "yearFrom": 2025,
+    "yearTo": 2025,
     "photos": [
       {
         "file": "2026-01.jpg",

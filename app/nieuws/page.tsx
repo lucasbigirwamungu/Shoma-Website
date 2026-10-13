@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Newspaper, ExternalLink } from 'lucide-react';
+import { ArrowRight, ChevronDown, Newspaper, ExternalLink } from 'lucide-react';
 import PhotoAlbums from '@/components/fotoalbums/PhotoAlbums';
 import { allNewsletters, groupNewslettersByYear } from '@/lib/newsletter-data';
 
@@ -129,7 +129,7 @@ export default function NieuwsPage() {
                     <span className="text-sm text-shoma-slate/75">
                       {newsletters.length} {newsletters.length === 1 ? 'uitgave' : 'uitgaven'}
                     </span>
-                    <span className="ml-auto text-shoma-slate/75 group-open:rotate-180 transition-transform">▼</span>
+                    <ChevronDown className="ml-auto h-4 w-4 text-shoma-slate/75 transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
                   </summary>
                   <div className="px-5 py-3 bg-white/50 border-t border-shoma-teal/10 space-y-2">
                     {newsletters.map((nl) => (
@@ -145,7 +145,7 @@ export default function NieuwsPage() {
                           <span className="text-sm font-medium group-hover/link:underline">{nl.title}</span>
                           <span className="text-xs text-shoma-slate/75"> ({nl.date})</span>
                         </div>
-                        <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0 mt-0.5" />
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0 mt-0.5" aria-hidden="true" />
                       </a>
                     ))}
                   </div>

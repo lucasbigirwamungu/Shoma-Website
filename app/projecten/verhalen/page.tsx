@@ -36,7 +36,7 @@ export default function ProjectVerhalenPage() {
           </p>
           <Link
             href="/projecten"
-            className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white mt-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-white/80 hover:text-white mt-6 transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
             Terug naar projecten
@@ -124,7 +124,7 @@ function StoryCard({ story, accent, tag }: { story: ProjectStory; accent: string
         ))}
       </div>
 
-      <p className="text-xs text-shoma-slate/35 mt-6">
+      <p className="text-xs text-shoma-slate/75 mt-6">
         Oorspronkelijk gepubliceerd op{' '}
         <a
           href={story.sourceUrl}

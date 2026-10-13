@@ -120,7 +120,7 @@ export default function B2BContactForm() {
         {/* Bedrijfsnaam */}
         <div>
           <label htmlFor="b2b-bedrijfsnaam" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            Bedrijfsnaam <span className="text-red-400">*</span>
+            Bedrijfsnaam <span className="text-red-700">*</span>
           </label>
           <input
             id="b2b-bedrijfsnaam"
@@ -140,7 +140,7 @@ export default function B2BContactForm() {
         {/* Naam contactpersoon */}
         <div>
           <label htmlFor="b2b-contactpersoon" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            Naam contactpersoon <span className="text-red-400">*</span>
+            Naam contactpersoon <span className="text-red-700">*</span>
           </label>
           <input
             id="b2b-contactpersoon"
@@ -161,7 +161,7 @@ export default function B2BContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="b2b-email" className="block text-sm font-medium text-shoma-slate mb-1.5">
-              Zakelijk e-mailadres <span className="text-red-400">*</span>
+              Zakelijk e-mailadres <span className="text-red-700">*</span>
             </label>
             <input
               id="b2b-email"
@@ -196,7 +196,7 @@ export default function B2BContactForm() {
         {/* MVO Interessegebied */}
         <div>
           <label htmlFor="b2b-interessegebied" className="block text-sm font-medium text-shoma-slate mb-1.5">
-            MVO Interessegebied <span className="text-red-400">*</span>
+            MVO Interessegebied <span className="text-red-700">*</span>
           </label>
           <select
             id="b2b-interessegebied"

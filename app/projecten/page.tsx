@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 };
 
 const SDG_COLORS: Record<number, string> = {
-  1: 'bg-red-500', 4: 'bg-yellow-500', 6: 'bg-blue-500',
-  7: 'bg-yellow-400', 13: 'bg-green-600',
+  1: 'bg-red-600', 4: 'bg-red-800', 6: 'bg-blue-600',
+  7: 'bg-amber-700', 13: 'bg-green-700',
 };
 
 const SDG_NAMES: Record<number, string> = {
@@ -150,7 +150,7 @@ export default function ProjectenPage() {
                   <GraduationCap className="w-5 h-5 text-white" aria-hidden="true" />
                   <span className="text-white font-bold">KEMPS Onderwijs</span>
                 </div>
-                <span className="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-bold rounded-lg px-2 py-1">SDG 4</span>
+                <span className="absolute top-3 right-3 bg-red-800 text-white text-xs font-bold rounded-lg px-2 py-1">SDG 4</span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-shoma-slate text-lg mb-2">Kashasha English Medium Primary School</h3>
@@ -213,7 +213,7 @@ export default function ProjectenPage() {
                   <BookOpen className="w-5 h-5 text-white" aria-hidden="true" />
                   <span className="text-white font-bold">Regulier Onderwijs</span>
                 </div>
-                <span className="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold rounded-lg px-2 py-1">SDG 1</span>
+                <span className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold rounded-lg px-2 py-1">SDG 1</span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-shoma-slate text-lg mb-2">Overheidsscholen in Rubya</h3>
@@ -448,19 +448,19 @@ export default function ProjectenPage() {
                 <GraduationCap className="w-8 h-8 mx-auto mb-2 text-shoma-terracotta-light" />
                 <p className="text-3xl font-extrabold">74</p>
                 <p className="text-sm text-white/70 mt-1">KEMPS-leerlingen gesponsord</p>
-                <p className="text-xs text-white/50 mt-0.5">Nursery t/m Klas 7</p>
+                <p className="text-xs text-white/75 mt-0.5">Nursery t/m Klas 7</p>
               </div>
               <div className="bg-white/10 rounded-2xl p-5 text-center">
                 <BookOpen className="w-8 h-8 mx-auto mb-2 text-shoma-terracotta-light" />
                 <p className="text-3xl font-extrabold">155</p>
                 <p className="text-sm text-white/70 mt-1">Reguliere leerlingen gesponsord</p>
-                <p className="text-xs text-white/50 mt-0.5">€40/jaar per kind</p>
+                <p className="text-xs text-white/75 mt-0.5">€40/jaar per kind</p>
               </div>
-              <div className="bg-shoma-terracotta/80 rounded-2xl p-5 text-center">
-                <Users className="w-8 h-8 mx-auto mb-2 text-white" />
+              <div className="bg-shoma-terracotta rounded-2xl p-5 text-center text-shoma-slate">
+                <Users className="w-8 h-8 mx-auto mb-2 text-shoma-slate" />
                 <p className="text-3xl font-extrabold">229</p>
-                <p className="text-sm text-white/90 mt-1">Totaal kinderen geholpen</p>
-                <p className="text-xs text-white/70 mt-0.5">Schooljaar 2025</p>
+                <p className="text-sm mt-1">Totaal kinderen geholpen</p>
+                <p className="text-xs mt-0.5">Schooljaar 2025</p>
               </div>
             </div>
 
