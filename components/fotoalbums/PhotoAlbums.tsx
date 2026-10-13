@@ -21,12 +21,6 @@ export default function PhotoAlbums() {
       {/* Header */}
       <div className="bg-shoma-teal-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex items-center gap-2 mb-3">
-            <Camera className="w-5 h-5 text-shoma-terracotta-light" aria-hidden="true" />
-            <p className="text-shoma-terracotta-light font-semibold text-sm uppercase tracking-wider">
-              Beelden uit Rubya, Tanzania
-            </p>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Fotoalbums</h2>
           <p className="text-white/70 max-w-2xl leading-relaxed">
             Foto&apos;s zeggen meer dan woorden. Bekijk hier hoe de projecten van Stichting Shoma het
@@ -36,14 +30,14 @@ export default function PhotoAlbums() {
       </div>
 
       {/* Album index */}
-      <div className="bg-white border-b border-gray-100 sticky top-16 z-10">
+      <div className="bg-white border-b border-shoma-teal/10 sticky top-16 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Fotoalbums" className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
             {ALBUMS.map((album) => (
               <a
                 key={album.id}
                 href={`#${album.id}`}
-                className="shrink-0 inline-flex items-center gap-1.5 text-sm text-shoma-slate/60 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
+                className="shrink-0 inline-flex items-center gap-1.5 text-sm text-shoma-slate/75 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
               >
                 <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                 {album.title}
@@ -69,16 +63,16 @@ export default function PhotoAlbums() {
                     className={`${ACCENT_CLASSES[album.accent] ?? 'bg-shoma-teal'} text-white text-xs font-bold rounded-lg px-2.5 py-1`}>
                     {album.tag}
                   </span>
-                  <span className="text-shoma-slate/50 text-xs">
+                  <span className="text-shoma-slate/75 text-xs">
                     {album.photos.length} foto&apos;s
                   </span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-shoma-slate">
                   {album.title}
                 </h3>
-                <p className="text-shoma-slate/60 text-sm mt-0.5">{album.subtitle}</p>
+                <p className="text-shoma-slate/75 text-sm mt-0.5">{album.subtitle}</p>
               </div>
-              <p className="text-shoma-slate/70 text-sm max-w-md leading-relaxed sm:text-right">
+              <p className="text-shoma-slate/75 text-sm max-w-md leading-relaxed sm:text-right">
                 {album.description}
               </p>
             </div>

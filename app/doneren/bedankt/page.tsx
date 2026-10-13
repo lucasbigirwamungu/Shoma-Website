@@ -24,7 +24,7 @@ export default function BedanktPage() {
           Dank u wel! 🙏
         </h1>
 
-        <p className="text-shoma-slate/65 text-lg leading-relaxed mb-8">
+        <p className="text-shoma-slate/75 text-lg leading-relaxed mb-8">
           Uw donatie is ontvangen. U ontvangt binnen enkele minuten een bevestiging
           en uw fiscale ANBI-kwitantie per e-mail.
         </p>
@@ -32,7 +32,7 @@ export default function BedanktPage() {
         {/* Impact reminder */}
         <div className="bg-white rounded-2xl p-6 border border-shoma-teal/10 shadow-sm text-left mb-8">
           <h3 className="font-semibold text-shoma-slate mb-3">Wat uw donatie betekent</h3>
-          <div className="space-y-2.5 text-sm text-shoma-slate/70">
+          <div className="space-y-2.5 text-sm text-shoma-slate/75">
             <div className="flex items-start gap-2.5">
               <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
               <span>Uw geld gaat direct naar een kind in Rubya, Tanzania</span>
@@ -53,7 +53,7 @@ export default function BedanktPage() {
           <p className="text-sm font-medium text-shoma-teal mb-3">
             Help ons meer kinderen te bereiken
           </p>
-          <p className="text-xs text-shoma-slate/55 mb-4">
+          <p className="text-xs text-shoma-slate/75 mb-4">
             Deel uw steun en inspireer anderen. Elk extra kind dat de kans krijgt om naar
             school te gaan, begint met iemand die het woord verspreidt.
           </p>
@@ -64,7 +64,7 @@ export default function BedanktPage() {
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/"
-            className="flex-1 flex items-center justify-center gap-2 bg-white border border-gray-200 hover:border-shoma-teal/30 text-shoma-slate px-5 py-3 rounded-xl font-medium text-sm transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 bg-white border border-shoma-teal/15 hover:border-shoma-teal/30 text-shoma-slate px-5 py-3 rounded-xl font-medium text-sm transition-colors"
           >
             Terug naar homepage
           </Link>

@@ -79,7 +79,7 @@ export default function MorphicNavbar() {
 
   return (
     <motion.header
-      initial={reducedMotion ? false : { y: -32, opacity: 0 }}
+      initial={{ y: -32, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-50"
@@ -93,8 +93,9 @@ export default function MorphicNavbar() {
           <Image
             src="/shoma-logo-transparent.png"
             alt="Stichting Shoma - Onderwijs in Tanzania"
-            width={2000}
-            height={818}
+            // Weergavemaat i.p.v. bronmaat: anders laadt elke pagina het logo op 2048px
+            width={98}
+            height={40}
             priority
             className="h-9 w-auto lg:h-10"
             quality={95}
@@ -138,13 +139,9 @@ export default function MorphicNavbar() {
         {/* CTA + mobiel menu toggle */}
         <div className="flex shrink-0 items-center gap-2">
           <motion.div
-            initial={reducedMotion ? false : { scale: 0.85, y: -6 }}
+            initial={{ scale: 0.85, y: -6 }}
             animate={{ scale: 1, y: 0 }}
-            transition={
-              reducedMotion
-                ? { duration: 0.3 }
-                : { type: 'spring', stiffness: 260, damping: 18, delay: 0.9 }
-            }
+            transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.9 }}
           >
             <Link
               href="/doneren"

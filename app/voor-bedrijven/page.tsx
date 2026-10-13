@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const sdgItems = [
   { sdg: 'SDG 1', label: 'Geen Armoede', color: 'bg-red-500', description: 'Scholing doorbreekt de armoedesyclus in Rubya' },
   { sdg: 'SDG 4', label: 'Kwaliteitsonderwijs', color: 'bg-yellow-500', description: 'KEMPS biedt Engels, hoogwaardig onderwijs aan 62+ kinderen' },
-  { sdg: 'SDG 6', label: 'Schoon Water', color: 'bg-blue-500', description: '20.000 liter drinkwater per dag – school én gemeenschap' },
+  { sdg: 'SDG 6', label: 'Schoon Water', color: 'bg-blue-500', description: '20.000 liter drinkwater per dag, voor school én gemeenschap' },
 ];
 
 const tiers = [
@@ -75,9 +75,9 @@ const caseStudy = {
 
 export default function VoorBedrijvenPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* ─── Hero ─────────────────────────────────────────────────────────────── */}
-      <div className="relative bg-shoma-teal-dark text-white overflow-hidden">
+      <div className="relative bg-shoma-teal-dark text-white overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1400&q=80"
@@ -137,7 +137,7 @@ export default function VoorBedrijvenPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-shoma-slate mb-3">
                 Compenseer & Leer voor uw team
               </h2>
-              <p className="text-shoma-slate/70 mb-6">
+              <p className="text-shoma-slate/75 mb-6">
                 Laat uw medewerkers hun CO₂-voetafdruk compenseren door bomen te planten in Tanzania, terwijl u gelijktijdig onderwijs financiert. Ideaal voor bedrijfsuitjes, incentives, of ESG-rapportage.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -159,7 +159,7 @@ export default function VoorBedrijvenPage() {
             <div className="w-full md:w-80 h-64 bg-white/70 rounded-3xl flex items-center justify-center border border-shoma-teal/15">
               <div className="text-center">
                 <p className="font-semibold text-shoma-slate text-lg">CO₂ compensatie</p>
-                <p className="text-sm text-shoma-slate/60">+ Onderwijs in Tanzania</p>
+                <p className="text-sm text-shoma-slate/75">+ Onderwijs in Tanzania</p>
               </div>
             </div>
           </div>
@@ -173,17 +173,17 @@ export default function VoorBedrijvenPage() {
             <h2 className="text-2xl font-bold text-shoma-slate">
               Directe bijdrage aan de UN Sustainable Development Goals
             </h2>
-            <p className="text-shoma-slate/55 mt-2 max-w-xl mx-auto">
+            <p className="text-shoma-slate/75 mt-2 max-w-xl mx-auto">
               Opneembaar in uw eigen duurzaamheidsrapportage met projectbewijs en SDG-certificaat.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {sdgItems.map((item) => (
-              <div key={item.sdg} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div key={item.sdg} className="bg-white rounded-2xl p-6 border border-shoma-teal/10 shadow-sm">
                 <div className={`${item.color} text-white rounded-xl px-3 py-1.5 inline-block mb-4 font-bold text-sm`}>
-                  {item.sdg} – {item.label}
+                  {item.sdg}: {item.label}
                 </div>
-                <p className="text-sm text-shoma-slate/70 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-shoma-slate/75 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -195,9 +195,6 @@ export default function VoorBedrijvenPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
-              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
-                Waarom Shoma?
-              </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-6">
                 Geen greenwashing. Bewezen resultaten.
               </h2>
@@ -232,7 +229,7 @@ export default function VoorBedrijvenPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-shoma-slate">{item.title}</h3>
-                        <p className="text-sm text-shoma-slate/60 mt-0.5 leading-relaxed">{item.body}</p>
+                        <p className="text-sm text-shoma-slate/75 mt-0.5 leading-relaxed">{item.body}</p>
                       </div>
                     </div>
                   );
@@ -256,9 +253,9 @@ export default function VoorBedrijvenPage() {
               <h3 className="text-2xl font-extrabold text-shoma-teal mb-3">
                 {caseStudy.result}
               </h3>
-              <p className="text-sm text-shoma-slate/70 leading-relaxed">{caseStudy.description}</p>
+              <p className="text-sm text-shoma-slate/75 leading-relaxed">{caseStudy.description}</p>
               <div className="mt-5 pt-5 border-t border-shoma-teal/10">
-                <p className="text-xs text-shoma-slate/50 italic">
+                <p className="text-xs text-shoma-slate/75 italic">
                   &ldquo;Dankzij de professionele aanpak van Shoma konden wij direct bijdragen aan SDG 6.
                   Volledige transparantie over elke bestede euro.&rdquo;
                 </p>
@@ -273,7 +270,7 @@ export default function VoorBedrijvenPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-shoma-slate">Partnerschapsmogelijkheden</h2>
-            <p className="text-shoma-slate/55 mt-3 max-w-xl mx-auto">
+            <p className="text-shoma-slate/75 mt-3 max-w-xl mx-auto">
               Kies het project dat het beste aansluit bij uw MVO-strategie. Alle tiers omvatten
               documentatie voor uw duurzaamheidsrapportage.
             </p>
@@ -285,7 +282,7 @@ export default function VoorBedrijvenPage() {
                 className={`relative bg-white rounded-3xl p-7 border-2 transition-all flex flex-col ${
                   tier.highlight
                     ? 'border-shoma-teal shadow-xl shadow-shoma-teal/10 scale-[1.02]'
-                    : 'border-gray-200 hover:border-shoma-teal/40 hover:shadow-md'
+                    : 'border-shoma-teal/15 hover:border-shoma-teal/40 hover:shadow-md'
                 }`}
               >
                 {tier.highlight && (
@@ -296,7 +293,7 @@ export default function VoorBedrijvenPage() {
                   </div>
                 )}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-shoma-slate/50 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-shoma-slate/75 uppercase tracking-wider">
                     {tier.tier}
                   </span>
                   <span className={`${tier.sdgColor} text-white text-xs font-bold rounded-md px-2 py-0.5`}>
@@ -307,7 +304,7 @@ export default function VoorBedrijvenPage() {
                 <p className="text-3xl font-extrabold text-shoma-teal mb-5">{tier.amount}</p>
                 <ul className="space-y-2.5 flex-1 mb-6">
                   {tier.perks.map((perk) => (
-                    <li key={perk} className="flex items-start gap-2.5 text-sm text-shoma-slate/70">
+                    <li key={perk} className="flex items-start gap-2.5 text-sm text-shoma-slate/75">
                       <CheckCircle className="w-4 h-4 text-shoma-teal shrink-0 mt-0.5" aria-hidden="true" />
                       {perk}
                     </li>
@@ -335,8 +332,8 @@ export default function VoorBedrijvenPage() {
                 <FileText className="w-5 h-5 text-shoma-teal" aria-hidden="true" />
               </div>
               <div>
-                <p className="font-semibold text-shoma-slate">Beleidsplan 2026–2028</p>
-                <p className="text-sm text-shoma-slate/55 mt-0.5 max-w-xl">
+                <p className="font-semibold text-shoma-slate">Beleidsplan 2026-2028</p>
+                <p className="text-sm text-shoma-slate/75 mt-0.5 max-w-xl">
                   Lees waar Shoma de komende jaren op inzet en hoe uw partnerschap daarin past.
                 </p>
               </div>
@@ -360,31 +357,28 @@ export default function VoorBedrijvenPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Tekst */}
             <div>
-              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
-                Contact opnemen
-              </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-5">
                 Laten we kennis maken
               </h2>
-              <p className="text-shoma-slate/65 leading-relaxed mb-6">
+              <p className="text-shoma-slate/75 leading-relaxed mb-6">
                 Vul het formulier in en een bestuurslid van Stichting Shoma neemt binnen
                 <strong className="text-shoma-slate"> 2 werkdagen</strong> contact op. Geen
                 verplichtingen: eerst samen kijken wat past.
               </p>
               <div className="space-y-4 text-sm">
-                <div className="flex items-center gap-3 text-shoma-slate/70">
+                <div className="flex items-center gap-3 text-shoma-slate/75">
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
                     <span className="text-shoma-teal font-bold text-xs">1</span>
                   </div>
                   Formulier invullen → direct doorgestuurd naar partners@shoma.nl
                 </div>
-                <div className="flex items-center gap-3 text-shoma-slate/70">
+                <div className="flex items-center gap-3 text-shoma-slate/75">
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
                     <span className="text-shoma-teal font-bold text-xs">2</span>
                   </div>
                   Eerste gesprek: uw MVO-doelen × onze projecten afstemmen
                 </div>
-                <div className="flex items-center gap-3 text-shoma-slate/70">
+                <div className="flex items-center gap-3 text-shoma-slate/75">
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
                     <span className="text-shoma-teal font-bold text-xs">3</span>
                   </div>
@@ -393,7 +387,7 @@ export default function VoorBedrijvenPage() {
               </div>
               <div className="mt-8 p-5 bg-white rounded-2xl border border-shoma-teal/10">
                 <p className="text-sm font-medium text-shoma-slate mb-1">Direct bellen?</p>
-                <p className="text-xs text-shoma-slate/55">
+                <p className="text-xs text-shoma-slate/75">
                   Stuur een e-mail naar{' '}
                   <a href="mailto:partners@shoma.nl" className="text-shoma-teal hover:underline font-medium">
                     partners@shoma.nl

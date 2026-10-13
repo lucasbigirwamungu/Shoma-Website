@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     category: 'education',
     summary: 'Kwalitatief Engelstalig basisonderwijs als sleutel naar een betere toekomst',
     description:
-      'De Kashasha English Medium Primary School (KEMPS) is in 2016 gestart met 13 leerlingen en telt nu 257 leerlingen. De school biedt hoogwaardig onderwijs in het Engels – de voertaal van het Tanzaniaanse vervolgonderwijs. De school beschikt over een bibliotheek, elektriciteit, een keuken en een betegelde binnenplaats. Shoma sponsort 55 leerlingen verdeeld over Nursery t/m Klas 4. Hoog scorende leerlingen worden door de overheid geselecteerd voor geavanceerde sterklassen. Sponsoring kost €350 per kind per jaar.',
+      'De Kashasha English Medium Primary School (KEMPS) is in 2016 gestart met 13 leerlingen en telt nu 257 leerlingen. De school biedt hoogwaardig onderwijs in het Engels, de voertaal van het Tanzaniaanse vervolgonderwijs. De school beschikt over een bibliotheek, elektriciteit, een keuken en een betegelde binnenplaats. Shoma sponsort 55 leerlingen verdeeld over Nursery t/m Klas 4. Hoog scorende leerlingen worden door de overheid geselecteerd voor geavanceerde sterklassen. Sponsoring kost €350 per kind per jaar.',
     currentFunding: 18600,
     targetFunding: 25000,
     impactMultiplier: 350,
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     category: 'water',
     summary: 'Veilig drinkwater voor de school én de omliggende gemeenschap',
     description:
-      'Met steun van Stichting Wilde Ganzen realiseerde Shoma een diepe bron (60–80 meter) op het schoolterrein. Het water wordt opgeslagen in ondergrondse tanks en via zonnepompen gedistribueerd. De installatie voorziet de school en de omliggende gemeenschap buiten schooltijd van schoon drinkwater. Commerciële waterhandelaren zijn expliciet uitgesloten. Dit project reduceert schoolverzuim doordat kinderen niet langer uren per dag water hoeven te halen.',
+      'Met steun van Stichting Wilde Ganzen realiseerde Shoma een diepe bron (60-80 meter) op het schoolterrein. Het water wordt opgeslagen in ondergrondse tanks en via zonnepompen gedistribueerd. De installatie voorziet de school en de omliggende gemeenschap buiten schooltijd van schoon drinkwater. Commerciële waterhandelaren zijn expliciet uitgesloten. Dit project reduceert schoolverzuim doordat kinderen niet langer uren per dag water hoeven te halen.',
     currentFunding: 12400,
     targetFunding: 20000,
     impactMultiplier: 1,

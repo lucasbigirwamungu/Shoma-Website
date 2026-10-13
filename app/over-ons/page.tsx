@@ -128,14 +128,20 @@ const annualReports = [
   },
 ];
 
+/** Voor- en achternaamletter, zodat bestuursleden met dezelfde achternaam niet dezelfde letter krijgen. */
+const initials = (name: string) => {
+  const parts = name.trim().split(/\s+/);
+  return (parts[0].charAt(0) + (parts.length > 1 ? parts[parts.length - 1].charAt(0) : '')).toUpperCase();
+};
+
 export default function OverOnsPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-shoma-teal-dark text-white">
+      <div className="bg-shoma-teal-dark text-white pt-20">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Over Stichting Shoma</h1>
-          <p className="text-white/70 max-w-2xl leading-relaxed">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Over Stichting Shoma</h1>
+          <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
             Opgericht vanuit een persoonlijke verbinding. Gedreven door transparantie.
             Meer dan 20 jaar onderwijs bevordering in Rubya, Tanzania.
           </p>
@@ -146,30 +152,30 @@ export default function OverOnsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Oprichtverhaal */}
         <Reveal>
-          <h2 className="text-2xl font-bold text-shoma-slate mb-6">Ons verhaal</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-6">Ons verhaal</h2>
           <div className="bg-shoma-sand rounded-3xl p-8 border border-shoma-teal/10">
             {/* "Shoma" betekenis */}
             <StoryBadge />
-            <p className="text-shoma-slate/75 leading-relaxed mb-4">
+            <p className="max-w-[72ch] text-shoma-slate/80 leading-relaxed mb-4">
               Stichting Shoma is in <strong className="text-shoma-slate">2005</strong> opgericht
               na een persoonlijk bezoek van een groep Nederlanders aan Rubya in augustus 2004,
               ter gelegenheid van het huwelijk van Frank Bigirwamungu (geboren in Rubya) en
               Marloes Bargeman, die er in 2000 als coassistent in het plaatselijke ziekenhuis
               werkte.
             </p>
-            <p className="text-shoma-slate/75 leading-relaxed mb-4">
+            <p className="max-w-[72ch] text-shoma-slate/80 leading-relaxed mb-4">
               Rubya ligt in het noordwesten van Tanzania nabij het Victoriameer. De bevolking
               leeft grotendeels van kleinschalige landbouw en is sterk afhankelijk van volatiele
               wereldmarktprijzen. Door de impact van HIV/AIDS is er een onevenredig grote groep
               weeskinderen die zonder steun niet naar school kunnen.
             </p>
-            <p className="text-shoma-slate/75 leading-relaxed mb-4">
+            <p className="max-w-[72ch] text-shoma-slate/80 leading-relaxed mb-4">
               Hoewel de Tanzaniaanse overheid stelt dat basisonderwijs gratis is, verplichten
               scholen gezinnen tot bijdragen voor uniformen, onderhoud en leermaterialen,
               oplopend tot €35 à €40 per jaar. Voor arme gezinnen en wezen is dit een
               onneembare barrière. Stichting Shoma doorbreekt die barrière.
             </p>
-            <p className="text-shoma-slate/75 leading-relaxed">
+            <p className="max-w-[72ch] text-shoma-slate/80 leading-relaxed">
               Wij geloven dat onderwijs de sleutel is tot een betere toekomst. Onze aanpak:
               onderwijs toegankelijk maken, leefomstandigheden verbeteren en lokale samenwerking
               stimuleren, volledig gerund door vrijwilligers in Nederland en Tanzania.
@@ -193,7 +199,7 @@ export default function OverOnsPage() {
         {/* ANBI gegevens volledig */}
         <section id="anbi">
           <Reveal>
-            <h2 className="text-2xl font-bold text-shoma-slate mb-6">ANBI-gegevens</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-6">ANBI-gegevens</h2>
           </Reveal>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
@@ -218,7 +224,7 @@ export default function OverOnsPage() {
             <span className="text-2xl">📄</span>
             <div>
               <p className="font-semibold text-shoma-terracotta-ink mb-1">Wilt u meer informatie over de fiscale aftrek?</p>
-              <p className="text-sm text-shoma-slate/70 leading-relaxed">
+              <p className="text-sm text-shoma-slate/75 leading-relaxed">
                 Als ANBI-instelling kunt u uw donatie aan Stichting Shoma aftrekken van uw
                 inkomstenbelasting. Bij een periodieke schenking (5 jaar vastgelegd via een
                 schenkingsovereenkomst) is de volledige gift aftrekbaar zonder drempel.
@@ -244,17 +250,17 @@ export default function OverOnsPage() {
         <section id="bestuur">
           <Reveal className="flex items-center gap-3 mb-6">
             <Users className="w-6 h-6 text-shoma-teal" aria-hidden="true" />
-            <h2 className="text-2xl font-bold text-shoma-slate">Bestuur Nederland</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate">Bestuur Nederland</h2>
           </Reveal>
           <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {boardMembers.map((member) => (
               <StaggerItem key={member.name} className="bg-shoma-sand rounded-xl p-4 text-center border border-shoma-teal/10">
                 <div className="w-10 h-10 bg-shoma-teal rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-sm">
-                    {member.name.split(' ').pop()?.charAt(0)}
+                  <span className="text-white font-bold text-sm" aria-hidden="true">
+                    {initials(member.name)}
                   </span>
                 </div>
-                <p className="font-semibold text-shoma-slate text-xs leading-tight">{member.name}</p>
+                <p className="font-semibold text-shoma-slate text-sm leading-tight">{member.name}</p>
                 <p className="text-xs text-shoma-teal mt-0.5">{member.role}</p>
               </StaggerItem>
             ))}
@@ -262,17 +268,17 @@ export default function OverOnsPage() {
 
           {/* Ambassadeurs */}
           <div className="flex items-center gap-3 mb-3 mt-2">
-            <span className="text-base font-semibold text-shoma-slate/70">Ambassadeurs</span>
+            <span className="text-base font-semibold text-shoma-slate/75">Ambassadeurs</span>
           </div>
           <StaggerContainer className="flex flex-wrap gap-3 mb-8">
             {ambassadors.map((a) => (
               <StaggerItem key={a.name} className="flex items-center gap-2 bg-shoma-sand/60 border border-shoma-teal/10 rounded-xl px-4 py-2">
                 <div className="w-7 h-7 bg-shoma-terracotta/20 rounded-full flex items-center justify-center">
-                  <span className="text-shoma-terracotta-ink font-bold text-xs">{a.name.charAt(0)}</span>
+                  <span className="text-shoma-terracotta-ink font-bold text-[0.65rem]" aria-hidden="true">{initials(a.name)}</span>
                 </div>
                 <div>
                   <p className="font-semibold text-shoma-slate text-xs">{a.name}</p>
-                  <p className="text-xs text-shoma-slate/45">{a.role}</p>
+                  <p className="text-xs text-shoma-slate/75">{a.role}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -286,11 +292,11 @@ export default function OverOnsPage() {
             {localTeam.map((member) => (
               <StaggerItem key={member.name} className="bg-shoma-sand rounded-xl p-4 flex items-center gap-3 border border-shoma-teal/10">
                 <div className="w-9 h-9 bg-shoma-terracotta rounded-full flex items-center justify-center shrink-0">
-                  <span className="text-shoma-slate font-bold text-xs">{member.name.charAt(0)}</span>
+                  <span className="text-shoma-slate font-bold text-xs" aria-hidden="true">{initials(member.name)}</span>
                 </div>
                 <div>
                   <p className="font-semibold text-shoma-slate text-sm">{member.name}</p>
-                  <p className="text-xs text-shoma-slate/55">{member.role}</p>
+                  <p className="text-xs text-shoma-slate/75">{member.role}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -304,10 +310,10 @@ export default function OverOnsPage() {
         {/* Jaarrekeningen */}
         <section id="jaarrekeningen">
           <Reveal>
-            <h2 className="text-2xl font-bold text-shoma-slate mb-2">
-              Jaarrekeningen 2012–2025
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-2">
+              Jaarrekeningen 2012-2025
             </h2>
-            <p className="text-shoma-slate/55 mb-6">
+            <p className="text-shoma-slate/75 mb-6">
               Alle jaarrekeningen en jaarverslagen zijn direct downloadbaar als PDF.
             </p>
 
@@ -369,10 +375,10 @@ export default function OverOnsPage() {
         {/* Beleidsplan */}
         <section id="beleidsplan">
           <Reveal>
-            <h2 className="text-2xl font-bold text-shoma-slate mb-2">
-              Beleidsplan 2026–2028
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-2">
+              Beleidsplan 2026-2028
             </h2>
-            <p className="text-shoma-slate/55 mb-6 text-sm">
+            <p className="text-shoma-slate/75 mb-6 text-sm">
               Een nieuw bestuur, een nieuw beleidsplan. Shoma richt zich de komende jaren op
               groei en zelfredzaamheid van de gemeenschap in Rubya.
             </p>
@@ -391,7 +397,7 @@ export default function OverOnsPage() {
               <StaggerItem key={item.title} className="bg-shoma-sand rounded-xl p-4 flex gap-3 border border-shoma-teal/10">
                 <div>
                   <p className="font-semibold text-shoma-slate text-sm">{item.title}</p>
-                  <p className="text-xs text-shoma-slate/55 mt-0.5 leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-shoma-slate/75 mt-0.5 leading-relaxed">{item.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -400,7 +406,7 @@ export default function OverOnsPage() {
           <StaggerContainer className="space-y-3">
             {[
               {
-                title: 'Beleidsplan 2026–2028',
+                title: 'Beleidsplan 2026-2028',
                 desc: 'Strategisch beleid: consolidatie, kwaliteitsversterking en lokale zelfredzaamheid.',
                 href: '/documenten/Beleidsplan-stichting-shoma-2026-2028-1.pdf',
               },
@@ -410,12 +416,12 @@ export default function OverOnsPage() {
                 href: '/documenten/investering-dekkingsplan-2026.pdf',
               },
               {
-                title: 'Beleidsplan 2023–2025',
+                title: 'Beleidsplan 2023-2025',
                 desc: 'Vorig beleidsplan, ter archief.',
                 href: '/documenten/Beleidsplan-2023-2025.pdf',
               },
               {
-                title: 'Beleidsplan 2021–2023',
+                title: 'Beleidsplan 2021-2023',
                 desc: 'Ouder beleidsplan, ter archief.',
                 href: '/documenten/beleidsplan-shoma-2021-2023.pdf',
               },
@@ -431,7 +437,7 @@ export default function OverOnsPage() {
               >
                 <div>
                   <p className="font-medium text-shoma-slate">{doc.title}</p>
-                  <p className="text-sm text-shoma-slate/55 mt-0.5">{doc.desc}</p>
+                  <p className="text-sm text-shoma-slate/75 mt-0.5">{doc.desc}</p>
                 </div>
                 <a
                   href={doc.href}
@@ -454,7 +460,7 @@ export default function OverOnsPage() {
         {/* Statuten */}
         <Reveal>
           <section id="statuten">
-            <h2 className="text-2xl font-bold text-shoma-slate mb-4">Statuten</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-4">Statuten</h2>
             <div className="space-y-3">
               {[
                 {
@@ -474,7 +480,7 @@ export default function OverOnsPage() {
                 >
                   <div>
                     <p className="font-medium text-shoma-slate">{doc.title}</p>
-                    <p className="text-sm text-shoma-slate/55 mt-0.5">{doc.desc}</p>
+                    <p className="text-sm text-shoma-slate/75 mt-0.5">{doc.desc}</p>
                   </div>
                   <a
                     href={doc.href}

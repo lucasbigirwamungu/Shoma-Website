@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BookOpen, ChevronRight, ArrowLeft } from 'lucide-react';
+import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { PROJECT_STORIES, type ProjectStory } from '@/lib/project-stories';
 import type { ProjectCategory } from '@/types';
 
@@ -21,18 +21,12 @@ const CATEGORY_ORDER: ProjectCategory[] = ['education', 'water', 'energy'];
 
 export default function ProjectVerhalenPage() {
   return (
-    <div className="min-h-screen bg-shoma-sand pt-20">
+    <div className="min-h-screen bg-shoma-sand">
       {/* Header */}
-      <div className="bg-shoma-teal-dark text-white">
+      <div className="bg-shoma-teal-dark text-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex items-center gap-2 mb-3">
-            <BookOpen className="w-5 h-5 text-shoma-terracotta-light" aria-hidden="true" />
-            <p className="text-shoma-terracotta-light font-semibold text-sm uppercase tracking-wider">
-              De verhalen achter de cijfers
-            </p>
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Projectverhalen</h1>
-          <p className="text-white/70 max-w-2xl leading-relaxed">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Projectverhalen</h1>
+          <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
             Achter elk project zit een verhaal: hoe het begon, wie erbij betrokken waren en wat er
             onderweg gebeurde. Deze verhalen vullen de samenvattingen op onze{' '}
             <Link href="/projecten" className="underline underline-offset-2 hover:text-white">
@@ -51,14 +45,14 @@ export default function ProjectVerhalenPage() {
       </div>
 
       {/* Category index */}
-      <div className="bg-white border-b border-gray-100 sticky top-16 z-10">
+      <div className="bg-white border-b border-shoma-teal/10 sticky top-16 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
             {CATEGORY_ORDER.map((cat) => (
               <a
                 key={cat}
                 href={`#${cat}`}
-                className="shrink-0 inline-flex items-center gap-1.5 text-sm text-shoma-slate/60 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
+                className="shrink-0 inline-flex items-center gap-1.5 text-sm text-shoma-slate/75 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
               >
                 <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                 {CATEGORY_META[cat].label}
@@ -93,14 +87,14 @@ function StoryCard({ story, accent, tag }: { story: ProjectStory; accent: string
   return (
     <article
       id={story.slug}
-      className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 p-6 sm:p-8 scroll-mt-32"
+      className="bg-white rounded-3xl overflow-hidden shadow-sm border border-shoma-teal/10 p-6 sm:p-8 scroll-mt-32"
     >
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         <span className={`${accent} text-white text-xs font-bold rounded-lg px-2.5 py-1`}>{tag}</span>
-        <span className="text-shoma-slate/40 text-xs">{story.period}</span>
+        <span className="text-shoma-slate/75 text-xs">{story.period}</span>
       </div>
       <h3 className="text-xl sm:text-2xl font-bold text-shoma-slate mb-2">{story.title}</h3>
-      <p className="text-shoma-slate/55 text-sm mb-6">{story.excerpt}</p>
+      <p className="text-shoma-slate/75 text-sm mb-6">{story.excerpt}</p>
 
       {story.photos.length > 0 && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -124,7 +118,7 @@ function StoryCard({ story, accent, tag }: { story: ProjectStory; accent: string
 
       <div className="space-y-4">
         {story.body.map((paragraph, i) => (
-          <p key={i} className="text-shoma-slate/70 text-sm leading-relaxed">
+          <p key={i} className="text-shoma-slate/75 text-sm leading-relaxed">
             {paragraph}
           </p>
         ))}

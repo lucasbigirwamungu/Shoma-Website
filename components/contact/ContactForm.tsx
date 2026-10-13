@@ -51,12 +51,12 @@ export default function ContactForm() {
   // ─── Successtatus ─────────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <div className="bg-white rounded-3xl border border-gray-100 shadow-xl p-10 text-center w-full" role="status">
+      <div className="bg-white rounded-3xl border border-shoma-teal/10 shadow-xl p-10 text-center w-full" role="status">
         <div className="w-16 h-16 bg-shoma-teal/10 rounded-full flex items-center justify-center mx-auto mb-5">
           <CheckCircle className="w-8 h-8 text-shoma-teal" aria-hidden="true" />
         </div>
         <h2 className="text-2xl font-bold text-shoma-slate mb-3">Bericht verzonden!</h2>
-        <p className="text-shoma-slate/65 leading-relaxed">
+        <p className="text-shoma-slate/75 leading-relaxed">
           Bedankt voor uw bericht. Wij nemen zo snel mogelijk contact met u op.
         </p>
         <button
@@ -76,7 +76,7 @@ export default function ContactForm() {
     `w-full px-4 py-3 rounded-xl border transition-colors focus:outline-none focus:ring-2 focus:ring-shoma-teal/20 text-shoma-slate ${
       fieldErrors[field]
         ? 'border-red-400 focus:border-red-400 bg-red-50/30'
-        : 'border-gray-200 focus:border-shoma-teal bg-white'
+        : 'border-shoma-teal/15 focus:border-shoma-teal bg-white'
     }`;
 
   const fieldError = (field: keyof ContactInput) =>
@@ -90,10 +90,10 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="bg-white rounded-3xl border border-gray-100 shadow-xl p-7 sm:p-8 w-full"
+      className="bg-white rounded-3xl border border-shoma-teal/10 shadow-xl p-7 sm:p-8 w-full"
     >
       <h2 className="text-xl font-bold text-shoma-slate mb-1">Stuur ons een bericht</h2>
-      <p className="text-sm text-shoma-slate/55 mb-6">
+      <p className="text-sm text-shoma-slate/75 mb-6">
         Wilt u in contact komen met Shoma? Vul dan hieronder uw gegevens in.
       </p>
 

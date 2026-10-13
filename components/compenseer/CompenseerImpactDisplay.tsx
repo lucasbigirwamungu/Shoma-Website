@@ -52,7 +52,7 @@ export default function CompenseerImpactDisplay({
       </div>
 
       {/* Breakdown */}
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
+      <div className="bg-white border border-shoma-teal/15 rounded-lg p-6">
         <h3 className="text-lg font-bold text-shoma-teal mb-4">Berekening</h3>
         <div className="space-y-3 text-sm">
           <div className="flex justify-between">
@@ -77,7 +77,7 @@ export default function CompenseerImpactDisplay({
       </div>
 
       {/* Species info */}
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
+      <div className="bg-white border border-shoma-teal/15 rounded-lg p-6">
         <h3 className="text-lg font-bold text-shoma-teal mb-4">
           Boomsoorten mix
         </h3>

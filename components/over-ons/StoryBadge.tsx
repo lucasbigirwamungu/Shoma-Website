@@ -50,7 +50,7 @@ export default function StoryBadge() {
       <span ref={wordRef} className="text-2xl font-extrabold text-shoma-teal inline-block">
         Shoma
       </span>
-      <span className="text-shoma-slate/60 text-sm">is het Kihaya-woord voor</span>
+      <span className="text-shoma-slate/75 text-sm">is het Kihaya-woord voor</span>
       <span className="text-lg font-bold text-shoma-terracotta-ink">&ldquo;onderwijs&rdquo;</span>
     </div>
   );

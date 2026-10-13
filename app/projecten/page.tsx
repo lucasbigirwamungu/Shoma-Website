@@ -61,15 +61,12 @@ const OPEN_NEEDS: { title: string; body: string; slug: string }[] = [
 
 export default function ProjectenPage() {
   return (
-    <div className="min-h-screen bg-shoma-sand pt-20">
+    <div className="min-h-screen bg-shoma-sand">
       {/* Header */}
-      <div className="bg-shoma-teal-dark text-white">
+      <div className="bg-shoma-teal-dark text-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <p className="text-shoma-terracotta-light font-semibold text-sm uppercase tracking-wider mb-3">
-            Impact in Rubya, Tanzania
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Onze projecten</h1>
-          <p className="text-white/70 max-w-2xl leading-relaxed">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">Onze projecten</h1>
+          <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
             Onderwijs, schoon water en duurzame energie voor de gemeenschap van Rubya: van de
             bouw van onze eigen school tot solarlampen en een schoolmoestuin. Elk project
             transparant gefinancierd en lokaal gecontroleerd.
@@ -89,7 +86,7 @@ export default function ProjectenPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-2xl font-bold text-shoma-slate mb-4">Hoe het begon</h2>
-            <div className="space-y-4 text-shoma-slate/70 leading-relaxed">
+            <div className="space-y-4 text-shoma-slate/75 leading-relaxed">
               <p>
                 Stichting Shoma is in 2005 opgericht om de leefomstandigheden van de mensen in en
                 rond Rubya te verbeteren. Na overleg met de lokale bevolking is ervoor gekozen om
@@ -132,7 +129,7 @@ export default function ProjectenPage() {
       <section className="bg-shoma-sand py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-shoma-slate mb-2">Onderwijs</h2>
-          <p className="text-shoma-slate/60 mb-8">
+          <p className="text-shoma-slate/75 mb-8">
             Shoma ondersteunt twee typen onderwijs: het Engelstalige KEMPS-programma en het
             reguliere overheidsonderwijs. Beide zijn essentieel, maar vragen om een andere aanpak.
           </p>
@@ -157,7 +154,7 @@ export default function ProjectenPage() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-shoma-slate text-lg mb-2">Kashasha English Medium Primary School</h3>
-                <p className="text-sm text-shoma-slate/65 leading-relaxed mb-4">
+                <p className="text-sm text-shoma-slate/75 leading-relaxed mb-4">
                   KEMPS is gestart in 2016 met 13 leerlingen en telt nu <strong>257 leerlingen</strong>.
                   De school biedt hoogwaardig Engelstalig onderwijs, de voertaal van het Tanzaniaans
                   vervolgonderwijs. Shoma sponsort <strong>55 leerlingen</strong>{' '}
@@ -166,26 +163,26 @@ export default function ProjectenPage() {
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
                     <p className="font-extrabold text-shoma-teal text-xl">257</p>
-                    <p className="text-xs text-shoma-slate/55 mt-0.5">leerlingen totaal</p>
+                    <p className="text-xs text-shoma-slate/75 mt-0.5">leerlingen totaal</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
                     <p className="font-extrabold text-shoma-terracotta-ink text-xl">55</p>
-                    <p className="text-xs text-shoma-slate/55 mt-0.5">door Shoma gesponsord</p>
+                    <p className="text-xs text-shoma-slate/75 mt-0.5">door Shoma gesponsord</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center col-span-2">
                     <p className="font-extrabold text-shoma-teal text-xl">€ 350</p>
-                    <p className="text-xs text-shoma-slate/55 mt-0.5">per kind per jaar</p>
+                    <p className="text-xs text-shoma-slate/75 mt-0.5">per kind per jaar</p>
                   </div>
                   {/* Financiële voortgang */}
                   <div className="col-span-2 mt-3 space-y-2">
-                    <div className="flex justify-between text-xs text-shoma-slate/55 mb-1.5">
+                    <div className="flex justify-between text-xs text-shoma-slate/75 mb-1.5">
                       <span>Financieringsvoortgang</span>
                       <span className="font-semibold text-shoma-teal">62%</span>
                     </div>
                     <div className="w-full h-2 bg-shoma-sand rounded-full overflow-hidden">
                       <div className="h-full bg-shoma-teal rounded-full" style={{ width: '62%' }} />
                     </div>
-                    <div className="flex justify-between text-xs text-shoma-slate/50">
+                    <div className="flex justify-between text-xs text-shoma-slate/75">
                       <span>€ 19.250 ingezameld</span>
                       <span>Doel: € 31.000</span>
                     </div>
@@ -220,30 +217,30 @@ export default function ProjectenPage() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-shoma-slate text-lg mb-2">Overheidsscholen in Rubya</h3>
-                <p className="text-sm text-shoma-slate/65 leading-relaxed mb-4">
+                <p className="text-sm text-shoma-slate/75 leading-relaxed mb-4">
                   Hoewel de overheid basisonderwijs gratis noemt, zijn er bijdragen voor uniformen en
-                  materialen (€35–€40/jaar). Voor arme gezinnen is dit onbetaalbaar. Shoma betaalt dit voor{' '}
+                  materialen (€35-€40/jaar). Voor arme gezinnen is dit onbetaalbaar. Shoma betaalt dit voor{' '}
                   <strong>155 kinderen</strong> per jaar.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
                     <p className="font-extrabold text-shoma-terracotta-ink text-xl">155</p>
-                    <p className="text-xs text-shoma-slate/55 mt-0.5">kinderen (2025)</p>
+                    <p className="text-xs text-shoma-slate/75 mt-0.5">kinderen (2025)</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
                     <p className="font-extrabold text-shoma-terracotta-ink text-xl">€ 40</p>
-                    <p className="text-xs text-shoma-slate/55 mt-0.5">per kind per jaar</p>
+                    <p className="text-xs text-shoma-slate/75 mt-0.5">per kind per jaar</p>
                   </div>
                   {/* Financiële voortgang */}
                   <div className="col-span-2 mt-3 space-y-2">
-                    <div className="flex justify-between text-xs text-shoma-slate/55 mb-1.5">
+                    <div className="flex justify-between text-xs text-shoma-slate/75 mb-1.5">
                       <span>Financieringsvoortgang</span>
                       <span className="font-semibold text-shoma-terracotta-ink">97%</span>
                     </div>
                     <div className="w-full h-2 bg-shoma-sand rounded-full overflow-hidden">
                       <div className="h-full bg-shoma-terracotta rounded-full" style={{ width: '97%' }} />
                     </div>
-                    <div className="flex justify-between text-xs text-shoma-slate/50">
+                    <div className="flex justify-between text-xs text-shoma-slate/75">
                       <span>€ 6.200 ingezameld</span>
                       <span>Doel: € 6.400</span>
                     </div>
@@ -266,7 +263,7 @@ export default function ProjectenPage() {
       <section className="bg-shoma-cream py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-shoma-slate mb-2">Water & Energie</h2>
-          <p className="text-shoma-slate/60 mb-8">
+          <p className="text-shoma-slate/75 mb-8">
             Schoon water en duurzame energie zijn randvoorwaarden voor goed onderwijs.
           </p>
 
@@ -274,7 +271,7 @@ export default function ProjectenPage() {
             {PROJECTS.filter((p) => p.category !== 'education').map((project, index) => (
               <article
                 key={project.id}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-3xl overflow-hidden shadow-sm border border-shoma-teal/10 hover:shadow-md transition-shadow"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-2 ${index % 2 === 1 ? '' : ''}`}>
                   <div className="relative h-64 lg:h-auto min-h-64">
@@ -296,20 +293,20 @@ export default function ProjectenPage() {
 
                   <div className="p-8 lg:p-10 flex flex-col justify-center">
                     <h2 className="text-2xl font-bold text-shoma-slate mb-3">{project.title}</h2>
-                    <p className="text-shoma-slate/65 leading-relaxed mb-6">{project.description}</p>
+                    <p className="text-shoma-slate/75 leading-relaxed mb-6">{project.description}</p>
 
                     <div className="grid grid-cols-3 gap-3 mb-6">
                       {project.stats.map((stat) => (
                         <div key={stat.label} className="bg-shoma-sand rounded-xl p-3 text-center">
                           <p className="font-extrabold text-shoma-teal text-lg leading-tight">{stat.value}</p>
-                          <p className="text-xs text-shoma-slate/55 mt-1 leading-tight">{stat.label}</p>
+                          <p className="text-xs text-shoma-slate/75 mt-1 leading-tight">{stat.label}</p>
                         </div>
                       ))}
                     </div>
 
                     {/* Progress bar */}
                     <div className="mb-6">
-                      <div className="flex justify-between text-xs text-shoma-slate/55 mb-1.5">
+                      <div className="flex justify-between text-xs text-shoma-slate/75 mb-1.5">
                         <span>Financieringsvoortgang</span>
                         <span className="font-semibold text-shoma-teal">
                           {Math.round((project.currentFunding / project.targetFunding) * 100)}%
@@ -321,7 +318,7 @@ export default function ProjectenPage() {
                           style={{ width: `${Math.min((project.currentFunding / project.targetFunding) * 100, 100)}%` }}
                         />
                       </div>
-                      <div className="flex justify-between text-xs text-shoma-slate/50 mt-1">
+                      <div className="flex justify-between text-xs text-shoma-slate/75 mt-1">
                         <span>€ {project.currentFunding.toLocaleString('nl-NL')} ingezameld</span>
                         <span>Doel: € {project.targetFunding.toLocaleString('nl-NL')}</span>
                       </div>
@@ -354,7 +351,7 @@ export default function ProjectenPage() {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-shoma-slate mb-2">Alle projecten sinds 2005</h2>
-          <p className="text-shoma-slate/60 mb-8 max-w-2xl">
+          <p className="text-shoma-slate/75 mb-8 max-w-2xl">
             Van het eerste stuk grond tot de schoolkeuken van nu. Elk project heeft een eigen
             verhaal met achtergrond en foto&apos;s.
           </p>
@@ -389,9 +386,9 @@ export default function ProjectenPage() {
                     </span>
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <p className="text-xs text-shoma-slate/50 mb-1">{story.period}</p>
+                    <p className="text-xs text-shoma-slate/75 mb-1">{story.period}</p>
                     <h3 className="font-bold text-shoma-slate text-lg leading-snug mb-2">{story.title}</h3>
-                    <p className="text-sm text-shoma-slate/65 leading-relaxed flex-1">{story.excerpt}</p>
+                    <p className="text-sm text-shoma-slate/75 leading-relaxed flex-1">{story.excerpt}</p>
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-shoma-teal mt-4">
                       Lees het verhaal
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
@@ -408,7 +405,7 @@ export default function ProjectenPage() {
       <section className="bg-shoma-clay py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-shoma-slate mb-2">Waar we nog aan werken</h2>
-          <p className="text-shoma-slate/65 mb-8 max-w-2xl">
+          <p className="text-shoma-slate/75 mb-8 max-w-2xl">
             De school staat, maar is nog niet af. Voor deze onderdelen loopt de fondsenwerving nog.
           </p>
 
@@ -416,7 +413,7 @@ export default function ProjectenPage() {
             {OPEN_NEEDS.map((need) => (
               <div key={need.title} className="bg-white rounded-2xl p-6 border border-shoma-teal/10">
                 <h3 className="font-bold text-shoma-slate mb-2">{need.title}</h3>
-                <p className="text-sm text-shoma-slate/65 leading-relaxed mb-4">{need.body}</p>
+                <p className="text-sm text-shoma-slate/75 leading-relaxed mb-4">{need.body}</p>
                 <Link
                   href={`/projecten/verhalen#${need.slug}`}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-shoma-teal hover:text-shoma-teal-dark transition-colors"

@@ -39,15 +39,16 @@ const rows: ImpactRow[] = [
     icon: Droplets,
     label: 'Liters schoon drinkwater',
     value: (a) => `${calcCleanWaterLiters(a).toLocaleString('nl-NL')} L`,
-    color: 'text-blue-700',
+    color: 'text-shoma-terracotta-ink',
   },
 ];
 
 interface Props {
   initialAmount?: number;
+  className?: string;
 }
 
-export default function ImpactCalculator({ initialAmount = 40 }: Props) {
+export default function ImpactCalculator({ initialAmount = 40, className = 'max-w-md mx-auto' }: Props) {
   const [amount, setAmount] = useState<number>(initialAmount);
   const [rawInput, setRawInput] = useState<string>(String(initialAmount));
   const valueRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -76,11 +77,11 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
   };
 
   return (
-    <div className="bg-shoma-sand p-6 rounded-2xl border border-shoma-teal/10 shadow-sm max-w-md mx-auto">
+    <div className={`bg-shoma-sand p-6 rounded-2xl border border-shoma-teal/10 shadow-sm ${className}`}>
       <h3 className="text-xl font-bold text-shoma-slate mb-1">
         Bereken uw directe impact
       </h3>
-      <p className="text-sm text-shoma-slate/70 mb-5">
+      <p className="text-sm text-shoma-slate/75 mb-5">
         Dankzij onze 100% vrijwilligersstructuur gaat elke euro rechtstreeks naar Rubya.
       </p>
 
@@ -116,7 +117,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
           return (
             <div
               key={row.label}
-              className="flex items-center justify-between bg-white rounded-xl px-4 py-3 shadow-xs border border-gray-100"
+              className="flex items-center justify-between gap-3 bg-white rounded-xl px-4 py-3 border border-shoma-teal/10"
             >
               <div className="flex items-center gap-2.5">
                 <Icon className={`w-4 h-4 ${row.color}`} aria-hidden="true" />
@@ -126,7 +127,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
                 ref={(el) => {
                   valueRefs.current[i] = el;
                 }}
-                className={`inline-block font-bold text-base ${row.color}`}
+                className={`inline-block shrink-0 whitespace-nowrap font-bold text-base tabular-nums ${row.color}`}
               >
                 {amount > 0 ? row.value(amount) : '-'}
               </span>
@@ -135,7 +136,7 @@ export default function ImpactCalculator({ initialAmount = 40 }: Props) {
         })}
       </div>
 
-      <p className="text-xs text-shoma-slate/70 mt-5 text-center leading-relaxed">
+      <p className="text-xs text-shoma-slate/75 mt-5 text-center leading-relaxed">
         Gebaseerd op werkelijke kosten: €40/jaar regulier onderwijs · €30/maand KEMPS ·
         €1 = 50 liter drinkwater via het BAENT-pompstation.
       </p>

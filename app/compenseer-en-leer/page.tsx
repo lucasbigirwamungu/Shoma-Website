@@ -98,7 +98,7 @@ export default function CompenseerEnLeerPage() {
             ].map((benefit, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition"
+                className="bg-white p-6 rounded-lg border border-shoma-teal/15 hover:shadow-md transition"
               >
                 <div className="text-4xl mb-3">{benefit.icon}</div>
                 <h3 className="font-bold text-gray-800 mb-2">{benefit.title}</h3>
@@ -136,12 +136,12 @@ export default function CompenseerEnLeerPage() {
             ].map((faq, idx) => (
               <details
                 key={idx}
-                className="group bg-white rounded-lg border border-gray-200"
+                className="group bg-white rounded-lg border border-shoma-teal/15"
               >
                 <summary className="px-6 py-4 cursor-pointer font-medium text-gray-800 hover:bg-orange-100 transition">
                   {faq.q}
                 </summary>
-                <div className="px-6 pb-4 text-sm text-gray-600 border-t border-gray-200">
+                <div className="px-6 pb-4 text-sm text-gray-600 border-t border-shoma-teal/15">
                   {faq.a}
                 </div>
               </details>

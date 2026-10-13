@@ -43,7 +43,7 @@ const features = [
 
 const pricingTiers = [
   {
-    size: '1–25 medewerkers',
+    size: '1-25 medewerkers',
     monthlyFee: '€ 99,-',
     perPersonFee: '€ 7,50',
     features: [
@@ -55,7 +55,7 @@ const pricingTiers = [
     ],
   },
   {
-    size: '26–100 medewerkers',
+    size: '26-100 medewerkers',
     monthlyFee: '€ 299,-',
     perPersonFee: '€ 5,99',
     features: [
@@ -163,7 +163,7 @@ export default function CompenseerBedrijvenSections() {
             <h2 className="text-4xl font-bold text-shoma-slate mb-4">
               Volledige team-oplossing
             </h2>
-            <p className="text-lg text-shoma-slate/60 max-w-2xl mx-auto">
+            <p className="text-lg text-shoma-slate/75 max-w-2xl mx-auto">
               Van inschrijving tot rapportage: alles wat u nodig hebt om uw team CO₂ te laten compenseren met transparantie.
             </p>
           </div>
@@ -171,12 +171,12 @@ export default function CompenseerBedrijvenSections() {
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
-                <div key={feature.title} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div key={feature.title} className="bg-white rounded-2xl p-8 border border-shoma-teal/10 shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-14 h-14 bg-shoma-teal/10 rounded-xl flex items-center justify-center mb-5">
                     <Icon className="w-7 h-7 text-shoma-teal" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold text-shoma-slate mb-2">{feature.title}</h3>
-                  <p className="text-shoma-slate/65 leading-relaxed">{feature.desc}</p>
+                  <p className="text-shoma-slate/75 leading-relaxed">{feature.desc}</p>
                 </div>
               );
             })}
@@ -191,7 +191,7 @@ export default function CompenseerBedrijvenSections() {
             <h2 className="text-4xl font-bold text-shoma-slate mb-4">
               Transparante Pricing
             </h2>
-            <p className="text-lg text-shoma-slate/60 max-w-2xl mx-auto">
+            <p className="text-lg text-shoma-slate/75 max-w-2xl mx-auto">
               Maandelijkse basis-fee + per-persoon kosten. Geen verborgen charges.
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function CompenseerBedrijvenSections() {
                 className={`relative rounded-3xl p-8 border-2 flex flex-col transition-all ${
                   tier.highlight
                     ? 'border-shoma-teal bg-gradient-to-br from-shoma-teal/5 to-white shadow-xl'
-                    : 'border-gray-200 bg-white'
+                    : 'border-shoma-teal/15 bg-white'
                 }`}
               >
                 {tier.highlight && (
@@ -215,11 +215,11 @@ export default function CompenseerBedrijvenSections() {
                 <h3 className="text-2xl font-bold text-shoma-slate mb-2">{tier.size}</h3>
                 <div className="mb-6">
                   <div className="text-4xl font-extrabold text-shoma-teal">{tier.monthlyFee}</div>
-                  <p className="text-sm text-shoma-slate/60 mt-1">per maand, plus {tier.perPersonFee} per persoon</p>
+                  <p className="text-sm text-shoma-slate/75 mt-1">per maand, plus {tier.perPersonFee} per persoon</p>
                 </div>
                 <ul className="space-y-3 flex-1 mb-8">
                   {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-shoma-slate/70">
+                    <li key={feature} className="flex items-start gap-3 text-sm text-shoma-slate/75">
                       <span className="text-shoma-teal font-bold mt-0.5">✓</span>
                       {feature}
                     </li>
@@ -248,15 +248,15 @@ export default function CompenseerBedrijvenSections() {
             <h2 className="text-4xl font-bold text-shoma-slate mb-4">
               Hoe bedrijven het gebruiken
             </h2>
-            <p className="text-lg text-shoma-slate/60 max-w-2xl mx-auto">
+            <p className="text-lg text-shoma-slate/75 max-w-2xl mx-auto">
               Van MVO-initiatieven tot ESG-rapportage: Compenseer & Leer past in elk bedrijfsplan.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase) => (
-              <div key={useCase.title} className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div key={useCase.title} className="bg-white rounded-2xl p-6 border border-shoma-teal/10">
                 <h3 className="text-lg font-bold text-shoma-slate mb-2">{useCase.title}</h3>
-                <p className="text-shoma-slate/65 text-sm leading-relaxed">{useCase.description}</p>
+                <p className="text-shoma-slate/75 text-sm leading-relaxed">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function CompenseerBedrijvenSections() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-shoma-slate mb-1">{item.title}</h3>
-                  <p className="text-shoma-slate/65">{item.desc}</p>
+                  <p className="text-shoma-slate/75">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -341,9 +341,9 @@ export default function CompenseerBedrijvenSections() {
                 a: 'Zeer zeldzaam (lokaal team monitort). Als voorkomen: vervanging gratis, u ontvangt melding + foto van nieuwe boom.',
               },
             ].map((item) => (
-              <div key={item.q} className="bg-white rounded-2xl p-6 border border-gray-100">
+              <div key={item.q} className="bg-white rounded-2xl p-6 border border-shoma-teal/10">
                 <h3 className="text-lg font-bold text-shoma-slate mb-3">{item.q}</h3>
-                <p className="text-shoma-slate/65 leading-relaxed">{item.a}</p>
+                <p className="text-shoma-slate/75 leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -355,13 +355,10 @@ export default function CompenseerBedrijvenSections() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
-              <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-3">
-                Aan de slag
-              </p>
               <h2 className="text-3xl font-bold text-shoma-slate mb-5">
                 Laat ons uw team helpen CO₂ compenseren
               </h2>
-              <p className="text-shoma-slate/65 leading-relaxed mb-6">
+              <p className="text-shoma-slate/75 leading-relaxed mb-6">
                 Vul het formulier in en we nemen binnen 24 uur contact op. We helpen u de juiste CO₂-scope te kiezen en uw team in te stellen.
               </p>
               <div className="space-y-4 text-sm">
@@ -371,7 +368,7 @@ export default function CompenseerBedrijvenSections() {
                   'Custom pricing voor grote groepen',
                   'Setup-ondersteuning',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-shoma-slate/70">
+                  <div key={item} className="flex items-center gap-3 text-shoma-slate/75">
                     <span className="text-shoma-teal font-bold">✓</span>
                     {item}
                   </div>

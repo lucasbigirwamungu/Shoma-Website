@@ -40,15 +40,15 @@ const CONTACT_DETAILS = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-shoma-sand pt-20">
+    <div className="min-h-screen bg-shoma-sand">
       {/* Header */}
-      <div className="bg-shoma-teal-dark text-white">
+      <div className="bg-shoma-teal-dark text-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="flex items-center gap-3 mb-4">
             <Mail className="w-7 h-7 text-shoma-terracotta-light" aria-hidden="true" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-white">Contact</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">Contact</h1>
           </div>
-          <p className="text-white/70 max-w-2xl leading-relaxed">
+          <p className="text-white/80 text-lg max-w-2xl leading-relaxed">
             Heeft u een vraag over onze projecten, een donatie of wilt u op een andere manier
             bijdragen? Wij horen graag van u.
           </p>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                         <Icon className="w-5 h-5 text-shoma-teal" aria-hidden="true" />
                       </div>
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-shoma-slate/50 mb-0.5">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-shoma-slate/75 mb-0.5">
                           {item.label}
                         </p>
                         {item.lines.map((line) =>

@@ -35,8 +35,8 @@ export default function Footer() {
               <Image
                 src="/shoma-logo-light.png"
                 alt="Stichting Shoma"
-                width={2000}
-                height={818}
+                width={117}
+                height={48}
                 className="h-12 w-auto"
               />
             </div>
@@ -87,9 +87,9 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { href: '/over-ons#anbi', label: 'ANBI Status' },
-                { href: '/over-ons#jaarrekeningen', label: 'Jaarrekeningen 2012–2025' },
+                { href: '/over-ons#jaarrekeningen', label: 'Jaarrekeningen 2012-2025' },
                 { href: '/over-ons#bestuur', label: 'Bestuur & Organisatie' },
-                { href: '/over-ons#beleidsplan', label: 'Beleidsplan 2026–2028' },
+                { href: '/over-ons#beleidsplan', label: 'Beleidsplan 2026-2028' },
                 { href: '/over-ons#statuten', label: 'Statuten' },
                 { href: '/privacyverklaring', label: 'Privacyverklaring' },
               ].map((link) => (

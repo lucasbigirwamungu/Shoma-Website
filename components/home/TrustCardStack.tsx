@@ -92,13 +92,13 @@ function MetricCard({ metric, index, totalCards, isExpanded, reducedMotion }: Me
   const collapsedPose = {
     x: collapsedX,
     y: collapsedY,
-    rotate: reducedMotion ? 0 : collapsedRotate,
+    rotate: collapsedRotate,
     scale: 1,
   };
   const expandedPose = {
     x: spreadX,
     y: 0,
-    rotate: reducedMotion ? 0 : spreadRotate,
+    rotate: spreadRotate,
     scale: 1,
   };
 
@@ -142,7 +142,7 @@ function MetricCard({ metric, index, totalCards, isExpanded, reducedMotion }: Me
           <MetricValue metric={metric} />
         </div>
         <p className="mt-2 font-semibold text-shoma-slate">{metric.label}</p>
-        <p className="mt-1 text-sm text-shoma-slate/60 leading-snug">{metric.sublabel}</p>
+        <p className="mt-1 text-sm text-shoma-slate/75 leading-snug">{metric.sublabel}</p>
       </div>
     </motion.div>
   );
@@ -174,7 +174,7 @@ function MobileMetricGrid() {
                 <MetricValue metric={metric} />
               </div>
               <p className="mt-1.5 text-sm font-semibold text-shoma-slate">{metric.label}</p>
-              <p className="mt-0.5 text-xs leading-snug text-shoma-slate/60">{metric.sublabel}</p>
+              <p className="mt-0.5 text-xs leading-snug text-shoma-slate/75">{metric.sublabel}</p>
             </div>
           </motion.div>
         );
@@ -225,7 +225,7 @@ export default function TrustCardStack({ className }: TrustCardStackProps) {
         ))}
       </button>
 
-      <p id="cijferstack-hint" className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/70 lg:block">
+      <p id="cijferstack-hint" className="mt-3 hidden text-center text-xs font-medium text-shoma-slate/75 lg:block">
         {isExpanded ? 'Klik om de kaarten in te klappen' : 'Klik op de kaarten om alle cijfers te zien'}
       </p>
     </div>

@@ -27,7 +27,7 @@ const featuredNews = [
     date: 'Januari 2026',
     title: 'Bestuurswissel en een frisse blik op de toekomst',
     summary:
-      'Na jaren van tomeloze inzet hebben een aantal bestuursleden het stokje overgedragen. Begin 2025 nam Jaap Bargeman afscheid als voorzitter; hij blijft samen met Jellie als ambassadeur verbonden aan Shoma. Ook namen we afscheid van Klaas en Betsie Niestijl. Onder leiding van voorzitter Frank Bigirwamungu gaat een vernieuwd bestuur aan de slag met het beleidsplan 2026–2028: een ICT-lokaal voor 187 leerlingen, een landbouwproject met irrigatie, universitaire beurzen voor talentvolle leerlingen en de aanplant van vruchtbomen voor eigen schoolinkomsten.',
+      'Na jaren van tomeloze inzet hebben een aantal bestuursleden het stokje overgedragen. Begin 2025 nam Jaap Bargeman afscheid als voorzitter; hij blijft samen met Jellie als ambassadeur verbonden aan Shoma. Ook namen we afscheid van Klaas en Betsie Niestijl. Onder leiding van voorzitter Frank Bigirwamungu gaat een vernieuwd bestuur aan de slag met het beleidsplan 2026-2028: een ICT-lokaal voor 187 leerlingen, een landbouwproject met irrigatie, universitaire beurzen voor talentvolle leerlingen en de aanplant van vruchtbomen voor eigen schoolinkomsten.',
     category: 'Organisatie',
     categoryColor: 'bg-purple-100 text-purple-800',
   },
@@ -56,13 +56,13 @@ const newslettersByYear = groupNewslettersByYear(allNewsletters);
 
 export default function NieuwsPage() {
   return (
-    <div className="min-h-screen bg-shoma-sand pt-20">
+    <div className="min-h-screen bg-shoma-sand">
       {/* Header */}
-      <div className="bg-shoma-teal-dark text-white">
+      <div className="bg-shoma-teal-dark text-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="flex items-center gap-3 mb-4">
             <Newspaper className="w-7 h-7 text-shoma-terracotta-light" aria-hidden="true" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-white">Nieuws & Foto&apos;s</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">Nieuws & Foto&apos;s</h1>
           </div>
           <p className="text-white/70 max-w-2xl">
             Rechtstreekse updates vanuit Rubya. Maximaal 4 nieuwsbrieven per jaar, enkel bij
@@ -84,16 +84,16 @@ export default function NieuwsPage() {
         {featuredNews.map((item) => (
           <article
             key={item.id}
-            className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-2xl p-7 border border-shoma-teal/10 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-center gap-3 mb-4 flex-wrap">
               <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.categoryColor}`}>
                 {item.category}
               </span>
-              <span className="text-xs text-shoma-slate/40">{item.date}</span>
+              <span className="text-xs text-shoma-slate/75">{item.date}</span>
             </div>
             <h2 className="text-xl font-bold text-shoma-slate mb-3">{item.title}</h2>
-            <p className="text-shoma-slate/65 leading-relaxed text-sm">{item.summary}</p>
+            <p className="text-shoma-slate/75 leading-relaxed text-sm">{item.summary}</p>
             {'url' in item && item.url && (
               <a
                 href={item.url}
@@ -115,7 +115,7 @@ export default function NieuwsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl p-8 border border-shoma-teal/15">
           <h2 className="text-2xl font-bold text-shoma-slate mb-6">Nieuwsbrief archief</h2>
-          <p className="text-shoma-slate/60 text-sm mb-6">
+          <p className="text-shoma-slate/75 text-sm mb-6">
             Alle nieuwsbrieven van Stichting Shoma van 2012 tot heden ({allNewsletters.length} uitgaven).
             Meer informatie? Neem contact op via <a href="mailto:info@shoma.nl" className="text-shoma-teal underline">info@shoma.nl</a>
           </p>
@@ -126,10 +126,10 @@ export default function NieuwsPage() {
                 <details key={year} open={year === allNewsletters[0].year} className="group border border-shoma-teal/20 rounded-xl">
                   <summary className="flex items-center gap-3 cursor-pointer px-5 py-3 hover:bg-shoma-teal/5 transition-colors">
                     <span className="text-lg font-bold text-shoma-teal">{year}</span>
-                    <span className="text-sm text-shoma-slate/55">
+                    <span className="text-sm text-shoma-slate/75">
                       {newsletters.length} {newsletters.length === 1 ? 'uitgave' : 'uitgaven'}
                     </span>
-                    <span className="ml-auto text-shoma-slate/40 group-open:rotate-180 transition-transform">▼</span>
+                    <span className="ml-auto text-shoma-slate/75 group-open:rotate-180 transition-transform">▼</span>
                   </summary>
                   <div className="px-5 py-3 bg-white/50 border-t border-shoma-teal/10 space-y-2">
                     {newsletters.map((nl) => (
@@ -138,12 +138,12 @@ export default function NieuwsPage() {
                         href={nl.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-start gap-2 text-shoma-slate/70 hover:text-shoma-teal transition-colors group/link"
+                        className="flex items-start gap-2 text-shoma-slate/75 hover:text-shoma-teal transition-colors group/link"
                       >
                         <span className="text-sm group-hover/link:text-shoma-teal">→</span>
                         <div className="flex-1">
                           <span className="text-sm font-medium group-hover/link:underline">{nl.title}</span>
-                          <span className="text-xs text-shoma-slate/50"> ({nl.date})</span>
+                          <span className="text-xs text-shoma-slate/75"> ({nl.date})</span>
                         </div>
                         <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0 mt-0.5" />
                       </a>

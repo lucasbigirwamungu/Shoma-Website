@@ -41,7 +41,7 @@ export default function FiscalBanner() {
 
   return (
     <motion.div
-      initial={reducedMotion ? false : { opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '0px 0px -10% 0px' }}
       transition={{ duration: 0.6, ease: EASE_OUT }}
@@ -58,7 +58,7 @@ export default function FiscalBanner() {
           <h2 className="text-2xl font-bold text-shoma-slate mb-2">
             Uw donatie is fiscaal aftrekbaar
           </h2>
-          <p className="text-shoma-slate/70 leading-relaxed text-lg mb-3">
+          <p className="text-shoma-slate/75 leading-relaxed text-lg mb-3">
             Stichting Shoma is erkend als <strong className="text-shoma-slate">ANBI (Algemeen Nut Beogende Instelling)</strong>{' '}
             door de Nederlandse Belastingdienst. Dit betekent dat u uw donaties kunt
             aftrekken van uw inkomstenbelasting.
@@ -89,7 +89,7 @@ export default function FiscalBanner() {
       <div className="mt-6 pt-6 border-t border-shoma-teal/10 grid grid-cols-2 md:grid-cols-4 gap-4">
         {anbiFacts.map((item) => (
           <div key={item.label}>
-            <p className="text-xs text-shoma-slate/45 uppercase tracking-wider font-semibold">{item.label}</p>
+            <p className="text-xs text-shoma-slate/75 uppercase tracking-wider font-semibold">{item.label}</p>
             <p className="font-semibold text-shoma-slate text-sm mt-0.5">{item.value}</p>
           </div>
         ))}

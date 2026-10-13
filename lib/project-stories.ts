@@ -46,7 +46,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     slug: 'voortgang-bouw-van-de-school',
     title: 'Voortgang bouw van de school (KEMPS)',
     category: 'education',
-    period: '2015 – 2019',
+    period: '2015 - 2019',
     excerpt: 'Van eerste casco tot volledig dak: de bouw van KEMPS stap voor stap.',
     body: [
       'In januari 2015 is besloten te starten met de bouw van een Engelstalige lagere school (zie voor het waarom "de bouw van KEMPS").',
@@ -100,7 +100,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     slug: 'verbetering-leefomgeving-en-hygiene',
     title: 'Verbetering leefomgeving en hygiëne',
     category: 'water',
-    period: '2010 – heden',
+    period: '2010 - heden',
     excerpt: 'Basisbehoeften eerst: waterplaatsen en veilige toiletten rond de scholen.',
     body: [
       'Om naar school te kunnen, moet eerst in een aantal andere basisbehoeften voorzien worden. Water is één van de belangrijkste: om te drinken, koken, wassen. Dit moet gehaald worden uit bronnen; waterleidingen zijn er in Rubya niet. Bij één van de natuurlijke bronnen hebben we in 2010 een waterplaats gemaakt om makkelijker water te kunnen halen. Verder hebben we in de loop der jaren bij meerdere scholen wc\'s gebouwd. De oude wc\'s waren vaak in zeer slechte staat en vormden een gevaar voor de kinderen, zowel instortingsgevaar als gevaar van de uitbraak van ziektes.',
@@ -178,7 +178,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     slug: 'de-afbouw-van-de-school',
     title: 'De afbouw van de school',
     category: 'education',
-    period: '2023 – heden',
+    period: '2023 - heden',
     excerpt: 'Acht lokalen en een eetzaal zijn klaar; toiletten, een bewakersonderkomen en de moestuinbewatering wachten nog op financiering.',
     body: [
       'De afbouw van de school nadert zijn voltooiing. De 8 klaslokalen zijn afgebouwd en ingericht.',
@@ -212,7 +212,7 @@ export const PROJECT_STORIES: ProjectStory[] = [
     slug: 'schoolkeuken-en-energietransitie',
     title: 'Schoolkeuken en de energietransitie',
     category: 'energy',
-    period: '2024 – heden',
+    period: '2024 - heden',
     excerpt: 'Van open vuur naar dubbelwandige kookpotten, en nu op zoek naar een alternatief voor hout.',
     body: [
       'Omdat niet alle kinderen thuis een ontbijt krijgen, is besloten dat alle kinderen op onze Engelstalige school zowel een ontbijt als een warme maaltijd tussen de middag krijgen. In eerste instantie werd er gestookt op open vuren.',

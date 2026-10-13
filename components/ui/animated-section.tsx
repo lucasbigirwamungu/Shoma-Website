@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, type Variants } from 'motion/react';
-import type { ComponentPropsWithoutRef, ElementType } from 'react';
+import { motion, type Variants } from 'motion/react';
+import { useMemo, type ComponentPropsWithoutRef, type ElementType } from 'react';
 
 interface AnimatedSectionProps extends Omit<ComponentPropsWithoutRef<'div'>, 'ref'> {
   as?: ElementType;
@@ -17,12 +17,11 @@ export function AnimatedSection({
   children,
   ...props
 }: AnimatedSectionProps) {
-  const reducedMotion = useReducedMotion();
-  const MotionComponent = motion.create(as);
+  const MotionComponent = useMemo(() => motion.create(as), [as]);
 
   return (
     <MotionComponent
-      initial={reducedMotion ? false : { opacity: 0, y }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}

@@ -152,7 +152,7 @@ export default function DonationForm() {
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden max-w-lg w-full">
+    <div className="bg-white rounded-3xl shadow-xl border border-shoma-teal/10 overflow-hidden max-w-lg w-full">
       {/* Progress bar */}
       <div className="h-1.5 bg-gray-100">
         <div
@@ -168,11 +168,11 @@ export default function DonationForm() {
           return (
             <div key={label} className="flex items-center gap-2">
               <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
-                step > s ? 'bg-shoma-teal text-white' : step === s ? 'bg-shoma-terracotta text-shoma-slate' : 'bg-gray-100 text-shoma-slate/70'
+                step > s ? 'bg-shoma-teal text-white' : step === s ? 'bg-shoma-terracotta text-shoma-slate' : 'bg-gray-100 text-shoma-slate/75'
               }`}>
                 {step > s ? <Check className="w-3.5 h-3.5" /> : s}
               </div>
-              <span className={`text-xs font-medium hidden sm:block ${step === s ? 'text-shoma-slate' : 'text-shoma-slate/70'}`}>
+              <span className={`text-xs font-medium hidden sm:block ${step === s ? 'text-shoma-slate' : 'text-shoma-slate/75'}`}>
                 {label}
               </span>
               {i < 2 && <div className="w-8 sm:w-12 h-px bg-gray-200 mx-1" />}
@@ -188,7 +188,7 @@ export default function DonationForm() {
           <div className="space-y-5">
             <div>
               <h2 className="text-xl font-bold text-shoma-slate">Kies uw bijdrage</h2>
-              <p className="text-sm text-shoma-slate/70 mt-1">Elke euro gaat direct naar een kind in Rubya</p>
+              <p className="text-sm text-shoma-slate/75 mt-1">Elke euro gaat direct naar een kind in Rubya</p>
             </div>
 
             {/* Donatietype selector */}
@@ -205,14 +205,14 @@ export default function DonationForm() {
                     className={`flex flex-col items-start p-4 rounded-2xl border-2 text-left transition-all ${
                       active
                         ? `${type.borderColor} bg-shoma-sand`
-                        : 'border-gray-200 hover:border-shoma-teal/30 bg-white'
+                        : 'border-shoma-teal/15 hover:border-shoma-teal/30 bg-white'
                     }`}
                   >
-                    <Icon className={`w-5 h-5 mb-2 ${active ? type.color : 'text-shoma-slate/50'}`} aria-hidden="true" />
+                    <Icon className={`w-5 h-5 mb-2 ${active ? type.color : 'text-shoma-slate/75'}`} aria-hidden="true" />
                     <span className={`font-bold text-sm ${active ? 'text-shoma-slate' : 'text-shoma-slate/75'}`}>
                       {type.label}
                     </span>
-                    <span className="text-xs text-shoma-slate/70 mt-0.5 leading-tight">{type.subtitle}</span>
+                    <span className="text-xs text-shoma-slate/75 mt-0.5 leading-tight">{type.subtitle}</span>
                   </button>
                 );
               })}
@@ -230,7 +230,7 @@ export default function DonationForm() {
                     className={`flex-1 flex items-center justify-center gap-2 min-h-11 rounded-lg text-sm font-semibold transition-all ${
                       form.frequency === freq
                         ? 'bg-shoma-teal text-white shadow-sm'
-                        : 'text-shoma-slate/70 hover:text-shoma-slate'
+                        : 'text-shoma-slate/75 hover:text-shoma-slate'
                     }`}
                   >
                     {freq === 'monthly' ? (
@@ -254,7 +254,7 @@ export default function DonationForm() {
                   className={`relative flex flex-col items-start p-4 rounded-2xl border-2 text-left transition-all ${
                     form.amount === preset.amount
                       ? 'border-shoma-terracotta bg-orange-50'
-                      : 'border-gray-200 hover:border-shoma-teal/40 bg-white'
+                      : 'border-shoma-teal/15 hover:border-shoma-teal/40 bg-white'
                   } ${preset.highlight ? 'ring-2 ring-shoma-terracotta/20' : ''}`}
                 >
                   {preset.highlight && (
@@ -263,7 +263,7 @@ export default function DonationForm() {
                     </span>
                   )}
                   <span className="font-extrabold text-shoma-slate text-lg">{preset.label}</span>
-                  <span className="text-xs text-shoma-slate/70 mt-0.5 leading-tight">{preset.description}</span>
+                  <span className="text-xs text-shoma-slate/75 mt-0.5 leading-tight">{preset.description}</span>
                 </button>
               ))}
             </div>
@@ -285,7 +285,7 @@ export default function DonationForm() {
                   onChange={(e) => setForm((f) => ({ ...f, amount: '', customAmount: e.target.value.replace(/[^0-9.]/g, '') }))}
                   onFocus={() => setForm((f) => ({ ...f, amount: '' }))}
                   placeholder="Anders, namelijk..."
-                  className="w-full pl-8 pr-4 py-3 rounded-xl border border-gray-200 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
+                  className="w-full pl-8 pr-4 py-3 rounded-xl border border-shoma-teal/15 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
                 />
               </div>
             </div>
@@ -306,18 +306,18 @@ export default function DonationForm() {
           <div className="space-y-5">
             <div>
               <h2 className="text-xl font-bold text-shoma-slate">Uw gegevens</h2>
-              <p className="text-sm text-shoma-slate/70 mt-1">Alleen het hoognodige: voor uw fiscale ANBI-kwitantie.</p>
+              <p className="text-sm text-shoma-slate/75 mt-1">Alleen het hoognodige: voor uw fiscale ANBI-kwitantie.</p>
             </div>
 
             {/* Samenvatting */}
             <div className="bg-shoma-teal/5 border border-shoma-teal/15 rounded-xl p-4 flex items-center justify-between">
               <div>
-                <span className="text-xs text-shoma-teal/70 uppercase tracking-wider font-medium">
+                <span className="text-xs text-shoma-teal uppercase tracking-wider font-medium">
                   {activeType.label}
                 </span>
                 <p className="font-bold text-shoma-slate text-lg">
                   € {resolvedAmount.toFixed(2)}{' '}
-                  <span className="text-sm font-normal text-shoma-slate/60">
+                  <span className="text-sm font-normal text-shoma-slate/75">
                     {form.frequency === 'monthly' ? '/ maand' : 'eenmalig'}
                   </span>
                 </p>
@@ -337,7 +337,7 @@ export default function DonationForm() {
                 value={form.donorName}
                 onChange={(e) => setForm((f) => ({ ...f, donorName: e.target.value }))}
                 placeholder="Jan de Vries"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
+                className="w-full px-4 py-3 rounded-xl border border-shoma-teal/15 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
               />
             </div>
 
@@ -353,9 +353,9 @@ export default function DonationForm() {
                 value={form.donorEmail}
                 onChange={(e) => setForm((f) => ({ ...f, donorEmail: e.target.value }))}
                 placeholder="jan@voorbeeld.nl"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
+                className="w-full px-4 py-3 rounded-xl border border-shoma-teal/15 focus:border-shoma-terracotta focus:ring-2 focus:ring-shoma-terracotta/20 focus:outline-none text-shoma-slate"
               />
-              <p className="text-xs text-shoma-slate/70 mt-1.5">Uw fiscale ANBI-kwitantie wordt naar dit adres gestuurd.</p>
+              <p className="text-xs text-shoma-slate/75 mt-1.5">Uw fiscale ANBI-kwitantie wordt naar dit adres gestuurd.</p>
             </div>
 
             <label className="flex items-start gap-3 cursor-pointer group">
@@ -365,7 +365,7 @@ export default function DonationForm() {
                   {form.newsletterOptIn && <Check className="w-3 h-3 text-white" />}
                 </div>
               </div>
-              <span className="text-sm text-shoma-slate/70 leading-relaxed">
+              <span className="text-sm text-shoma-slate/75 leading-relaxed">
                 Ja, ik ontvang graag updates over de voortgang in Rubya (max. 4× per jaar).
               </span>
             </label>
@@ -389,23 +389,23 @@ export default function DonationForm() {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-bold text-shoma-slate">Bevestig uw donatie</h2>
-              <p className="text-sm text-shoma-slate/70 mt-1">U wordt doorgestuurd naar de beveiligde Mollie-betaalpagina.</p>
+              <p className="text-sm text-shoma-slate/75 mt-1">U wordt doorgestuurd naar de beveiligde Mollie-betaalpagina.</p>
             </div>
 
             <div className="bg-shoma-sand rounded-2xl p-5 space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-shoma-slate/60">Type</span>
+                <span className="text-shoma-slate/75">Type</span>
                 <span className="font-medium text-shoma-slate">{activeType.label}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-shoma-slate/60">Donateur</span>
+                <span className="text-shoma-slate/75">Donateur</span>
                 <span className="font-medium text-shoma-slate">{form.donorName}</span>
               </div>
               <div className="border-t border-shoma-teal/10 pt-3 flex justify-between">
-                <span className="text-shoma-slate/60">Bedrag</span>
+                <span className="text-shoma-slate/75">Bedrag</span>
                 <span className="font-extrabold text-shoma-terracotta-ink text-lg">
                   € {resolvedAmount.toFixed(2)}{' '}
-                  <span className="text-sm font-normal text-shoma-slate/50">
+                  <span className="text-sm font-normal text-shoma-slate/75">
                     {form.frequency === 'monthly' ? '/ maand' : 'eenmalig'}
                   </span>
                 </span>
@@ -448,7 +448,7 @@ export default function DonationForm() {
               </Button>
             </div>
 
-            <p className="text-xs text-shoma-slate/70 text-center">
+            <p className="text-xs text-shoma-slate/75 text-center">
               Door te betalen gaat u akkoord met onze{' '}
               <a href="/privacyverklaring" className="underline hover:text-shoma-teal">privacyverklaring</a>.
             </p>

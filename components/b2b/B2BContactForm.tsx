@@ -76,12 +76,12 @@ export default function B2BContactForm() {
   // ─── Successtatus ─────────────────────────────────────────────────────────────
   if (form._state === 'success') {
     return (
-      <div className="bg-white rounded-3xl border border-gray-100 shadow-xl p-10 text-center max-w-lg w-full">
+      <div className="bg-white rounded-3xl border border-shoma-teal/10 shadow-xl p-10 text-center max-w-lg w-full">
         <div className="w-16 h-16 bg-shoma-teal/10 rounded-full flex items-center justify-center mx-auto mb-5">
           <CheckCircle className="w-8 h-8 text-shoma-teal" aria-hidden="true" />
         </div>
         <h3 className="text-2xl font-bold text-shoma-slate mb-3">Aanvraag ontvangen!</h3>
-        <p className="text-shoma-slate/65 leading-relaxed">
+        <p className="text-shoma-slate/75 leading-relaxed">
           Bedankt voor uw interesse in een partnerschap met Stichting Shoma. Een bestuurslid
           neemt binnen <strong>2 werkdagen</strong> contact op via{' '}
           <strong>{INITIAL.corporateEmail || 'het opgegeven e-mailadres'}</strong>.
@@ -102,17 +102,17 @@ export default function B2BContactForm() {
     `w-full px-4 py-3 rounded-xl border transition-colors focus:outline-none focus:ring-2 focus:ring-shoma-teal/20 text-shoma-slate ${
       fieldErrors[field]
         ? 'border-red-400 focus:border-red-400 bg-red-50/30'
-        : 'border-gray-200 focus:border-shoma-teal bg-white'
+        : 'border-shoma-teal/15 focus:border-shoma-teal bg-white'
     }`;
 
   return (
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="bg-white rounded-3xl border border-gray-100 shadow-xl p-7 sm:p-8 max-w-lg w-full"
+      className="bg-white rounded-3xl border border-shoma-teal/10 shadow-xl p-7 sm:p-8 max-w-lg w-full"
     >
       <h3 className="text-xl font-bold text-shoma-slate mb-1">Stuur ons een bericht</h3>
-      <p className="text-sm text-shoma-slate/55 mb-6">
+      <p className="text-sm text-shoma-slate/75 mb-6">
         Wij reageren binnen 2 werkdagen via <strong>partners@shoma.nl</strong>.
       </p>
 
@@ -179,7 +179,7 @@ export default function B2BContactForm() {
           </div>
           <div>
             <label htmlFor="b2b-telefoon" className="block text-sm font-medium text-shoma-slate mb-1.5">
-              Telefoonnummer <span className="text-shoma-slate/40 text-xs font-normal">(optioneel)</span>
+              Telefoonnummer <span className="text-shoma-slate/75 text-xs font-normal">(optioneel)</span>
             </label>
             <input
               id="b2b-telefoon"
@@ -218,7 +218,7 @@ export default function B2BContactForm() {
         <div>
           <label htmlFor="b2b-bericht" className="block text-sm font-medium text-shoma-slate mb-1.5">
             Uw MVO-doelstellingen of vragen
-            <span className="text-shoma-slate/40 text-xs font-normal ml-1">(optioneel)</span>
+            <span className="text-shoma-slate/75 text-xs font-normal ml-1">(optioneel)</span>
           </label>
           <textarea
             id="b2b-bericht"
@@ -229,7 +229,7 @@ export default function B2BContactForm() {
             placeholder="Wat zijn uw specifieke doelstellingen op het gebied van duurzaamheid of medewerkersbetrokkenheid?"
             className={`${inputClass('message')} resize-none`}
           />
-          <p className="text-xs text-shoma-slate/40 mt-1 text-right">
+          <p className="text-xs text-shoma-slate/75 mt-1 text-right">
             {form.message?.length ?? 0} / 2000
           </p>
         </div>
@@ -254,7 +254,7 @@ export default function B2BContactForm() {
         {isLoading ? 'Versturen…' : 'Aanvraag versturen'}
       </Button>
 
-      <p className="text-xs text-shoma-slate/40 mt-3 text-center">
+      <p className="text-xs text-shoma-slate/75 mt-3 text-center">
         Uw gegevens worden uitsluitend gebruikt voor opvolging door het Shoma-bestuur en nooit
         gedeeld met derden. Zie onze{' '}
         <a href="/privacyverklaring" className="underline hover:text-shoma-teal">

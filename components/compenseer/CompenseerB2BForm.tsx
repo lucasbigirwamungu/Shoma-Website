@@ -112,8 +112,8 @@ export default function CompenseerB2BForm() {
   };
 
   const teamSizeOptions = [
-    { value: '1-25', label: '1–25 medewerkers' },
-    { value: '26-100', label: '26–100 medewerkers' },
+    { value: '1-25', label: '1-25 medewerkers' },
+    { value: '26-100', label: '26-100 medewerkers' },
     { value: '100+', label: '100+ medewerkers' },
   ];
 
@@ -128,10 +128,10 @@ export default function CompenseerB2BForm() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="bg-white rounded-3xl p-8 border-2 border-gray-100 shadow-sm"
+      className="bg-white rounded-3xl p-8 border-2 border-shoma-teal/10 shadow-sm"
     >
       <h3 className="text-2xl font-bold text-shoma-slate mb-1">Vraag in</h3>
-      <p className="text-sm text-shoma-slate/60 mb-6">Wij nemen binnen 24 uur contact op.</p>
+      <p className="text-sm text-shoma-slate/75 mb-6">Wij nemen binnen 24 uur contact op.</p>
 
       {/* Success message */}
       {form._state === 'success' && (
@@ -300,7 +300,7 @@ export default function CompenseerB2BForm() {
         {form._state === 'loading' ? 'Verzenden...' : 'Vraag in'}
       </button>
 
-      <p className="text-xs text-shoma-slate/50 text-center mt-4">
+      <p className="text-xs text-shoma-slate/75 text-center mt-4">
         Uw gegevens worden beveiligd verstuurd naar partners@shoma.nl en niet gedeeld.
       </p>
     </form>

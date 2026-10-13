@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import MorphicNavbar from '@/components/layout/MorphicNavbar';
 import Footer from '@/components/layout/Footer';
+import MotionProvider from '@/components/ui/MotionProvider';
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { siteUrl } from "@/lib/site-url";
@@ -80,9 +81,11 @@ export default function RootLayout({
         >
           Ga naar de inhoud
         </a>
-        <MorphicNavbar />
-        <main id="inhoud" tabIndex={-1} className="flex-1 outline-none">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <MorphicNavbar />
+          <main id="inhoud" tabIndex={-1} className="flex-1 overflow-x-clip outline-none">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

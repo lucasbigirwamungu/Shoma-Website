@@ -140,9 +140,6 @@ export default function PartnerSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-10">
-          <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-2">
-            Zakelijk partnerschap
-          </p>
           <TextAnimate
             as="h2"
             by="word"
@@ -152,7 +149,7 @@ export default function PartnerSection() {
           >
             Realiseer uw CSR-doelen met bewezen impact
           </TextAnimate>
-          <p className="mt-4 text-shoma-slate/60 max-w-2xl mx-auto">
+          <p className="mt-4 text-shoma-slate/75 max-w-2xl mx-auto">
             Bedrijven die met Shoma samenwerken dragen direct bij aan meetbare SDG-doelstellingen
             met volledige transparantie.
           </p>

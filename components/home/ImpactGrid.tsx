@@ -26,7 +26,6 @@ const projects = [
     image: '/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg',
     sdgGoals: [1, 4],
     stat: { value: '257', label: 'kinderen op KEMPS (2025)' },
-    accentColor: 'from-shoma-terracotta/90',
   },
   {
     slug: 'schoon-water-baent',
@@ -38,7 +37,6 @@ const projects = [
     image: '/images/projectverhalen/waterproject/IMG_1859.jpg',
     sdgGoals: [6],
     stat: { value: '20.000L', label: 'dagelijkse opslagcapaciteit' },
-    accentColor: 'from-blue-600/90',
   },
   {
     slug: 'duurzame-energie-solar',
@@ -50,20 +48,16 @@ const projects = [
     image: '/images/zonnepaneel.jpg',
     sdgGoals: [7, 13],
     stat: { value: '~30%', label: 'minder operationele kosten' },
-    accentColor: 'from-amber-600/90',
   },
 ];
 
 export default function ImpactGrid() {
   return (
-    <section className="bg-shoma-cream py-20">
+    <section className="bg-shoma-cream py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
           <div>
-            <p className="text-shoma-terracotta-ink font-semibold text-sm uppercase tracking-wider mb-2">
-              Onze projecten in Rubya
-            </p>
             <TextAnimate
               as="h2"
               by="word"
@@ -97,7 +91,7 @@ export default function ImpactGrid() {
               <motion.article
                 key={project.slug}
                 variants={staggerItem}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-gray-100 hover:-translate-y-1"
+                className="group bg-white rounded-2xl overflow-hidden shadow-[0_2px_10px_rgba(61,40,7,0.06)] hover:shadow-[0_14px_30px_rgba(61,40,7,0.14)] transition-all duration-300 flex flex-col border border-shoma-teal/10 hover:-translate-y-1"
               >
                 {/* Image */}
                 <div className="relative h-52 overflow-hidden">
@@ -108,8 +102,6 @@ export default function ImpactGrid() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t ${project.accentColor} to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-300`} />
                   {/* Category badge */}
                   <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                     <Icon className="w-3.5 h-3.5 text-shoma-teal" aria-hidden="true" />
@@ -135,21 +127,21 @@ export default function ImpactGrid() {
                   <h3 className="font-bold text-lg text-shoma-slate group-hover:text-shoma-teal transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-shoma-slate/65 text-sm leading-relaxed mt-2 flex-1">
+                  <p className="text-shoma-slate/75 text-sm leading-relaxed mt-2 flex-1">
                     {project.summary}
                   </p>
 
                   {/* Stat */}
-                  <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
-                    <div>
-                      <span className="text-xl font-extrabold text-shoma-terracotta-ink">
+                  <div className="mt-5 pt-4 border-t border-shoma-teal/10 flex items-end justify-between gap-4">
+                    <div className="min-w-0">
+                      <span className="block text-xl font-extrabold tabular-nums text-shoma-terracotta-ink">
                         {project.stat.value}
                       </span>
-                      <span className="text-xs text-shoma-slate/50 ml-1.5">{project.stat.label}</span>
+                      <span className="block text-xs text-shoma-slate/75">{project.stat.label}</span>
                     </div>
                     <Link
                       href="/projecten"
-                      className="flex items-center gap-1 text-sm font-semibold text-shoma-teal hover:text-shoma-teal-dark transition-colors"
+                      className="flex shrink-0 items-center gap-1 whitespace-nowrap text-sm font-semibold text-shoma-teal hover:text-shoma-teal-dark transition-colors"
                       aria-label={`Meer info over ${project.title}`}
                     >
                       Meer info

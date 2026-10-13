@@ -117,7 +117,7 @@ export default function TierCardFlip({
               <span
                 className={cn(
                   'text-xs font-bold uppercase tracking-wider',
-                  image ? 'text-white drop-shadow-sm' : 'text-shoma-teal/60'
+                  image ? 'text-white drop-shadow-sm' : 'text-shoma-teal'
                 )}
               >
                 {tier}
@@ -173,11 +173,11 @@ export default function TierCardFlip({
               <h3 className="font-bold text-lg text-shoma-slate leading-snug tracking-tight">
                 {title}
               </h3>
-              <p className="text-xs font-semibold uppercase tracking-wider text-shoma-teal/70">
+              <p className="text-xs font-semibold uppercase tracking-wider text-shoma-teal">
                 SDG {sdg}: {sdgName}
               </p>
             </div>
-            <p className="text-sm text-shoma-slate/70 leading-relaxed">{description}</p>
+            <p className="text-sm text-shoma-slate/75 leading-relaxed">{description}</p>
 
             <div className="space-y-2 pt-1">
               {['Onbezoldigd bestuur, lokaal gecontroleerd', 'Volledige transparantie via de jaarrekening'].map(

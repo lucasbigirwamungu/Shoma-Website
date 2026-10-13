@@ -167,7 +167,7 @@ export default function BusinessDonationForm() {
                     ? 'bg-shoma-terracotta text-shoma-slate'
                     : idx < ['input', 'impact', 'checkout'].indexOf(step)
                       ? 'bg-green-700 text-white'
-                      : 'bg-gray-200 text-shoma-slate/70'
+                      : 'bg-gray-200 text-shoma-slate/75'
                 }`}
               >
                 {idx + 1}
