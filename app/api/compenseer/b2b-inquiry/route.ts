@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     // Send email to Shoma
     const emailResult = await resend.emails.send({
       from: 'Compenseer & Leer <noreply@shoma.nl>',
-      to: process.env.PARTNER_EMAIL || 'partners@shoma.nl',
+      to: process.env.PARTNER_EMAIL || 'secretariaat@shoma.nl',
       subject: `Nieuw B2B-verzoek: ${company_name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
             </ul>
           </div>
 
-          <p>Heeft u vragen? Stuur dan een e-mail naar <a href="mailto:partners@shoma.nl">partners@shoma.nl</a></p>
+          <p>Heeft u vragen? Stuur dan een e-mail naar <a href="mailto:secretariaat@shoma.nl">secretariaat@shoma.nl</a></p>
 
           <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #999;">
             Stichting Shoma | Onderwijs in Tanzania<br/>

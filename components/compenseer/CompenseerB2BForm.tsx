@@ -301,7 +301,7 @@ export default function CompenseerB2BForm() {
       </button>
 
       <p className="text-xs text-shoma-slate/75 text-center mt-4">
-        Uw gegevens worden beveiligd verstuurd naar partners@shoma.nl en niet gedeeld.
+        Uw gegevens worden beveiligd verstuurd naar secretariaat@shoma.nl en niet gedeeld.
       </p>
     </form>
   );

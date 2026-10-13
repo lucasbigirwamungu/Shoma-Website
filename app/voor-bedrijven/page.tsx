@@ -370,7 +370,7 @@ export default function VoorBedrijvenPage() {
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
                     <span className="text-shoma-teal font-bold text-xs">1</span>
                   </div>
-                  Formulier invullen → direct doorgestuurd naar partners@shoma.nl
+                  Formulier invullen → direct doorgestuurd naar secretariaat@shoma.nl
                 </div>
                 <div className="flex items-center gap-3 text-shoma-slate/75">
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
@@ -389,8 +389,8 @@ export default function VoorBedrijvenPage() {
                 <p className="text-sm font-medium text-shoma-slate mb-1">Direct bellen?</p>
                 <p className="text-xs text-shoma-slate/75">
                   Stuur een e-mail naar{' '}
-                  <a href="mailto:partners@shoma.nl" className="text-shoma-teal hover:underline font-medium">
-                    partners@shoma.nl
+                  <a href="mailto:secretariaat@shoma.nl" className="text-shoma-teal hover:underline font-medium">
+                    secretariaat@shoma.nl
                   </a>{' '}
                   met uw telefoonnummer en gewenste belmoment.
                 </p>

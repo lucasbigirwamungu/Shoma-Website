@@ -46,7 +46,7 @@ export async function POST(request: Request) {
       // Ga door met e-mail, DB-fout blokkeert niet
     }
 
-    // ─── Stuur notificatie naar partners@shoma.nl ─────────────────────────────
+    // ─── Stuur notificatie naar secretariaat@shoma.nl ─────────────────────────────
     await sendB2BLeadNotification(lead);
 
     return NextResponse.json(
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('[Shoma B2B] Onverwachte fout:', error);
     return NextResponse.json(
-      { error: 'Er is een serverfout opgetreden. Probeer het opnieuw of stuur een e-mail naar partners@shoma.nl.' },
+      { error: 'Er is een serverfout opgetreden. Probeer het opnieuw of stuur een e-mail naar secretariaat@shoma.nl.' },
       { status: 500 }
     );
   }

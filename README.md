@@ -47,7 +47,7 @@ Zie `.env.local.example` voor alle benodigde variabelen:
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key (server-only) |
 | `RESEND_API_KEY` | Resend API key voor B2B e-mailnotificaties |
 | `RESEND_FROM_EMAIL` | Afzenderadres (bijv. `noreply@shoma.nl`) |
-| `PARTNER_EMAIL` | Ontvangstadres voor B2B-leads (bijv. `partners@shoma.nl`) |
+| `PARTNER_EMAIL` | Ontvangstadres voor B2B-leads (bijv. `secretariaat@shoma.nl`) |
 
 ## Database Setup (Supabase)
 

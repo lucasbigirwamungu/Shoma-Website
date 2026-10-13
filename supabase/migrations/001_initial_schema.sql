@@ -49,7 +49,7 @@ CREATE TABLE donations (
 );
 
 -- ─── B2B Leads ───────────────────────────────────────────────────────────────
--- Directe opvolging door het bestuur via partners@shoma.nl
+-- Directe opvolging door het bestuur via secretariaat@shoma.nl
 CREATE TABLE b2b_leads (
     id                 UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
     company_name       VARCHAR(255) NOT NULL,

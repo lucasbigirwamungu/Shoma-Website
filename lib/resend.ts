@@ -1,7 +1,7 @@
 import type { B2BLeadInput, ContactInput } from '@/lib/validations';
 
 // ─── B2B Lead Notificatie E-mail ──────────────────────────────────────────────
-// Stuurt een gestructureerde notificatie naar partners@shoma.nl wanneer
+// Stuurt een gestructureerde notificatie naar secretariaat@shoma.nl wanneer
 // een nieuw B2B-intakeformulier wordt ingediend.
 
 const MVO_LABELS: Record<string, string> = {
@@ -82,7 +82,7 @@ function buildEmailHtml(lead: B2BLeadInput): string {
 export async function sendB2BLeadNotification(lead: B2BLeadInput): Promise<void> {
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'noreply@shoma.nl';
-  const toEmail = process.env.PARTNER_EMAIL ?? 'partners@shoma.nl';
+  const toEmail = process.env.PARTNER_EMAIL ?? 'secretariaat@shoma.nl';
 
   const subject = `Nieuwe B2B aanvraag: ${lead.companyName} – ${MVO_LABELS[lead.mvoInterestArea] ?? lead.mvoInterestArea}`;
 

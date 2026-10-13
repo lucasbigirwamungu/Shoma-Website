@@ -113,7 +113,7 @@ export default function B2BContactForm() {
     >
       <h3 className="text-xl font-bold text-shoma-slate mb-1">Stuur ons een bericht</h3>
       <p className="text-sm text-shoma-slate/75 mb-6">
-        Wij reageren binnen 2 werkdagen via <strong>partners@shoma.nl</strong>.
+        Wij reageren binnen 2 werkdagen via <strong>secretariaat@shoma.nl</strong>.
       </p>
 
       <div className="space-y-4">
