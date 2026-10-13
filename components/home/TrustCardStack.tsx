@@ -36,8 +36,8 @@ const metrics: Metric[] = [
   {
     id: 'kinderen',
     icon: GraduationCap,
-    value: 260,
-    suffix: '+',
+    value: 210,
+    suffix: '',
     label: 'Kinderen gesponsord',
     sublabel: 'Actief ondersteund in schooljaar 2025',
   },

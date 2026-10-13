@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Mail, Phone, Building2, Users } from 'lucide-react';
+import { Mail, Phone, Building2, Users, Check } from 'lucide-react';
 
 type FormState = {
   company_name: string;
@@ -135,11 +135,11 @@ export default function CompenseerB2BForm() {
 
       {/* Success message */}
       {form._state === 'success' && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start gap-3">
-          <div className="text-green-600 font-bold text-xl mt-0.5">✓</div>
+        <div className="mb-6 p-4 bg-shoma-sand border border-shoma-teal/15 rounded-xl flex items-start gap-3">
+          <Check className="mt-0.5 h-5 w-5 shrink-0 text-shoma-teal" aria-hidden="true" />
           <div>
-            <p className="font-semibold text-green-900">Dank u!</p>
-            <p className="text-sm text-green-800">Uw aanvraag is verstuurd. Wij nemen snel contact op.</p>
+            <p className="font-semibold text-shoma-slate">Dank u!</p>
+            <p className="text-sm text-shoma-slate">Uw aanvraag is verstuurd. Wij nemen snel contact op.</p>
           </div>
         </div>
       )}
@@ -158,7 +158,7 @@ export default function CompenseerB2BForm() {
       <div className="space-y-5">
         {/* Company name */}
         <div>
-          <label htmlFor="co2-bedrijfsnaam" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-bedrijfsnaam" className="block text-sm font-medium text-shoma-slate mb-2 flex items-center gap-2">
             <Building2 className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Bedrijfsnaam
           </label>
@@ -171,13 +171,13 @@ export default function CompenseerB2BForm() {
             onChange={handleChange}
             placeholder="Acme Corp"
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           />
         </div>
 
         {/* Contact name */}
         <div>
-          <label htmlFor="co2-naam" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-naam" className="block text-sm font-medium text-shoma-slate mb-2 flex items-center gap-2">
             <Users className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Uw naam
           </label>
@@ -190,13 +190,13 @@ export default function CompenseerB2BForm() {
             onChange={handleChange}
             placeholder="Jan Jansen"
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           />
         </div>
 
         {/* Email */}
         <div>
-          <label htmlFor="co2-email" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-email" className="block text-sm font-medium text-shoma-slate mb-2 flex items-center gap-2">
             <Mail className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             E-mailadres
           </label>
@@ -209,13 +209,13 @@ export default function CompenseerB2BForm() {
             onChange={handleChange}
             placeholder="jan@acmecorp.nl"
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           />
         </div>
 
         {/* Phone */}
         <div>
-          <label htmlFor="co2-telefoon" className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+          <label htmlFor="co2-telefoon" className="block text-sm font-medium text-shoma-slate mb-2 flex items-center gap-2">
             <Phone className="w-4 h-4 text-shoma-teal" aria-hidden="true" />
             Telefoonnummer
           </label>
@@ -227,13 +227,13 @@ export default function CompenseerB2BForm() {
             value={form.phone}
             onChange={handleChange}
             placeholder="+31 6 12345678"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           />
         </div>
 
         {/* Team size */}
         <div>
-          <label htmlFor="co2-teamgrootte" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-teamgrootte" className="block text-sm font-medium text-shoma-slate mb-2">
             Team-grootte
           </label>
           <select
@@ -242,7 +242,7 @@ export default function CompenseerB2BForm() {
             value={form.team_size}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           >
             <option value="">Selecteer team-grootte...</option>
             {teamSizeOptions.map((option) => (
@@ -255,7 +255,7 @@ export default function CompenseerB2BForm() {
 
         {/* CO2 scope */}
         <div>
-          <label htmlFor="co2-scope" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-scope" className="block text-sm font-medium text-shoma-slate mb-2">
             CO₂-scope voorkeur
           </label>
           <select
@@ -263,7 +263,7 @@ export default function CompenseerB2BForm() {
             name="co2_scope"
             value={form.co2_scope}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent"
           >
             <option value="">Selecteer scope...</option>
             {co2ScopeOptions.map((option) => (
@@ -276,7 +276,7 @@ export default function CompenseerB2BForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="co2-opmerkingen" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="co2-opmerkingen" className="block text-sm font-medium text-shoma-slate mb-2">
             Opmerkingen (optioneel)
           </label>
           <textarea
@@ -286,7 +286,7 @@ export default function CompenseerB2BForm() {
             onChange={handleChange}
             placeholder="Bijv. we willen dit gebruiken voor ons MVO-programma..."
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent resize-none"
+            className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:outline-none focus:ring-2 focus:ring-shoma-teal focus:border-transparent resize-none"
           />
         </div>
       </div>
@@ -295,7 +295,7 @@ export default function CompenseerB2BForm() {
       <button
         type="submit"
         disabled={form._state === 'loading'}
-        className="w-full mt-6 bg-shoma-teal hover:bg-shoma-teal-dark disabled:bg-gray-300 text-white font-bold py-3.5 rounded-xl transition-colors"
+        className="w-full mt-6 bg-shoma-teal hover:bg-shoma-teal-dark disabled:bg-shoma-clay disabled:text-shoma-slate/60 text-white font-bold py-3.5 rounded-xl transition-colors"
       >
         {form._state === 'loading' ? 'Verzenden...' : 'Vraag in'}
       </button>

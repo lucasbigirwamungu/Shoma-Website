@@ -24,10 +24,20 @@ interface MpesaCallback {
 }
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = (await request.json()) as MpesaCallback;
+  // Safaricom kan geen headers meesturen; het geheim zit daarom in de callback-URL.
+  // Zonder MPESA_CALLBACK_SECRET wordt elke callback geweigerd.
+  const secret = process.env.MPESA_CALLBACK_SECRET;
+  if (!secret || request.nextUrl.searchParams.get('token') !== secret) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
 
-    const { stkCallback } = body.Body;
+  try {
+    const body = (await request.json()) as Partial<MpesaCallback>;
+
+    const stkCallback = body.Body?.stkCallback;
+    if (!stkCallback || typeof stkCallback.CheckoutRequestID !== 'string') {
+      return NextResponse.json({ error: 'Invalid callback' }, { status: 400 });
+    }
     const { ResultCode, CallbackMetadata, CheckoutRequestID } = stkCallback;
 
     // Initialize Supabase

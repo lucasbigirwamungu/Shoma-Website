@@ -3,6 +3,9 @@
  * RBAC: Role-Based Access Control
  */
 
+import type { NextRequest } from 'next/server';
+import { ADMIN_COOKIE, verifySessionToken } from '@/lib/admin-session';
+
 export type AdminRole = 'super_admin' | 'admin' | 'editor';
 
 export interface AdminUser {
@@ -139,35 +142,56 @@ export function hasAllPermissions(user: AdminUser | null, permissions: string[])
 }
 
 /**
- * Protect API routes
+ * De ingelogde beheerder op basis van de sessie-cookie, of null
  */
-export async function requireAdminAuth(
-  authHeader: string | null,
-  requiredPermission: string
-): Promise<{ authorized: boolean; user?: AdminUser; error?: string }> {
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return { authorized: false, error: 'Missing or invalid authorization header' };
-  }
+export async function getAdminFromRequest(request: NextRequest): Promise<AdminUser | null> {
+  const session = await verifySessionToken(request.cookies.get(ADMIN_COOKIE)?.value);
+  if (!session) return null;
 
-  const token = authHeader.substring(7);
-
-  // TODO: Verify JWT token and get user
-  // For now, return mock
-  const mockUser: AdminUser = {
-    id: '1',
-    email: 'admin@shoma.nl',
-    name: 'Admin',
+  return {
+    id: 'admin',
+    email: session.email,
+    name: 'Beheerder',
     role: 'super_admin',
     permissions: rolePermissions.super_admin,
     active: true,
     createdAt: new Date(),
   };
+}
 
-  if (!hasPermission(mockUser, requiredPermission)) {
-    return { authorized: false, error: 'Insufficient permissions' };
+/**
+ * Protect API routes
+ */
+export async function requireAdminAuth(
+  request: NextRequest,
+  requiredPermission: string
+): Promise<{ authorized: boolean; user?: AdminUser; error?: string }> {
+  const user = await getAdminFromRequest(request);
+  if (!user) {
+    return { authorized: false, error: 'Niet ingelogd' };
   }
 
-  return { authorized: true, user: mockUser };
+  if (!hasPermission(user, requiredPermission)) {
+    return { authorized: false, error: 'Onvoldoende rechten' };
+  }
+
+  return { authorized: true, user };
+}
+
+/**
+ * Alleen eenvoudige map- en bestandsnamen, zodat een pad nooit buiten public/images kan komen
+ */
+export function isSafeImageFolder(folder: unknown): folder is string {
+  return typeof folder === 'string' && /^[a-z0-9][a-z0-9_-]*(\/[a-z0-9][a-z0-9_-]*)?$/i.test(folder);
+}
+
+export function isSafeImageFilename(filename: unknown): filename is string {
+  return (
+    typeof filename === 'string' &&
+    filename.length <= 200 &&
+    /^[a-z0-9][a-z0-9 ._-]*\.(jpe?g|png|webp|gif|avif)$/i.test(filename) &&
+    !filename.includes('..')
+  );
 }
 
 /**

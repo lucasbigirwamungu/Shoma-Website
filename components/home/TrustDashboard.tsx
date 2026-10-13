@@ -25,7 +25,7 @@ export default function TrustDashboard() {
             href="/over-ons#jaarrekeningen"
             className="inline-flex items-center gap-2 text-sm text-shoma-teal hover:text-shoma-teal-dark font-medium underline-offset-2 hover:underline transition-colors"
           >
-            Bekijk alle jaarrekeningen (2012-2025) →
+            Bekijk alle jaarrekeningen (2012 tot en met 2025)
           </a>
         </div>
       </div>

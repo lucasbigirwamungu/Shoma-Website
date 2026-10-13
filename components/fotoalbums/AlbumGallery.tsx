@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 export type AlbumPhoto = {
   file: string;
@@ -15,12 +15,16 @@ type AlbumGalleryProps = {
   title: string;
   folder: string;
   photos: AlbumPhoto[];
+  // Zet uit voor albums met kleine bronbestanden, die als grote openingsfoto onscherp worden
+  featureFirst?: boolean;
 };
 
 const photoSrc = (folder: string, file: string) => `/images/fotoalbums/${folder}/${file}`;
 
-export default function AlbumGallery({ title, folder, photos }: AlbumGalleryProps) {
+export default function AlbumGallery({ title, folder, photos, featureFirst = true }: AlbumGalleryProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState(false);
+  const firstExtraRef = useRef<HTMLButtonElement | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const lastTriggerRef = useRef<HTMLButtonElement | null>(null);
@@ -80,6 +84,16 @@ export default function AlbumGallery({ title, folder, photos }: AlbumGalleryProp
 
   const current = openIndex !== null ? photos[openIndex] : null;
 
+  // Grote albums tonen eerst drie rijen; de rest laadt pas na uitklappen
+  const hasFeature = featureFirst && photos.length >= 6;
+  const initialCount = hasFeature ? 9 : 8;
+  const isCollapsible = photos.length > initialCount + 2;
+  const visiblePhotos = isCollapsible && !expanded ? photos.slice(0, initialCount) : photos;
+
+  useEffect(() => {
+    if (expanded) firstExtraRef.current?.focus();
+  }, [expanded]);
+
   return (
     <>
       {/* Photo grid */}
@@ -88,13 +102,14 @@ export default function AlbumGallery({ title, folder, photos }: AlbumGalleryProp
           photos.length >= 8 ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-2 lg:grid-cols-3'
         }`}
       >
-        {photos.map((photo, photoIndex) => {
+        {visiblePhotos.map((photo, photoIndex) => {
           // Make first photo of each album span wider on larger grids
-          const isFeature = photoIndex === 0 && photos.length >= 6;
+          const isFeature = photoIndex === 0 && hasFeature;
           const label = photo.caption || photo.alt;
           return (
             <button
               key={photo.file}
+              ref={photoIndex === initialCount ? firstExtraRef : undefined}
               type="button"
               onClick={(event) => {
                 lastTriggerRef.current = event.currentTarget;
@@ -127,6 +142,23 @@ export default function AlbumGallery({ title, folder, photos }: AlbumGalleryProp
           );
         })}
       </div>
+
+      {isCollapsible && (
+        <div className="mt-6 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((value) => !value)}
+            aria-expanded={expanded}
+            className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-shoma-teal/25 bg-white px-5 py-2.5 text-sm font-semibold text-shoma-teal transition-colors hover:bg-shoma-teal hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-shoma-terracotta focus-visible:ring-offset-2"
+          >
+            {expanded ? 'Toon minder' : `Toon alle ${photos.length} foto's`}
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`}
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      )}
 
       {/* Lightbox */}
       {current && openIndex !== null && (

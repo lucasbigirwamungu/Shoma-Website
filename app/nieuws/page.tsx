@@ -5,7 +5,7 @@ import PhotoAlbums from '@/components/fotoalbums/PhotoAlbums';
 import { allNewsletters, groupNewslettersByYear } from '@/lib/newsletter-data';
 
 export const metadata: Metadata = {
-  title: "Nieuws & Foto's – Stichting Shoma",
+  title: "Nieuws en foto's",
   description:
     "Het laatste nieuws, alle nieuwsbrieven van 2012-2026 en de fotoalbums van de projecten van Stichting Shoma in Rubya, Tanzania.",
 };
@@ -140,7 +140,7 @@ export default function NieuwsPage() {
                         rel="noopener noreferrer"
                         className="flex items-start gap-2 text-shoma-slate/75 hover:text-shoma-teal transition-colors group/link"
                       >
-                        <span className="text-sm group-hover/link:text-shoma-teal">→</span>
+                        <ArrowRight className="h-4 w-4 group-hover/link:text-shoma-teal" aria-hidden="true" />
                         <div className="flex-1">
                           <span className="text-sm font-medium group-hover/link:underline">{nl.title}</span>
                           <span className="text-xs text-shoma-slate/75"> ({nl.date})</span>

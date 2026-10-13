@@ -19,7 +19,7 @@ export default function AdminLoginForm() {
     try {
       await login(email, password);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Login failed');
+      setError(err instanceof Error ? err.message : 'Inloggen is niet gelukt');
     } finally {
       setLoading(false);
     }
@@ -30,34 +30,35 @@ export default function AdminLoginForm() {
       {/* Email */}
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-shoma-slate mb-2">
-          Email Address
+          E-mailadres
         </label>
         <input
           id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="admin@shoma.nl"
+          placeholder="naam@shoma.nl"
+          autoComplete="username"
           disabled={loading}
           required
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-shoma-teal focus:border-transparent outline-none transition disabled:bg-gray-100"
+          className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:ring-2 focus:ring-shoma-teal focus:border-transparent outline-none transition disabled:bg-shoma-sand"
         />
       </div>
 
       {/* Password */}
       <div>
         <label htmlFor="password" className="block text-sm font-medium text-shoma-slate mb-2">
-          Password
+          Wachtwoord
         </label>
         <input
           id="password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="••••••••"
+          autoComplete="current-password"
           disabled={loading}
           required
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-shoma-teal focus:border-transparent outline-none transition disabled:bg-gray-100"
+          className="w-full px-4 py-3 border border-shoma-teal/25 rounded-xl focus:ring-2 focus:ring-shoma-teal focus:border-transparent outline-none transition disabled:bg-shoma-sand"
         />
       </div>
 
@@ -78,10 +79,10 @@ export default function AdminLoginForm() {
         {loading ? (
           <>
             <Loader className="w-4 h-4 animate-spin" />
-            Logging in...
+            Bezig met inloggen
           </>
         ) : (
-          'Login'
+          'Inloggen'
         )}
       </button>
     </form>

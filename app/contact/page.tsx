@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Mail, MapPin, Phone, Landmark, FileText } from 'lucide-react';
+import { Mail, MapPin, Phone, Landmark, FileText, BadgeCheck } from 'lucide-react';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact – Stichting Shoma',
+  title: 'Contact',
   description:
     'Neem contact op met Stichting Shoma. Stel uw vraag via het contactformulier, of gebruik ons adres, telefoonnummer, e-mailadres of IBAN.',
 };
@@ -35,6 +35,11 @@ const CONTACT_DETAILS = [
     icon: FileText,
     label: 'KVK',
     lines: ['04076887'],
+  },
+  {
+    icon: BadgeCheck,
+    label: 'RSIN',
+    lines: ['8143.90.249'],
   },
 ];
 

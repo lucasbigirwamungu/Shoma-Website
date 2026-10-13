@@ -10,8 +10,8 @@ type FormState = B2BLeadInput & { _state: 'idle' | 'loading' | 'success' | 'erro
 const MVO_OPTIONS = [
   { value: 'education', label: 'Onderwijsprojecten (KEMPS)' },
   { value: 'water',     label: 'Schoon Water & Sanitair (SDG 6)' },
-  { value: 'energy',    label: 'Duurzame Energie (Solar & Moestuin)', emoji: '☀️' },
-  { value: 'general',   label: 'Algemene Bedrijfssponsoring / MVO-advies', emoji: '🤝' },
+  { value: 'energy',    label: 'Duurzame Energie (Solar & Moestuin)' },
+  { value: 'general',   label: 'Algemene Bedrijfssponsoring / MVO-advies' },
 ] as const;
 
 const INITIAL: FormState = {

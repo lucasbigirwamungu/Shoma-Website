@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import type { AdminUser } from '@/lib/admin-auth';
+import { hasPermission as checkPermission, type AdminUser } from '@/lib/admin-auth';
 
 interface AdminContextType {
   user: AdminUser | null;
@@ -57,12 +57,12 @@ export function AdminAuthProvider({ children }: { children: ReactNode }) {
 
       if (!response.ok) {
         const error = await response.json();
-        throw new Error(error.message || 'Login failed');
+        throw new Error(error.message || 'Inloggen is niet gelukt');
       }
 
       const data = await response.json();
       setUser(data.user);
-      router.push('/admin');
+      router.push('/admin/compenseer');
     } catch (error) {
       console.error('Login error:', error);
       throw error;
@@ -85,9 +85,7 @@ export function AdminAuthProvider({ children }: { children: ReactNode }) {
   };
 
   const hasPermission = (permission: string): boolean => {
-    if (!user) return false;
-    // Mock implementation - TODO: Use actual permission check
-    return true;
+    return checkPermission(user, permission);
   };
 
   return (

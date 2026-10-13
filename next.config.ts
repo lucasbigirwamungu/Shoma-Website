@@ -33,18 +33,6 @@ const nextConfig: NextConfig = {
   images: {
     // Geen 3840px-variant: 2048px volstaat voor de grootste weergave en halveert de zwaarste bestanden
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'plus.unsplash.com',
-        pathname: '/**',
-      },
-    ],
   },
 };
 

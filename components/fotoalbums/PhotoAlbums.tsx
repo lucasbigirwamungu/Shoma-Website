@@ -37,7 +37,7 @@ export default function PhotoAlbums() {
               <a
                 key={album.id}
                 href={`#${album.id}`}
-                className="shrink-0 inline-flex items-center gap-1.5 text-sm text-shoma-slate/75 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
+                className="shrink-0 inline-flex items-center gap-1.5 min-h-11 text-sm text-shoma-slate/75 hover:text-shoma-teal font-medium px-3 py-1.5 rounded-lg hover:bg-shoma-sand transition-colors"
               >
                 <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                 {album.title}
@@ -77,7 +77,12 @@ export default function PhotoAlbums() {
               </p>
             </div>
 
-            <AlbumGallery title={album.title} folder={album.folder} photos={album.photos} />
+            <AlbumGallery
+              title={album.title}
+              folder={album.folder}
+              photos={album.photos}
+              featureFirst={album.featureFirst ?? true}
+            />
           </div>
         </section>
       ))}
@@ -90,7 +95,7 @@ export default function PhotoAlbums() {
           <p className="text-white/80 text-sm max-w-md mx-auto leading-relaxed">
             We werken continu aan het uitbreiden van onze fotoalbums. Wilt u ons helpen door foto&apos;s
             te delen? Neem dan{' '}
-            <a href="/contact" className="underline underline-offset-2 hover:text-shoma-terracotta-light">
+            <a href="/contact" className="inline-block py-2 underline underline-offset-2 hover:text-shoma-terracotta-light">
               contact
             </a>{' '}
             met ons op.

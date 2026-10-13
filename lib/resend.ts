@@ -37,7 +37,7 @@ function buildEmailHtml(lead: B2BLeadInput): string {
     <body>
       <div class="card">
         <div class="header">
-          <h1>🤝 Nieuwe Partner Aanvraag</h1>
+          <h1>Nieuwe partneraanvraag</h1>
           <p>Via het B2B intakeformulier op shoma.nl</p>
         </div>
         <div class="body">

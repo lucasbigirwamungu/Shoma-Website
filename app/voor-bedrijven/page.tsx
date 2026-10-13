@@ -8,7 +8,7 @@ import PartnerSection from '@/components/home/PartnerSection';
 import CompenseerBedrijvenSections from '@/components/bedrijven/CompenseerBedrijvenSections';
 
 export const metadata: Metadata = {
-  title: 'Voor Bedrijven – MVO Partnerschap | Stichting Shoma',
+  title: 'Voor bedrijven: MVO-partnerschap',
   description:
     'Word MVO-partner van Stichting Shoma: investeer in onderwijs en schoon water in Tanzania, of laat uw team CO₂ compenseren met Compenseer & Leer.',
 };
@@ -80,8 +80,8 @@ export default function VoorBedrijvenPage() {
       <div className="relative bg-shoma-teal-dark text-white overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1400&q=80"
-            alt="Solar energie Tanzania"
+            src="/images/fotoalbums/kemps-in-gebruik/CIZT0731.jpg"
+            alt=""
             fill
             priority
             className="object-cover opacity-20"
@@ -370,7 +370,7 @@ export default function VoorBedrijvenPage() {
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">
                     <span className="text-shoma-teal font-bold text-xs">1</span>
                   </div>
-                  Formulier invullen → direct doorgestuurd naar secretariaat@shoma.nl
+                  Formulier invullen, direct doorgestuurd naar secretariaat@shoma.nl
                 </div>
                 <div className="flex items-center gap-3 text-shoma-slate/75">
                   <div className="w-8 h-8 bg-shoma-teal/10 rounded-lg flex items-center justify-center">

@@ -7,7 +7,7 @@ import { AnimatedSection } from '@/components/ui/animated-section';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Geef een kind in Rubya een toekomst | Stichting Shoma',
+  title: { absolute: 'Geef een kind in Rubya een toekomst | Stichting Shoma' },
 };
 
 export default function HomePage() {

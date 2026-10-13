@@ -1,4 +1,9 @@
+import type { Metadata } from 'next';
 import { AdminAuthProvider } from '@/components/admin/AdminAuthProvider';
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default function AdminLayout({
   children,

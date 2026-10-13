@@ -3,25 +3,38 @@ import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { imageConfig, getImageUrl } from '@/lib/image-config';
 import { v4 as uuidv4 } from 'uuid';
+import { isSafeImageFilename, isSafeImageFolder, requireAdminAuth } from '@/lib/admin-auth';
+
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
 
 export async function POST(request: NextRequest) {
   try {
-    // Check admin auth (TODO: implement proper auth)
-    const authHeader = request.headers.get('authorization');
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const auth = await requireAdminAuth(request, 'upload:images');
+    if (!auth.authorized) {
+      return NextResponse.json({ error: auth.error }, { status: 401 });
     }
 
     const formData = await request.formData();
-    const file = formData.get('file') as File;
+    const file = formData.get('file');
     const folder = (formData.get('folder') as string) || 'fotoalbums';
 
-    if (!file) {
-      return NextResponse.json({ error: 'No file provided' }, { status: 400 });
+    if (!(file instanceof File)) {
+      return NextResponse.json({ error: 'Geen bestand meegestuurd' }, { status: 400 });
+    }
+
+    // Alleen de naam zelf, zonder pad, en alleen veilige tekens
+    const safeName = file.name.split(/[\\/]/).pop()!.replace(/[^a-z0-9._-]+/gi, '-');
+    const filename = `${uuidv4()}-${Date.now()}-${safeName}`;
+
+    if (!isSafeImageFolder(folder) || !isSafeImageFilename(filename) || !file.type.startsWith('image/')) {
+      return NextResponse.json({ error: 'Ongeldig bestand of ongeldige map' }, { status: 400 });
+    }
+
+    if (file.size > MAX_UPLOAD_BYTES) {
+      return NextResponse.json({ error: 'Het bestand is groter dan 10 MB' }, { status: 413 });
     }
 
     const bytes = await file.arrayBuffer();
-    const filename = `${uuidv4()}-${Date.now()}-${file.name}`;
 
     switch (imageConfig.storage) {
       case 'local':

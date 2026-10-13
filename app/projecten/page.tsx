@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle, BookOpen, GraduationCap, Users, Droplets, Sun,
 import KempsClassChartToggle from '@/components/projecten/KempsClassChartToggle';
 
 export const metadata: Metadata = {
-  title: 'Onze Projecten – Stichting Shoma',
+  title: 'Onze projecten',
   description:
     'Alle projecten van Stichting Shoma in Rubya, Tanzania: de bouw van KEMPS, regulier onderwijs, drinkwater, solarlampen, de schoolmoestuin en de schoolkeuken.',
 };

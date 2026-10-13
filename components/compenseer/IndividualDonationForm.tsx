@@ -8,6 +8,7 @@ import {
   formatPrice,
   PRESETS,
 } from '@/lib/compenseer/calculator';
+import { ArrowLeft, ArrowRight, Check, CheckCircle2 } from 'lucide-react';
 import { TreeSpecies, IndividualFootprint } from '@/lib/compenseer/types';
 import CompenseerImpactDisplay from './CompenseerImpactDisplay';
 
@@ -160,13 +161,13 @@ export default function IndividualDonationForm() {
       {step === 'input' && (
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-shoma-teal mb-3">
-            Bereken jouw CO₂ uitstoot
+            Bereken uw CO₂-uitstoot
           </h2>
           <p className="text-shoma-slate/75 leading-relaxed">
-            Vul in hoeveel uur je vliegt, hoeveel kilometer je per jaar met de auto rijdt, of wat
-            je jaarlijkse voetafdruk is. Wij tellen dat op tot je CO₂-uitstoot in kilo&apos;s. Daar
-            hoort een compensatiebedrag bij: 1,5 tot 2,5 cent per kilo CO₂, afhankelijk van je
-            totaal. Met je donatie planten lokale teams bomen op schoolterreinen in Rubya,
+            Vul in hoeveel uur u vliegt, hoeveel kilometer u per jaar met de auto rijdt, of wat
+            uw jaarlijkse voetafdruk is. Wij tellen dat op tot uw CO₂-uitstoot in kilo&apos;s. Daar
+            hoort een compensatiebedrag bij: 1,5 tot 2,5 cent per kilo CO₂, afhankelijk van uw
+            totaal. Met uw donatie planten lokale teams bomen op schoolterreinen in Rubya,
             Tanzania, een project van Stichting Shoma dat ook het onderwijs daar steunt.
           </p>
         </div>
@@ -181,16 +182,16 @@ export default function IndividualDonationForm() {
                   step === s
                     ? 'bg-shoma-terracotta text-shoma-slate'
                     : idx < ['input', 'impact', 'checkout'].indexOf(step)
-                      ? 'bg-green-700 text-white'
-                      : 'bg-gray-200 text-shoma-slate/75'
+                      ? 'bg-shoma-teal text-white'
+                      : 'bg-shoma-cream text-shoma-slate/75'
                 }`}
               >
                 {idx + 1}
               </div>
-              <span className="ml-2 text-sm font-medium">
-                {s === 'input' ? 'Je voetafdruk' : s === 'impact' ? 'Impact' : 'Betaling'}
+              <span className={`ml-2 text-sm font-medium ${step === s ? '' : 'hidden sm:inline'}`}>
+                {s === 'input' ? 'Uw voetafdruk' : s === 'impact' ? 'Impact' : 'Betaling'}
               </span>
-              {idx < 2 && <div className="w-12 h-0.5 bg-gray-300 ml-4" />}
+              {idx < 2 && <div className="w-6 sm:w-12 h-0.5 bg-shoma-clay ml-2 sm:ml-4" />}
             </div>
           ))}
         </div>
@@ -198,16 +199,16 @@ export default function IndividualDonationForm() {
 
       {step === 'input' && (
         <div className="space-y-8">
-          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-            <p className="text-sm text-blue-900">
-              💡 Kies één optie hieronder, of voeg meerdere in voor totaal:
+          <div className="bg-shoma-sand p-4 rounded-lg border border-shoma-teal/15">
+            <p className="text-sm text-shoma-slate">
+              Vul één veld in, of meerdere voor een totaal:
             </p>
           </div>
 
           {/* Flight hours */}
           <div>
-            <label htmlFor="voetafdruk-vlieguren" className="block text-sm font-medium text-gray-700 mb-2">
-              ✈️ Vlieguren (retour)
+            <label htmlFor="voetafdruk-vlieguren" className="block text-sm font-medium text-shoma-slate mb-2">
+              Vlieguren (retour)
             </label>
             <input
               id="voetafdruk-vlieguren"
@@ -224,7 +225,7 @@ export default function IndividualDonationForm() {
               <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.flightHours || 0} uur
               </span>
-              <span className="text-sm text-gray-600">
+              <span className="text-sm text-shoma-slate/75">
                 ~{Math.round((footprint.flightHours || 0) * CO2_FACTORS.flight)} kg CO₂
               </span>
             </div>
@@ -235,7 +236,7 @@ export default function IndividualDonationForm() {
                   <button
                     key={key}
                     onClick={() => handlePreset(key as keyof typeof PRESETS.individual)}
-                    className="text-xs px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded"
+                    className="text-xs px-2 py-1 bg-shoma-cream hover:bg-shoma-clay rounded"
                   >
                     {preset.description}
                   </button>
@@ -245,8 +246,8 @@ export default function IndividualDonationForm() {
 
           {/* Distance km */}
           <div>
-            <label htmlFor="voetafdruk-km" className="block text-sm font-medium text-gray-700 mb-2">
-              🚗 Gereden km (per jaar)
+            <label htmlFor="voetafdruk-km" className="block text-sm font-medium text-shoma-slate mb-2">
+              Gereden km (per jaar)
             </label>
             <input
               id="voetafdruk-km"
@@ -263,7 +264,7 @@ export default function IndividualDonationForm() {
               <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.distanceKm || 0} km
               </span>
-              <span className="text-sm text-gray-600">
+              <span className="text-sm text-shoma-slate/75">
                 ~{Math.round((footprint.distanceKm || 0) * 0.192)} kg CO₂
               </span>
             </div>
@@ -271,7 +272,7 @@ export default function IndividualDonationForm() {
 
           {/* Annual footprint */}
           <div>
-            <label htmlFor="voetafdruk-jaar" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="voetafdruk-jaar" className="block text-sm font-medium text-shoma-slate mb-2">
               Jaarlijkse voetafdruk (kg CO₂)
             </label>
             <input
@@ -289,25 +290,26 @@ export default function IndividualDonationForm() {
               <span className="text-lg font-bold text-shoma-terracotta-ink">
                 {footprint.annualFootprintKg || 0} kg
               </span>
-              <span className="text-sm text-gray-600">
+              <span className="text-sm text-shoma-slate/75">
                 EU gemiddelde: ~4500 kg/jaar
               </span>
             </div>
           </div>
 
-          <div className="bg-shoma-sand p-4 rounded-lg border-l-4 border-shoma-terracotta">
+          <div className="bg-shoma-sand p-4 rounded-lg border border-shoma-terracotta/40">
             <div className="text-3xl font-bold text-shoma-teal mb-2">
               {formatCO2(co2Kg)}
             </div>
-            <p className="text-sm text-gray-600">totale CO₂ uitstoot</p>
+            <p className="text-sm text-shoma-slate/75">totale CO₂ uitstoot</p>
           </div>
 
           <button
             onClick={handleNextStep}
             disabled={co2Kg === 0}
-            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
+            className="w-full bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:bg-shoma-clay disabled:text-shoma-slate/60 text-shoma-slate font-bold py-3 rounded-lg transition"
           >
-            Volgende: Impact zien →
+            Volgende: Impact zien
+              <ArrowRight className="ml-1 inline h-4 w-4" aria-hidden="true" />
           </button>
         </div>
       )}
@@ -315,7 +317,7 @@ export default function IndividualDonationForm() {
       {step === 'impact' && (
         <div className="space-y-8">
           <h2 className="text-2xl font-bold text-shoma-teal mb-6">
-            Jouw impact
+            Uw impact
           </h2>
 
           <CompenseerImpactDisplay calculation={calculation} />
@@ -323,15 +325,17 @@ export default function IndividualDonationForm() {
           <div className="flex gap-4">
             <button
               onClick={handlePrevStep}
-              className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-cream hover:bg-shoma-clay text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              ← Terug
+              <ArrowLeft className="mr-1 inline h-4 w-4" aria-hidden="true" />
+              Terug
             </button>
             <button
               onClick={handleNextStep}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-shoma-slate font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              Doneren →
+              Doneren
+              <ArrowRight className="ml-1 inline h-4 w-4" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -346,21 +350,21 @@ export default function IndividualDonationForm() {
           <div className="bg-shoma-sand p-4 rounded-lg">
             <div className="grid grid-cols-2 gap-4 text-sm mb-4">
               <div>
-                <span className="text-gray-600">CO₂ offset:</span>
+                <span className="text-shoma-slate/75">CO₂ offset:</span>
                 <p className="font-bold text-shoma-teal">{formatCO2(co2Kg)}</p>
               </div>
               <div>
-                <span className="text-gray-600">Bomen te planten:</span>
+                <span className="text-shoma-slate/75">Bomen te planten:</span>
                 <p className="font-bold text-shoma-teal">{calculation.treesAllocated}</p>
               </div>
               <div>
-                <span className="text-gray-600">Donatie bedrag:</span>
+                <span className="text-shoma-slate/75">Donatie bedrag:</span>
                 <p className="font-bold text-shoma-terracotta-ink">
                   {formatPrice(calculation.amountEur)}
                 </p>
               </div>
               <div>
-                <span className="text-gray-600">Kinderen ondersteund:</span>
+                <span className="text-shoma-slate/75">Kinderen ondersteund:</span>
                 <p className="font-bold text-shoma-teal">
                   ~{Math.round(calculation.treesAllocated / 2)}
                 </p>
@@ -370,7 +374,7 @@ export default function IndividualDonationForm() {
 
           <div className="space-y-4">
             <div>
-              <label htmlFor="donateur-naam" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="donateur-naam" className="block text-sm font-medium text-shoma-slate mb-2">
                 Naam
               </label>
               <input
@@ -379,13 +383,13 @@ export default function IndividualDonationForm() {
                 type="text"
                 value={donorName}
                 onChange={(e) => setDonorName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
-                placeholder="Je naam"
+                className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+                placeholder="Uw naam"
               />
             </div>
 
             <div>
-              <label htmlFor="donateur-email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="donateur-email" className="block text-sm font-medium text-shoma-slate mb-2">
                 Email
               </label>
               <input
@@ -394,8 +398,8 @@ export default function IndividualDonationForm() {
                 type="email"
                 value={donorEmail}
                 onChange={(e) => setDonorEmail(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
-                placeholder="jouw@email.nl"
+                className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+                placeholder="naam@voorbeeld.nl"
               />
             </div>
           </div>
@@ -403,14 +407,15 @@ export default function IndividualDonationForm() {
           <div className="flex gap-4">
             <button
               onClick={handlePrevStep}
-              className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-cream hover:bg-shoma-clay text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              ← Terug
+              <ArrowLeft className="mr-1 inline h-4 w-4" aria-hidden="true" />
+              Terug
             </button>
             <button
               onClick={handleSubmitDonation}
               disabled={!donorName || !donorEmail || isLoading}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:bg-shoma-clay disabled:text-shoma-slate/60 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               {isLoading ? 'Verwerking...' : 'Betalen met iDEAL'}
             </button>
@@ -421,46 +426,46 @@ export default function IndividualDonationForm() {
       {step === 'success' && successData && (
         <div className="space-y-8">
           <div className="text-center">
-            <div className="text-6xl mb-4">✓</div>
+            <CheckCircle2 className="mx-auto mb-4 h-14 w-14 text-shoma-teal" aria-hidden="true" />
             <h2 className="text-3xl font-bold text-shoma-teal mb-2">
-              Donatie geslaagd!
+              Donatie geslaagd
             </h2>
-            <p className="text-gray-600">
-              Bedankt {donorName}! Je bijdrage maakt verschil.
+            <p className="text-shoma-slate/75">
+              Bedankt {donorName}! Uw bijdrage maakt verschil.
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
-            <h3 className="font-bold text-green-900 mb-4">Jouw impact</h3>
+          <div className="bg-shoma-cream p-6 rounded-lg border border-shoma-teal/15">
+            <h3 className="font-bold text-shoma-slate mb-4">Uw impact</h3>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-3xl font-bold text-green-600">
+                <div className="text-3xl font-bold text-shoma-teal">
                   {successData.donation.trees_allocated}
                 </div>
-                <div className="text-xs text-green-800">Bomen gepland</div>
+                <div className="text-xs text-shoma-slate">Bomen gepland</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-600">
+                <div className="text-3xl font-bold text-shoma-teal">
                   {Math.round(successData.donation.co2_kg / 1000 * 100) / 100}t
                 </div>
-                <div className="text-xs text-blue-800">CO₂ offset</div>
+                <div className="text-xs text-shoma-slate">CO₂ offset</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-orange-600">
+                <div className="text-3xl font-bold text-shoma-terracotta-ink">
                   €{successData.donation.amount_eur.toFixed(2)}
                 </div>
-                <div className="text-xs text-orange-800">Gedoneerd</div>
+                <div className="text-xs text-shoma-slate">Gedoneerd</div>
               </div>
             </div>
           </div>
 
-          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-            <h3 className="font-bold text-blue-900 mb-3">Volgende stappen</h3>
-            <ul className="text-sm text-blue-800 space-y-2">
-              <li>✓ Je certificaat is gegenereerd</li>
-              <li>✓ Betalingsref: <code className="bg-white px-2 py-1">{successData.payment.receiptNumber}</code></li>
-              <li>→ Check je email voor certificate (pdf download)</li>
-              <li>→ Updates over boomgroei via newsletter</li>
+          <div className="bg-shoma-sand p-6 rounded-lg border border-shoma-teal/15">
+            <h3 className="font-bold text-shoma-slate mb-3">Volgende stappen</h3>
+            <ul className="text-sm text-shoma-slate space-y-2">
+              <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Uw certificaat is gemaakt</span></li>
+              <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Betalingsref: <code className="bg-white px-2 py-1">{successData.payment.receiptNumber}</code></span></li>
+              <li className="flex items-start gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Het certificaat (pdf) staat in uw e-mail</span></li>
+              <li className="flex items-start gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Updates over de boomgroei via de nieuwsbrief</span></li>
             </ul>
           </div>
 

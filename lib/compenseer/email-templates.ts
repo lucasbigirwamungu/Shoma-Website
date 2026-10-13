@@ -9,7 +9,7 @@ export function getDonationConfirmationEmail(
   certificateUrl: string
 ) {
   return {
-    subject: `Je CO₂ compensatie is actief! ${treesCount} bomen gepland`,
+    subject: `Uw CO₂-compensatie is actief: ${treesCount} bomen gepland`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -31,12 +31,12 @@ export function getDonationConfirmationEmail(
 <body>
   <div class="container">
     <div class="header">
-      <h1>✓ Bedankt ${donorName}!</h1>
-      <p>Je CO₂ compensatie is actief</p>
+      <h1>Bedankt ${donorName}</h1>
+      <p>Uw CO₂-compensatie is actief</p>
     </div>
 
     <div class="content">
-      <p>Je donatie is verwerkt en <strong>${treesCount} bomen</strong> worden nu geplant in Rubya, Tanzania.</p>
+      <p>Uw donatie is verwerkt en <strong>${treesCount} bomen</strong> worden nu geplant in Rubya, Tanzania.</p>
 
       <div style="text-align: center; background: #f9f6ee; padding: 30px; border-radius: 8px; margin: 20px 0;">
         <div class="metric">
@@ -49,21 +49,21 @@ export function getDonationConfirmationEmail(
         </div>
       </div>
 
-      <h2>Download je certificaat</h2>
-      <p>Je persoonlijke CO₂ certificaat is klaar:</p>
-      <a href="${certificateUrl}" class="cta">📄 Certificaat downloaden</a>
+      <h2>Download uw certificaat</h2>
+      <p>Uw persoonlijke CO₂-certificaat is klaar:</p>
+      <a href="${certificateUrl}" class="cta">Certificaat downloaden</a>
 
       <h2>Volgende stappen</h2>
       <div class="step">
         <span class="step-num">1</span>
         <strong>Groei-updates</strong>
-        <p>Je ontvangt maandelijks updates over hoe jouw bomen groeien in Tanzania.</p>
+        <p>U ontvangt maandelijks updates over hoe uw bomen groeien in Tanzania.</p>
       </div>
 
       <div class="step">
         <span class="step-num">2</span>
-        <strong>Deel je certificaat</strong>
-        <p>Deel je impact op social media! (#CompenseerEnLeer #ShomaEducation)</p>
+        <strong>Deel uw certificaat</strong>
+        <p>Deel uw impact op social media. (#CompenseerEnLeer #ShomaEducation)</p>
       </div>
 
       <div class="step">
@@ -75,7 +75,7 @@ export function getDonationConfirmationEmail(
       <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;">
 
       <p style="font-size: 12px; color: #999;">
-        Deze email is verzonden naar je account. Niet ingediend door jou?
+        Deze email is verzonden naar uw e-mailadres. Niet door u aangevraagd?
         <a href="https://www.shoma.nl/privacy" style="color: #6e4d1c;">Privacy</a>
       </p>
     </div>
@@ -98,7 +98,7 @@ export function getBusinessCertificateEmail(
   certificateUrl: string
 ) {
   return {
-    subject: `🏢 MVO Certificaat klaar - ${companyName}`,
+    subject: `MVO-certificaat klaar: ${companyName}`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -145,7 +145,7 @@ export function getBusinessCertificateEmail(
       </div>
 
       <div class="commitment">
-        <h3 style="margin-top: 0;">✓ Jouw commitments</h3>
+        <h3 style="margin-top: 0;">Uw commitments</h3>
         <ul style="margin: 10px 0; padding-left: 20px;">
           <li>CO₂ reductie en neutraliteit</li>
           <li>Steun onderwijs in Tanzania</li>
@@ -153,9 +153,9 @@ export function getBusinessCertificateEmail(
         </ul>
       </div>
 
-      <h3>Download je certificaat</h3>
+      <h3>Download uw certificaat</h3>
       <p>Perfect voor jaarverslagen, website, en stakeholder communicatie:</p>
-      <a href="${certificateUrl}" class="cta">📜 Download MVO-certificaat</a>
+      <a href="${certificateUrl}" class="cta">Download MVO-certificaat</a>
 
       <h3>Volgende stappen</h3>
       <ul>
@@ -185,15 +185,15 @@ export function getBusinessCertificateEmail(
 
 export function getNewsletterWelcomeEmail(donorName: string) {
   return {
-    subject: '👋 Welkom bij Shoma!',
+    subject: 'Welkom bij Stichting Shoma',
     html: `
 <p>Hallo ${donorName},</p>
 
-<p>Welkom bij de Stichting Shoma community! Vanaf nu ontvang je updates over:</p>
+<p>Welkom bij de Stichting Shoma community! Vanaf nu ontvangt u updates over:</p>
 <ul>
-  <li>Groei van jouw bomen in Tanzania</li>
-  <li>📚 Onderwijs resultaten in Rubya</li>
-  <li>🎉 Special events en campagnes</li>
+  <li>Groei van uw bomen in Tanzania</li>
+  <li>Onderwijs resultaten in Rubya</li>
+  <li>Special events en campagnes</li>
 </ul>
 
 <p>Veel sterkte!</p>

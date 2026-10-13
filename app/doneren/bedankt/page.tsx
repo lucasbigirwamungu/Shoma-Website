@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Heart, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight, Check } from 'lucide-react';
 import ShareButton from '@/components/ui/ShareButton';
 
 export const metadata: Metadata = {
-  title: 'Bedankt voor uw donatie | Stichting Shoma',
+  title: 'Bedankt voor uw donatie',
   robots: { index: false },
 };
 
@@ -21,7 +21,7 @@ export default function BedanktPage() {
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-shoma-slate mb-4">
-          Dank u wel! 🙏
+          Dank u wel
         </h1>
 
         <p className="text-shoma-slate/75 text-lg leading-relaxed mb-8">
@@ -34,15 +34,15 @@ export default function BedanktPage() {
           <h3 className="font-semibold text-shoma-slate mb-3">Wat uw donatie betekent</h3>
           <div className="space-y-2.5 text-sm text-shoma-slate/75">
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-shoma-terracotta-ink" aria-hidden="true" />
               <span>Uw geld gaat direct naar een kind in Rubya, Tanzania</span>
             </div>
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-shoma-terracotta-ink" aria-hidden="true" />
               <span>Het bestuur werkt onbezoldigd en verantwoordt elke besteding in de jaarrekening</span>
             </div>
             <div className="flex items-start gap-2.5">
-              <span className="text-shoma-terracotta-ink mt-0.5">✓</span>
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-shoma-terracotta-ink" aria-hidden="true" />
               <span>U ontvangt maximaal 4× per jaar updates als u zich aanmeldde</span>
             </div>
           </div>

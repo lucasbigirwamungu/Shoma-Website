@@ -8,7 +8,7 @@ export default function ShareButton() {
       try {
         await navigator.share({
           title: 'Stichting Shoma – Onderwijs voor Tanzania',
-          text: 'Ik steun onderwijs voor kinderen in Rubya, Tanzania via Stichting Shoma. ANBI erkend en volledig transparant. Doe jij ook mee?',
+          text: 'Ik steun onderwijs voor kinderen in Rubya, Tanzania via Stichting Shoma. ANBI erkend en volledig transparant. Doet u ook mee?',
           url: 'https://shoma.nl',
         });
       } catch {

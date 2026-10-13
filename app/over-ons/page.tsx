@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Download, ExternalLink, Users, Heart } from 'lucide-react';
+import { Download, ExternalLink, Users, Heart, FileText } from 'lucide-react';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/over-ons/Reveal';
 import StoryBadge from '@/components/over-ons/StoryBadge';
 import FiscalBanner from '@/components/over-ons/FiscalBanner';
 
 export const metadata: Metadata = {
-  title: 'Over Ons – Stichting Shoma',
+  title: 'Over ons',
   description:
     'Leer meer over Stichting Shoma: onze oprichting in 2005, het onbezoldigde bestuur, ANBI-status en alle jaarrekeningen sinds 2012.',
 };
@@ -221,7 +221,7 @@ export default function OverOnsPage() {
           </StaggerContainer>
           {/* Fiscale aftrek uitleg */}
           <Reveal className="mt-5 bg-shoma-sand border border-shoma-terracotta/20 rounded-2xl p-5 flex items-start gap-4">
-            <span className="text-2xl">📄</span>
+            <FileText className="mt-0.5 h-6 w-6 shrink-0 text-shoma-terracotta-ink" aria-hidden="true" />
             <div>
               <p className="font-semibold text-shoma-terracotta-ink mb-1">Wilt u meer informatie over de fiscale aftrek?</p>
               <p className="text-sm text-shoma-slate/75 leading-relaxed">

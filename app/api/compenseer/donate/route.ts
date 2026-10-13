@@ -134,7 +134,7 @@ export async function POST(request: NextRequest) {
         success: true,
         donation,
         certificate,
-        message: 'Donatie verwerkt! Je certificaat wordt gegenereerd en via email verzonden.',
+        message: 'Donatie verwerkt. Uw certificaat wordt gemaakt en per e-mail verzonden.',
       },
       { status: 201 }
     );

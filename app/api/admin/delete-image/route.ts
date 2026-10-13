@@ -2,20 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import { unlink } from 'fs/promises';
 import { join } from 'path';
 import { imageConfig } from '@/lib/image-config';
+import { isSafeImageFilename, isSafeImageFolder, requireAdminAuth } from '@/lib/admin-auth';
 
 export async function DELETE(request: NextRequest) {
   try {
-    // Check admin auth (TODO: implement proper auth)
-    const authHeader = request.headers.get('authorization');
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const auth = await requireAdminAuth(request, 'delete:images');
+    if (!auth.authorized) {
+      return NextResponse.json({ error: auth.error }, { status: 401 });
     }
 
     const { filename, folder } = await request.json();
 
-    if (!filename || !folder) {
+    if (!isSafeImageFilename(filename) || !isSafeImageFolder(folder)) {
       return NextResponse.json(
-        { error: 'filename and folder are required' },
+        { error: 'Ongeldige bestandsnaam of map' },
         { status: 400 }
       );
     }

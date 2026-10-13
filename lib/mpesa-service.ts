@@ -276,7 +276,8 @@ export function initializeMpesaService(): MpesaService {
     consumerSecret: process.env.MPESA_CONSUMER_SECRET || '',
     shortCode: process.env.MPESA_SHORT_CODE || '',
     passkey: process.env.MPESA_PASSKEY || '',
-    callbackUrl: process.env.MPESA_CALLBACK_URL || `${process.env.NEXT_PUBLIC_APP_URL}/api/mpesa/callback`,
+    // Het geheim in de URL laat de callback-route controleren dat de melding van onze eigen aanvraag komt
+    callbackUrl: `${process.env.MPESA_CALLBACK_URL || `${process.env.NEXT_PUBLIC_APP_URL}/api/mpesa/callback`}?token=${encodeURIComponent(process.env.MPESA_CALLBACK_SECRET || '')}`,
   };
 
   if (!config.consumerKey || !config.consumerSecret) {

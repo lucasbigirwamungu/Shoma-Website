@@ -154,7 +154,7 @@ export default function DonationForm() {
   return (
     <div className="bg-white rounded-3xl shadow-xl border border-shoma-teal/10 overflow-hidden max-w-lg w-full">
       {/* Progress bar */}
-      <div className="h-1.5 bg-gray-100">
+      <div className="h-1.5 bg-shoma-sand">
         <div
           className="h-full bg-shoma-terracotta transition-all duration-500 ease-out"
           style={{ width: `${(step / 3) * 100}%` }}
@@ -168,14 +168,14 @@ export default function DonationForm() {
           return (
             <div key={label} className="flex items-center gap-2">
               <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
-                step > s ? 'bg-shoma-teal text-white' : step === s ? 'bg-shoma-terracotta text-shoma-slate' : 'bg-gray-100 text-shoma-slate/75'
+                step > s ? 'bg-shoma-teal text-white' : step === s ? 'bg-shoma-terracotta text-shoma-slate' : 'bg-shoma-sand text-shoma-slate/75'
               }`}>
                 {step > s ? <Check className="w-3.5 h-3.5" /> : s}
               </div>
               <span className={`text-xs font-medium hidden sm:block ${step === s ? 'text-shoma-slate' : 'text-shoma-slate/75'}`}>
                 {label}
               </span>
-              {i < 2 && <div className="w-8 sm:w-12 h-px bg-gray-200 mx-1" />}
+              {i < 2 && <div className="w-8 sm:w-12 h-px bg-shoma-cream mx-1" />}
             </div>
           );
         })}
@@ -253,7 +253,7 @@ export default function DonationForm() {
                   onClick={() => setForm((f) => ({ ...f, amount: preset.amount, frequency: preset.frequency, customAmount: '' }))}
                   className={`relative flex flex-col items-start p-4 rounded-2xl border-2 text-left transition-all ${
                     form.amount === preset.amount
-                      ? 'border-shoma-terracotta bg-orange-50'
+                      ? 'border-shoma-terracotta bg-shoma-sand'
                       : 'border-shoma-teal/15 hover:border-shoma-teal/40 bg-white'
                   } ${preset.highlight ? 'ring-2 ring-shoma-terracotta/20' : ''}`}
                 >
@@ -413,20 +413,20 @@ export default function DonationForm() {
             </div>
 
             {/* Fiscaal aftrekbaar badge */}
-            <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
-              <BadgeCheck className="h-5 w-5 shrink-0 text-green-700" aria-hidden="true" />
+            <div className="flex items-center gap-3 bg-shoma-sand border border-shoma-teal/15 rounded-xl px-4 py-3">
+              <BadgeCheck className="h-5 w-5 shrink-0 text-shoma-slate" aria-hidden="true" />
               <div>
-                <p className="text-sm font-semibold text-green-800">Fiscaal aftrekbaar (ANBI)</p>
-                <p className="text-xs text-green-700 mt-0.5">
+                <p className="text-sm font-semibold text-shoma-slate">Fiscaal aftrekbaar (ANBI)</p>
+                <p className="text-xs text-shoma-slate mt-0.5">
                   Als erkende ANBI-instelling is uw donatie aftrekbaar van de inkomstenbelasting.{' '}
-                  <a href="/over-ons#fiscaal" className="underline font-medium">Meer info →</a>
+                  <a href="/over-ons#fiscaal" className="underline font-medium">Meer info</a>
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-blue-50 border border-blue-100 rounded-xl px-4 py-3">
-              <Lock className="h-5 w-5 shrink-0 text-blue-700" aria-hidden="true" />
-              <p className="text-xs text-blue-700 leading-relaxed">
+            <div className="flex items-center gap-3 bg-shoma-sand border border-shoma-teal/15 rounded-xl px-4 py-3">
+              <Lock className="h-5 w-5 shrink-0 text-shoma-slate" aria-hidden="true" />
+              <p className="text-xs text-shoma-slate leading-relaxed">
                 Beveiligd via <strong>Mollie</strong>: iDEAL, Apple Pay, Google Pay en creditcard.
               </p>
             </div>

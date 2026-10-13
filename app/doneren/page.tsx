@@ -4,7 +4,7 @@ import ImpactCalculator from '@/components/donation/ImpactCalculator';
 import { ShieldCheck, BadgeCheck, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Doneer – Stichting Shoma',
+  title: 'Doneren',
   description:
     'Doneer direct aan Stichting Shoma via iDEAL, Apple Pay of creditcard. ANBI erkend, onbezoldigd bestuur en volledige transparantie.',
 };
@@ -22,8 +22,8 @@ const trustSignals = [
   },
   {
     icon: Users,
-    title: '260+ kinderen geholpen',
-    body: 'In schooljaar 2025 ondersteunden wij meer dan 260 kinderen in Rubya, Tanzania.',
+    title: '210 kinderen gesponsord',
+    body: 'In schooljaar 2025 ondersteunden wij 210 kinderen in Rubya, Tanzania.',
   },
 ];
 

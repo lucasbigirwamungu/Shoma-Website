@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
           </div>
 
           ${message ? `
-            <div style="background-color: #e8f5e9; padding: 15px; border-left: 4px solid #4caf50; border-radius: 4px;">
+            <div style="background-color: #faf6ee; padding: 15px; border: 1px solid #e6d3ba; border-radius: 4px;">
               <strong>Opmerkingen:</strong><br/>
               ${message.replace(/\n/g, '<br/>')}
             </div>

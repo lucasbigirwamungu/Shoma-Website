@@ -80,7 +80,7 @@ export default function FiscalBanner() {
             className="inline-flex items-center gap-2 bg-shoma-teal hover:bg-shoma-teal-dark text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-150 active:scale-[0.97] shadow-sm whitespace-nowrap"
           >
             <FileText className="w-4 h-4" />
-            Meer info fiscale aftrek →
+            Meer info fiscale aftrek
           </a>
         </div>
       </div>

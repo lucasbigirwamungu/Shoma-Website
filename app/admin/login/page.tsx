@@ -3,8 +3,8 @@ import { Lock } from 'lucide-react';
 import AdminLoginForm from '@/components/admin/AdminLoginForm';
 
 export const metadata: Metadata = {
-  title: 'Admin Login – Stichting Shoma',
-  description: 'Admin dashboard login',
+  title: 'Beheer inloggen',
+  description: 'Inloggen voor beheerders van Stichting Shoma',
   robots: 'noindex, nofollow',
 };
 
@@ -19,8 +19,8 @@ export default function AdminLoginPage() {
               <Lock className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-white">Admin Login</h1>
-          <p className="text-white/70 mt-2">Stichting Shoma Dashboard</p>
+          <h1 className="text-3xl font-bold text-white">Inloggen beheer</h1>
+          <p className="text-white/70 mt-2">Dashboard van Stichting Shoma</p>
         </div>
 
         {/* Login Form */}
@@ -40,7 +40,7 @@ export default function AdminLoginPage() {
 
         {/* Security notice */}
         <div className="bg-white/10 border border-white/20 rounded-xl p-4 text-white text-sm text-center">
-          <p>🔒 Deze pagina is beveiligd. Deel je inloggegevens met niemand.</p>
+          <p>Deze pagina is beveiligd. Deel uw inloggegevens met niemand.</p>
         </div>
       </div>
     </div>

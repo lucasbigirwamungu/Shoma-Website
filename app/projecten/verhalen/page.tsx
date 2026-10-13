@@ -6,7 +6,7 @@ import { PROJECT_STORIES, type ProjectStory } from '@/lib/project-stories';
 import type { ProjectCategory } from '@/types';
 
 export const metadata: Metadata = {
-  title: "Projectverhalen – Stichting Shoma",
+  title: "Projectverhalen",
   description:
     'Lees de volledige verhalen achter de projecten van Stichting Shoma in Rubya, Tanzania: de bouw van KEMPS, watervoorziening, duurzame energie en leefomgeving.',
 };

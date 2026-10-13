@@ -8,6 +8,7 @@ import {
   formatPrice,
   PRESETS,
 } from '@/lib/compenseer/calculator';
+import { ArrowLeft, ArrowRight, Check, CheckCircle2 } from 'lucide-react';
 import { TreeSpecies, BusinessFootprint } from '@/lib/compenseer/types';
 import CompenseerImpactDisplay from './CompenseerImpactDisplay';
 
@@ -166,20 +167,20 @@ export default function BusinessDonationForm() {
                   step === s
                     ? 'bg-shoma-terracotta text-shoma-slate'
                     : idx < ['input', 'impact', 'checkout'].indexOf(step)
-                      ? 'bg-green-700 text-white'
-                      : 'bg-gray-200 text-shoma-slate/75'
+                      ? 'bg-shoma-teal text-white'
+                      : 'bg-shoma-cream text-shoma-slate/75'
                 }`}
               >
                 {idx + 1}
               </div>
-              <span className="ml-2 text-sm font-medium">
+              <span className={`ml-2 text-sm font-medium ${step === s ? '' : 'hidden sm:inline'}`}>
                 {s === 'input'
                   ? 'Bedrijfsgegevens'
                   : s === 'impact'
                     ? 'Impact'
                     : 'MVO-certificaat'}
               </span>
-              {idx < 2 && <div className="w-12 h-0.5 bg-gray-300 ml-4" />}
+              {idx < 2 && <div className="w-6 sm:w-12 h-0.5 bg-shoma-clay ml-2 sm:ml-4" />}
             </div>
           ))}
         </div>
@@ -191,15 +192,15 @@ export default function BusinessDonationForm() {
             Bedrijfs CO₂ voetafdruk
           </h2>
 
-          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-            <p className="text-sm text-blue-900">
-              💼 Kies je bedrijfscategorie en voer gegevens in
+          <div className="bg-shoma-sand p-4 rounded-lg border border-shoma-teal/15">
+            <p className="text-sm text-shoma-slate">
+              Kies uw bedrijfscategorie en vul de gegevens in
             </p>
           </div>
 
           {/* Category */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">
+            <label className="block text-sm font-medium text-shoma-slate mb-3">
               Bedrijfscategorie
             </label>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -212,7 +213,7 @@ export default function BusinessDonationForm() {
                     className={`p-3 rounded-lg text-sm font-medium transition ${
                       footprint.category === presetData.category
                         ? 'bg-shoma-terracotta text-shoma-slate'
-                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                        : 'bg-shoma-sand text-shoma-slate hover:bg-shoma-cream'
                     }`}
                   >
                     {presetData.description || key}
@@ -225,8 +226,8 @@ export default function BusinessDonationForm() {
           {/* Employees */}
           {footprint.category !== 'logistics' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                👥 Aantal medewerkers
+              <label className="block text-sm font-medium text-shoma-slate mb-2">
+                Aantal medewerkers
               </label>
               <input
                 type="range"
@@ -241,7 +242,7 @@ export default function BusinessDonationForm() {
                 <span className="text-lg font-bold text-shoma-terracotta-ink">
                   {footprint.employees || 20}
                 </span>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-shoma-slate/75">
                   ~{Math.round(((footprint.employees || 20) * 1200) / 1000)} ton CO₂/jaar
                 </span>
               </div>
@@ -251,8 +252,8 @@ export default function BusinessDonationForm() {
           {/* Vehicles */}
           {footprint.category === 'logistics' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                🚚 Aantal voertuigen
+              <label className="block text-sm font-medium text-shoma-slate mb-2">
+                Aantal voertuigen
               </label>
               <input
                 type="range"
@@ -267,7 +268,7 @@ export default function BusinessDonationForm() {
                 <span className="text-lg font-bold text-shoma-terracotta-ink">
                   {footprint.vehicles || 5}
                 </span>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-shoma-slate/75">
                   ~{Math.round(((footprint.vehicles || 5) * 8000) / 1000)} ton CO₂/jaar
                 </span>
               </div>
@@ -276,31 +277,32 @@ export default function BusinessDonationForm() {
 
           {/* Custom scope */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-shoma-slate mb-2">
               Custom CO₂ scope (optioneel, kg/jaar)
             </label>
             <input
               type="number"
               value={footprint.customScopeKg || 0}
               onChange={(e) => handleCustomScope(Number(e.target.value))}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
-              placeholder="Voer je totale CO2 in als je deze weet"
+              className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+              placeholder="Vul uw totale CO₂ in als u die weet"
             />
           </div>
 
-          <div className="bg-shoma-sand p-4 rounded-lg border-l-4 border-shoma-terracotta">
+          <div className="bg-shoma-sand p-4 rounded-lg border border-shoma-terracotta/40">
             <div className="text-3xl font-bold text-shoma-teal mb-2">
               {formatCO2(co2Kg)}
             </div>
-            <p className="text-sm text-gray-600">jaarlijkse CO₂ voetafdruk bedrijf</p>
+            <p className="text-sm text-shoma-slate/75">jaarlijkse CO₂ voetafdruk bedrijf</p>
           </div>
 
           <button
             onClick={handleNextStep}
             disabled={co2Kg === 0}
-            className="w-full bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
+            className="w-full bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:bg-shoma-clay disabled:text-shoma-slate/60 text-shoma-slate font-bold py-3 rounded-lg transition"
           >
-            Volgende: Impact zien →
+            Volgende: Impact zien
+              <ArrowRight className="ml-1 inline h-4 w-4" aria-hidden="true" />
           </button>
         </div>
       )}
@@ -314,25 +316,27 @@ export default function BusinessDonationForm() {
           <CompenseerImpactDisplay calculation={calculation} />
 
           <div className="bg-gradient-to-r from-shoma-teal to-shoma-terracotta p-6 rounded-lg text-white">
-            <h3 className="font-bold mb-2">✓ MVO Certificaat</h3>
+            <h3 className="font-bold mb-2">MVO-certificaat</h3>
             <p className="text-sm">
-              Na betaling ontvang je een professioneel MVO-certificaat voor jouw
-              stakeholders, partners en klanten. Perfect voor jouw duurzaamheidsrapport.
+              Na betaling ontvangt u een professioneel MVO-certificaat voor uw
+              stakeholders, partners en klanten. Geschikt voor uw duurzaamheidsrapport.
             </p>
           </div>
 
           <div className="flex gap-4">
             <button
               onClick={handlePrevStep}
-              className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-cream hover:bg-shoma-clay text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              ← Terug
+              <ArrowLeft className="mr-1 inline h-4 w-4" aria-hidden="true" />
+              Terug
             </button>
             <button
               onClick={handleNextStep}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 text-shoma-slate font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-shoma-terracotta-dark text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              MVO Certificaat aanvragen →
+              MVO Certificaat aanvragen
+              <ArrowRight className="ml-1 inline h-4 w-4" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -347,21 +351,21 @@ export default function BusinessDonationForm() {
           <div className="bg-shoma-sand p-4 rounded-lg">
             <div className="grid grid-cols-2 gap-4 text-sm mb-4">
               <div>
-                <span className="text-gray-600">CO₂ offset:</span>
+                <span className="text-shoma-slate/75">CO₂ offset:</span>
                 <p className="font-bold text-shoma-teal">{formatCO2(co2Kg)}</p>
               </div>
               <div>
-                <span className="text-gray-600">Bomen te planten:</span>
+                <span className="text-shoma-slate/75">Bomen te planten:</span>
                 <p className="font-bold text-shoma-teal">{calculation.treesAllocated}</p>
               </div>
               <div>
-                <span className="text-gray-600">Donatie bedrag:</span>
+                <span className="text-shoma-slate/75">Donatie bedrag:</span>
                 <p className="font-bold text-shoma-terracotta-ink">
                   {formatPrice(calculation.amountEur)}
                 </p>
               </div>
               <div>
-                <span className="text-gray-600">Certificaattype:</span>
+                <span className="text-shoma-slate/75">Certificaattype:</span>
                 <p className="font-bold text-shoma-teal">MVO Business</p>
               </div>
             </div>
@@ -369,40 +373,40 @@ export default function BusinessDonationForm() {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-shoma-slate mb-2">
                 Bedrijfsnaam
               </label>
               <input
                 type="text"
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
-                placeholder="Naam van je bedrijf"
+                className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+                placeholder="Naam van uw bedrijf"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-shoma-slate mb-2">
                 Contactemail
               </label>
               <input
                 type="email"
                 value={companyEmail}
                 onChange={(e) => setCompanyEmail(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+                className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
                 placeholder="contact@bedrijf.nl"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-shoma-slate mb-2">
                 Telefoonnummer
               </label>
               <input
                 type="tel"
                 value={companyPhone}
                 onChange={(e) => setCompanyPhone(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
+                className="w-full px-4 py-2 border border-shoma-teal/25 rounded-lg focus:ring-2 focus:ring-shoma-terracotta"
                 placeholder="+31 (0)6 1234 5678"
               />
             </div>
@@ -411,14 +415,15 @@ export default function BusinessDonationForm() {
           <div className="flex gap-4">
             <button
               onClick={handlePrevStep}
-              className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-cream hover:bg-shoma-clay text-shoma-slate font-bold py-3 rounded-lg transition"
             >
-              ← Terug
+              <ArrowLeft className="mr-1 inline h-4 w-4" aria-hidden="true" />
+              Terug
             </button>
             <button
               onClick={handleSubmitDonation}
               disabled={!companyName || !companyEmail || isLoading}
-              className="flex-1 bg-shoma-terracotta hover:bg-orange-500 disabled:bg-gray-300 text-shoma-slate font-bold py-3 rounded-lg transition"
+              className="flex-1 bg-shoma-terracotta hover:bg-shoma-terracotta-dark disabled:bg-shoma-clay disabled:text-shoma-slate/60 text-shoma-slate font-bold py-3 rounded-lg transition"
             >
               {isLoading ? 'Verwerking...' : 'Betalen (iDEAL / Creditcard)'}
             </button>
@@ -429,11 +434,11 @@ export default function BusinessDonationForm() {
       {step === 'success' && successData && (
         <div className="space-y-8">
           <div className="text-center">
-            <div className="text-6xl mb-4">🎉</div>
+            <CheckCircle2 className="mx-auto mb-4 h-14 w-14 text-shoma-teal" aria-hidden="true" />
             <h2 className="text-3xl font-bold text-shoma-teal mb-2">
-              MVO-commitmentgeregistreerd!
+              MVO-commitment geregistreerd
             </h2>
-            <p className="text-gray-600">
+            <p className="text-shoma-slate/75">
               Bedankt {companyName}! Jullie duurzaamheidsinspanning is nu actief.
             </p>
           </div>
@@ -462,28 +467,28 @@ export default function BusinessDonationForm() {
             </div>
           </div>
 
-          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-            <h3 className="font-bold text-blue-900 mb-3">Download je certificaat</h3>
-            <p className="text-sm text-blue-800 mb-4">
-              Je MVO-certificaat is klaar voor gebruik in jaarverslagen, marketing, en stakeholder communicatie.
+          <div className="bg-shoma-sand p-6 rounded-lg border border-shoma-teal/15">
+            <h3 className="font-bold text-shoma-slate mb-3">Download uw certificaat</h3>
+            <p className="text-sm text-shoma-slate mb-4">
+              Uw MVO-certificaat is klaar voor gebruik in jaarverslagen, marketing, en stakeholder communicatie.
             </p>
             <a
               href={`/api/compenseer/certificate/${successData.certificate.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition"
+              className="inline-block bg-shoma-teal hover:bg-shoma-teal-dark text-white font-bold py-2 px-4 rounded transition"
             >
-              📄 Download certificaat
+              Download certificaat
             </a>
           </div>
 
-          <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-            <h3 className="font-bold text-green-900 mb-3">Volgende stappen</h3>
-            <ul className="text-sm text-green-800 space-y-2">
-              <li>✓ Betaling verwerkt (ref: {successData.payment.receiptNumber})</li>
-              <li>✓ Bomen gepland in Rubya schooltuinen</li>
-              <li>→ Groei-updates via email (maandelijks)</li>
-              <li>→ Contact: info@shoma.nl voor vragen</li>
+          <div className="bg-shoma-sand p-6 rounded-lg border border-shoma-teal/15">
+            <h3 className="font-bold text-shoma-slate mb-3">Volgende stappen</h3>
+            <ul className="text-sm text-shoma-slate space-y-2">
+              <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Betaling verwerkt (ref: {successData.payment.receiptNumber})</span></li>
+              <li className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Bomen gepland in Rubya schooltuinen</span></li>
+              <li className="flex items-start gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Maandelijks groei-updates per e-mail</span></li>
+              <li className="flex items-start gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>Contact: info@shoma.nl voor vragen</span></li>
             </ul>
           </div>
 
