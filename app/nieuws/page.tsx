@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, ChevronDown, Newspaper, ExternalLink } from 'lucide-react';
+import { ArrowRight, ChevronDown, Newspaper, ExternalLink, FolderOpen } from 'lucide-react';
 import PhotoAlbums from '@/components/fotoalbums/PhotoAlbums';
 import { allNewsletters, groupNewslettersByYear } from '@/lib/newsletter-data';
 
@@ -15,6 +15,7 @@ const featuredNews = [
   {
     id: 'featured-0',
     date: 'September 2026',
+    year: 2026,
     title: 'Nieuw ICT-lokaal en stagiaires op KEMPS',
     summary:
       'In de nieuwsbrief van september 2026 delen we de mooiste mijlpalen van de afgelopen periode op KEMPS. Dankzij het Baarns Lyceum zijn 40 geüpdatete laptops geïnstalleerd met een stabiele internetverbinding. Stagiaires Daan en Ezra van de Hanzehogeschool ondersteunen drie maanden lang het onderwijs, de ICT-integratie en het bewegingsonderwijs. Samen met Pelle\'s Deurningen verkopen we chocoladeletters voor nieuwe speeltoestellen. Er is een nieuwe bewakersloge gebouwd, de parkeerplaats is gecementeerd en de toegangsweg is verbreed. Tientallen kansarme kinderen zijn weer voorzien van schoolgeld, uniform en leermiddelen.',
@@ -25,6 +26,7 @@ const featuredNews = [
   {
     id: 'featured-1',
     date: 'Januari 2026',
+    year: 2026,
     title: 'Bestuurswissel en een frisse blik op de toekomst',
     summary:
       'Na jaren van tomeloze inzet hebben een aantal bestuursleden het stokje overgedragen. Begin 2025 nam Jaap Bargeman afscheid als voorzitter; hij blijft samen met Jellie als ambassadeur verbonden aan Shoma. Ook namen we afscheid van Klaas en Betsie Niestijl. Onder leiding van voorzitter Frank Bigirwamungu gaat een vernieuwd bestuur aan de slag met het beleidsplan 2026-2028: een ICT-lokaal voor 187 leerlingen, een landbouwproject met irrigatie, universitaire beurzen voor talentvolle leerlingen en de aanplant van vruchtbomen voor eigen schoolinkomsten.',
@@ -34,6 +36,7 @@ const featuredNews = [
   {
     id: 'featured-2',
     date: 'Maart 2025',
+    year: 2025,
     title: 'KEMPS-leerlingen presteren uitmuntend op nationale examens',
     summary:
       'Leerlingen van de Kashasha English Medium Primary School scoorden boven het nationale gemiddelde. De hoog scorende leerlingen zijn door de overheid geselecteerd voor geavanceerde sterklassen op de middelbare school. KEMPS telt inmiddels 257 leerlingen (gestart in 2016 met slechts 13).',
@@ -43,6 +46,7 @@ const featuredNews = [
   {
     id: 'featured-3',
     date: 'Januari 2025',
+    year: 2025,
     title: '210 kinderen gesponsord in schooljaar 2025',
     summary:
       'Dankzij de steun van onze donateurs ondersteunen we in schooljaar 2025 in totaal 210 kinderen: 155 op reguliere overheidsscholen (€40/jaar) en 55 via de KEMPS-school (€350/jaar). Het vermogen van de stichting is gegroeid naar €21.188.',
@@ -51,8 +55,78 @@ const featuredNews = [
   },
 ];
 
+// Nieuws en nieuwsbrieven van dit jaar blijven zichtbaar; al het oudere staat in één map
+const CURRENT_YEAR = 2026;
+
+type FeaturedItem = (typeof featuredNews)[number];
+
+const recentNews = featuredNews.filter((item) => item.year >= CURRENT_YEAR);
+const olderNews = featuredNews.filter((item) => item.year < CURRENT_YEAR);
+
 // Alle nieuwsbrieven, gegroepeerd per jaar (nieuwste eerst)
-const newslettersByYear = groupNewslettersByYear(allNewsletters);
+const newslettersByYear = Array.from(groupNewslettersByYear(allNewsletters).entries());
+const recentYears = newslettersByYear.filter(([year]) => year >= CURRENT_YEAR);
+const olderYears = newslettersByYear.filter(([year]) => year < CURRENT_YEAR);
+const olderCount = olderYears.reduce((sum, [, newsletters]) => sum + newsletters.length, 0);
+const oldestYear = olderYears.length ? olderYears[olderYears.length - 1][0] : CURRENT_YEAR;
+
+function NewsCard({ item }: { item: FeaturedItem }) {
+  return (
+    <article className="bg-white rounded-2xl p-7 border border-shoma-teal/10 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-3 mb-4 flex-wrap">
+        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.categoryColor}`}>
+          {item.category}
+        </span>
+        <span className="text-xs text-shoma-slate/75">{item.date}</span>
+      </div>
+      <h2 className="text-xl font-bold text-shoma-slate mb-3">{item.title}</h2>
+      <p className="text-shoma-slate/75 leading-relaxed text-sm">{item.summary}</p>
+      {'url' in item && item.url && (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-shoma-teal hover:text-shoma-teal-dark font-semibold mt-4"
+        >
+          Lees de nieuwsbrief
+          <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+        </a>
+      )}
+    </article>
+  );
+}
+
+function YearGroup({ year, newsletters, open }: { year: number; newsletters: typeof allNewsletters; open?: boolean }) {
+  return (
+    <details open={open} className="group border border-shoma-teal/20 rounded-xl bg-white">
+      <summary className="flex items-center gap-3 cursor-pointer px-5 py-3 hover:bg-shoma-teal/5 transition-colors">
+        <span className="text-lg font-bold text-shoma-teal">{year}</span>
+        <span className="text-sm text-shoma-slate/75">
+          {newsletters.length} {newsletters.length === 1 ? 'uitgave' : 'uitgaven'}
+        </span>
+        <ChevronDown className="ml-auto h-4 w-4 text-shoma-slate/75 transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
+      </summary>
+      <div className="px-5 py-3 bg-white/50 border-t border-shoma-teal/10 space-y-2">
+        {newsletters.map((nl) => (
+          <a
+            key={nl.id}
+            href={nl.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-2 text-shoma-slate/75 hover:text-shoma-teal transition-colors group/link"
+          >
+            <ArrowRight className="h-4 w-4 group-hover/link:text-shoma-teal" aria-hidden="true" />
+            <div className="flex-1">
+              <span className="text-sm font-medium group-hover/link:underline">{nl.title}</span>
+              <span className="text-xs text-shoma-slate/75"> ({nl.date})</span>
+            </div>
+            <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0 mt-0.5" aria-hidden="true" />
+          </a>
+        ))}
+      </div>
+    </details>
+  );
+}
 
 export default function NieuwsPage() {
   return (
@@ -81,31 +155,8 @@ export default function NieuwsPage() {
       {/* Featured news items (3 most recent) */}
       <section className="bg-shoma-sand py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        {featuredNews.map((item) => (
-          <article
-            key={item.id}
-            className="bg-white rounded-2xl p-7 border border-shoma-teal/10 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <div className="flex items-center gap-3 mb-4 flex-wrap">
-              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.categoryColor}`}>
-                {item.category}
-              </span>
-              <span className="text-xs text-shoma-slate/75">{item.date}</span>
-            </div>
-            <h2 className="text-xl font-bold text-shoma-slate mb-3">{item.title}</h2>
-            <p className="text-shoma-slate/75 leading-relaxed text-sm">{item.summary}</p>
-            {'url' in item && item.url && (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-shoma-teal hover:text-shoma-teal-dark font-semibold mt-4"
-              >
-                Lees de nieuwsbrief
-                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-              </a>
-            )}
-          </article>
+        {recentNews.map((item) => (
+          <NewsCard key={item.id} item={item} />
         ))}
         </div>
       </section>
@@ -121,37 +172,39 @@ export default function NieuwsPage() {
           </p>
 
           <div className="space-y-3">
-            {Array.from(newslettersByYear.entries()).map(([year, newsletters]) => {
-              return (
-                <details key={year} open={year === allNewsletters[0].year} className="group border border-shoma-teal/20 rounded-xl">
-                  <summary className="flex items-center gap-3 cursor-pointer px-5 py-3 hover:bg-shoma-teal/5 transition-colors">
-                    <span className="text-lg font-bold text-shoma-teal">{year}</span>
-                    <span className="text-sm text-shoma-slate/75">
-                      {newsletters.length} {newsletters.length === 1 ? 'uitgave' : 'uitgaven'}
+            {recentYears.map(([year, newsletters]) => (
+              <YearGroup key={year} year={year} newsletters={newsletters} open />
+            ))}
+
+            {/* Map met alle oudere nieuwsbrieven, zodat de pagina korter blijft */}
+            {olderYears.length > 0 && (
+              <details className="group/folder rounded-2xl border border-shoma-teal/25 bg-shoma-sand">
+                <summary className="flex min-h-11 items-center gap-4 cursor-pointer rounded-2xl px-5 py-4 hover:bg-shoma-teal/5 transition-colors">
+                  <FolderOpen className="h-6 w-6 shrink-0 text-shoma-teal" aria-hidden="true" />
+                  <span className="min-w-0">
+                    <span className="block font-bold text-shoma-slate">Klik hier voor oudere nieuwsbrieven</span>
+                    <span className="block text-sm tabular-nums text-shoma-slate/75">
+                      {oldestYear}–{CURRENT_YEAR - 1} · {olderCount} uitgaven
                     </span>
-                    <ChevronDown className="ml-auto h-4 w-4 text-shoma-slate/75 transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
-                  </summary>
-                  <div className="px-5 py-3 bg-white/50 border-t border-shoma-teal/10 space-y-2">
-                    {newsletters.map((nl) => (
-                      <a
-                        key={nl.id}
-                        href={nl.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-start gap-2 text-shoma-slate/75 hover:text-shoma-teal transition-colors group/link"
-                      >
-                        <ArrowRight className="h-4 w-4 group-hover/link:text-shoma-teal" aria-hidden="true" />
-                        <div className="flex-1">
-                          <span className="text-sm font-medium group-hover/link:underline">{nl.title}</span>
-                          <span className="text-xs text-shoma-slate/75"> ({nl.date})</span>
-                        </div>
-                        <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity shrink-0 mt-0.5" aria-hidden="true" />
-                      </a>
+                  </span>
+                  <ChevronDown className="ml-auto h-5 w-5 shrink-0 text-shoma-teal transition-transform group-open/folder:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
+                </summary>
+                <div className="space-y-6 border-t border-shoma-teal/15 p-4 sm:p-5">
+                  {olderNews.length > 0 && (
+                    <div className="space-y-4">
+                      {olderNews.map((item) => (
+                        <NewsCard key={item.id} item={item} />
+                      ))}
+                    </div>
+                  )}
+                  <div className="space-y-3">
+                    {olderYears.map(([year, newsletters]) => (
+                      <YearGroup key={year} year={year} newsletters={newsletters} />
                     ))}
                   </div>
-                </details>
-              );
-            })}
+                </div>
+              </details>
+            )}
           </div>
         </div>
         </div>

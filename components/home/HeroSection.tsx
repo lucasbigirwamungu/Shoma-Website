@@ -34,8 +34,8 @@ export default function HeroSection() {
           <div className="mt-6 inline-flex items-center gap-3 bg-shoma-teal rounded-2xl px-5 py-3 border border-shoma-teal-light">
             <div className="text-2xl font-bold text-shoma-terracotta-light">€40</div>
             <div className="text-white/80 text-sm leading-tight">
-              <span className="font-semibold text-white">= 1 jaar school</span>
-              <br />voor een kansarm kind
+              <span className="font-semibold text-white">= 1 jaar op een overheidsschool</span>
+              <br />voor een kansarm kind (KEMPS: €350 per jaar)
             </div>
           </div>
 

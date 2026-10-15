@@ -40,7 +40,10 @@ export default function AlbumBrowser({ albums }: { albums: Album[] }) {
   useEffect(() => {
     const openFromHash = () => {
       const id = decodeURIComponent(window.location.hash.slice(1));
-      if (albums.some((album) => album.id === id)) setOpenId(id);
+      if (!albums.some((album) => album.id === id)) return;
+      // Staat het album in de map met oudere foto's, open dan eerst die map
+      document.getElementById(id)?.closest('details')?.setAttribute('open', '');
+      setOpenId(id);
     };
     openFromHash();
     window.addEventListener('hashchange', openFromHash);

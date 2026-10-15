@@ -1,4 +1,4 @@
-import { Camera } from 'lucide-react';
+import { Camera, ChevronDown, FolderOpen } from 'lucide-react';
 import AlbumBrowser, { type Album } from '@/components/fotoalbums/AlbumBrowser';
 // Albums en foto's staan in lib/fotoalbums.json; de bestanden zelf in public/images/fotoalbums/<folder>/.
 // Een foto toevoegen = bestand in de map zetten en een regel { file, alt, caption } aan het album toevoegen.
@@ -9,6 +9,12 @@ import albums from '@/lib/fotoalbums.json';
 const ALBUMS: Album[] = [...albums].sort(
   (a, b) => b.yearTo - a.yearTo || b.yearFrom - a.yearFrom
 );
+
+// Albums van 2025 en later staan direct op de pagina; oudere albums zitten samen in één map
+const RECENT_FROM = 2025;
+const RECENT_ALBUMS = ALBUMS.filter((album) => album.yearTo >= RECENT_FROM);
+const OLDER_ALBUMS = ALBUMS.filter((album) => album.yearTo < RECENT_FROM);
+const olderPhotoCount = OLDER_ALBUMS.reduce((sum, album) => sum + album.photos.length, 0);
 
 export default function PhotoAlbums() {
   return (
@@ -28,7 +34,25 @@ export default function PhotoAlbums() {
       {/* Albums: nieuwste eerst, foto's pas zichtbaar na openen */}
       <section className="bg-shoma-sand py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AlbumBrowser albums={ALBUMS} />
+          <AlbumBrowser albums={RECENT_ALBUMS} />
+
+          {OLDER_ALBUMS.length > 0 && (
+            <details className="group/folder mt-12 rounded-3xl border border-shoma-teal/25 bg-white">
+              <summary className="flex min-h-11 items-center gap-4 cursor-pointer rounded-3xl px-5 py-5 hover:bg-shoma-teal/5 transition-colors sm:px-7">
+                <FolderOpen className="h-7 w-7 shrink-0 text-shoma-teal" aria-hidden="true" />
+                <span className="min-w-0">
+                  <span className="block text-lg font-bold text-shoma-slate">Klik hier voor meer foto&apos;s</span>
+                  <span className="block text-sm tabular-nums text-shoma-slate/75">
+                    {OLDER_ALBUMS.length} albums van vóór {RECENT_FROM} · {olderPhotoCount} foto&apos;s
+                  </span>
+                </span>
+                <ChevronDown className="ml-auto h-5 w-5 shrink-0 text-shoma-teal transition-transform group-open/folder:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
+              </summary>
+              <div className="border-t border-shoma-teal/15 p-4 sm:p-7">
+                <AlbumBrowser albums={OLDER_ALBUMS} />
+              </div>
+            </details>
+          )}
         </div>
       </section>
 
