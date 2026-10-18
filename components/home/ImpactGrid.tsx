@@ -23,7 +23,7 @@ const projects = [
     title: 'KEMPS Basisschool',
     summary:
       'Engelstalig onderwijs als sleutel tot de toekomst. 257 kinderen bezochten KEMPS in 2025, voor €30 per maand.',
-    image: '/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg',
+    image: '/images/projecten/kemps-basisschool-1.jpg',
     sdgGoals: [1, 4],
     stat: { value: '257', label: 'kinderen op KEMPS (2025)' },
   },

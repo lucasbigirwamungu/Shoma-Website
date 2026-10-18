@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
     targetFunding: 25000,
     impactMultiplier: 350,
     imageUrl:
-      '/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg',
+      '/images/projecten/kemps-basisschool-1.jpg',
     sdgGoals: [1, 4],
     stats: [
       { label: 'Leerlingen op KEMPS', value: '257', unit: 'totaal' },

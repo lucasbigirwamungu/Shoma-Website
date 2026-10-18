@@ -139,7 +139,7 @@ export default function ProjectenPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-shoma-teal/20 hover:border-shoma-teal/40 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/images/fotoalbums/aangeleverd-ongebruikt/kemps-basisschool-1.jpg"
+                  src="/images/projecten/kemps-basisschool-1.jpg"
                   alt="Leerlingen van KEMPS in schooluniform voor het schoolgebouw"
                   fill
                   className="object-cover"
@@ -202,7 +202,7 @@ export default function ProjectenPage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-shoma-terracotta/20 hover:border-shoma-terracotta/40 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/images/fotoalbums/leven-in-rubya/P1050227.jpg"
+                  src="/images/fotoalbums/op-bezoek-in-rubya/P1050227.jpg"
                   alt="Volle klas in een overheidsschool in Rubya"
                   fill
                   className="object-cover"
