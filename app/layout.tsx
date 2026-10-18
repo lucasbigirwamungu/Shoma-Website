@@ -6,6 +6,7 @@ import MotionProvider from '@/components/ui/MotionProvider';
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { siteUrl } from "@/lib/site-url";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 
@@ -86,6 +87,7 @@ export default function RootLayout({
           <main id="inhoud" tabIndex={-1} className="flex-1 overflow-x-clip outline-none">{children}</main>
           <Footer />
         </MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
