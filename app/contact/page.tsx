@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Mail, MapPin, Phone, Landmark, FileText, BadgeCheck } from 'lucide-react';
 import ContactForm from '@/components/contact/ContactForm';
+import JsonLd from '@/components/seo/JsonLd';
+import { pageJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -46,6 +48,7 @@ const CONTACT_DETAILS = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-shoma-sand">
+      <JsonLd data={pageJsonLd('ContactPage', '/contact', 'Contact met Stichting Shoma')} />
       {/* Header */}
       <div className="bg-shoma-teal-dark text-white pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">

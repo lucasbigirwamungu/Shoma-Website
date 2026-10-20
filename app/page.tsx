@@ -5,14 +5,18 @@ import ImpactGrid from '@/components/home/ImpactGrid';
 import ImpactCalculatorSection from '@/components/home/ImpactCalculatorSection';
 import { AnimatedSection } from '@/components/ui/animated-section';
 import Link from 'next/link';
+import JsonLd from '@/components/seo/JsonLd';
+import { homeJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Geef een kind in Rubya een toekomst | Stichting Shoma' },
+  title: { absolute: 'Stichting Shoma | Onderwijs voor kinderen in Rubya, Tanzania' },
 };
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homeJsonLd()} />
+
       {/* 1. Hero – dual-pathway met primaire & zakelijke CTA */}
       <HeroSection />
 

@@ -4,6 +4,8 @@ import { Download, ExternalLink, Users, Heart, FileText } from 'lucide-react';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/over-ons/Reveal';
 import StoryBadge from '@/components/over-ons/StoryBadge';
 import FiscalBanner from '@/components/over-ons/FiscalBanner';
+import JsonLd from '@/components/seo/JsonLd';
+import { pageJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
   title: 'Over ons',
@@ -139,6 +141,7 @@ const initials = (name: string) => {
 export default function OverOnsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={pageJsonLd('AboutPage', '/over-ons', 'Over Stichting Shoma')} />
       {/* Header */}
       <div className="bg-shoma-teal-dark text-white pt-20">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">

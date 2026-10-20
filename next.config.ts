@@ -17,6 +17,19 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      {
+        // Pagina's leveren HTML of (voor agents) Markdown, afhankelijk van Accept; zie middleware.ts
+        source: '/((?!api/|_next/|mcp|\\.well-known/|.*\\.[^/]+$).*)',
+        headers: [{ key: 'Vary', value: 'Accept' }],
+      },
+    ];
+  },
+  async redirects() {
+    // Voorspelbare Engelstalige paden voor agents en scanners
+    return [
+      { source: '/about', destination: '/over-ons', permanent: true },
+      { source: '/privacy', destination: '/privacyverklaring', permanent: true },
+      { source: '/donate', destination: '/doneren', permanent: true },
     ];
   },
   images: {
