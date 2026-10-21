@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Download, ExternalLink, Users, Heart, FileText } from 'lucide-react';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/over-ons/Reveal';
 import StoryBadge from '@/components/over-ons/StoryBadge';
+import StoryTimeline from '@/components/over-ons/StoryTimeline';
 import FiscalBanner from '@/components/over-ons/FiscalBanner';
 import JsonLd from '@/components/seo/JsonLd';
 import { pageJsonLd } from '@/lib/structured-data';
@@ -158,7 +159,8 @@ export default function OverOnsPage() {
         {/* Oprichtverhaal */}
         <Reveal>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-shoma-slate mb-6">Ons verhaal</h2>
-          <div className="bg-shoma-sand rounded-3xl p-8 border border-shoma-teal/10">
+          <div className="bg-shoma-sand rounded-3xl p-8 border border-shoma-teal/10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] gap-x-14 gap-y-10">
+            <div>
             {/* "Shoma" betekenis */}
             <StoryBadge />
             <p className="max-w-[72ch] text-shoma-slate/80 leading-relaxed mb-4">
@@ -185,6 +187,8 @@ export default function OverOnsPage() {
               onderwijs toegankelijk maken, leefomstandigheden verbeteren en lokale samenwerking
               stimuleren, volledig gerund door vrijwilligers in Nederland en Tanzania.
             </p>
+            </div>
+            <StoryTimeline />
           </div>
         </Reveal>
         </div>

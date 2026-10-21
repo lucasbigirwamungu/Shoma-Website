@@ -6,6 +6,7 @@ import {
 import B2BContactForm from '@/components/b2b/B2BContactForm';
 import PartnerSection from '@/components/home/PartnerSection';
 import CompenseerBedrijvenSections from '@/components/bedrijven/CompenseerBedrijvenSections';
+import CompenseerCycle from '@/components/bedrijven/CompenseerCycle';
 
 export const metadata: Metadata = {
   title: 'Voor bedrijven: MVO-partnerschap',
@@ -156,11 +157,8 @@ export default function VoorBedrijvenPage() {
                 </a>
               </div>
             </div>
-            <div className="w-full md:w-80 h-64 bg-white/70 rounded-3xl flex items-center justify-center border border-shoma-teal/15">
-              <div className="text-center">
-                <p className="font-semibold text-shoma-slate text-lg">CO₂ compensatie</p>
-                <p className="text-sm text-shoma-slate/75">+ Onderwijs in Tanzania</p>
-              </div>
+            <div className="w-full md:w-[26rem] bg-white/70 rounded-3xl p-4 border border-shoma-teal/15">
+              <CompenseerCycle />
             </div>
           </div>
         </div>

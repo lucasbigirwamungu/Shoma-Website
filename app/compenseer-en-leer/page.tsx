@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Award, Camera, GraduationCap, Leaf } from 'lucide-react';
 import IndividualDonationForm from '@/components/compenseer/IndividualDonationForm';
+import HowItWorksRoad from '@/components/compenseer/HowItWorksRoad';
 
 export const metadata: Metadata = {
   title: 'Compenseer en Leer',
@@ -28,43 +29,19 @@ export default function CompenseerEnLeerPage() {
       </section>
 
       <section className="py-12 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-shoma-teal mb-8 text-center">
             Hoe werkt het?
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              {
-                num: '1',
-                title: 'Voetafdruk invoeren',
-                desc: 'Vlieguren, gereden kilometers of jaarlijkse CO₂-uitstoot',
-              },
-              {
-                num: '2',
-                title: 'Donatie berekenen',
-                desc: 'Wij berekenen de CO₂ en hoeveel bomen daarvoor nodig zijn',
-              },
-              {
-                num: '3',
-                title: 'Impact zien',
-                desc: 'Uw persoonlijke certificaat en updates over de boomgroei',
-              },
-              {
-                num: '4',
-                title: 'Betalen en planten',
-                desc: 'Betaling met iDEAL, de bomen groeien in Rubya',
-              },
-            ].map((step) => (
-              <div key={step.num} className="text-center">
-                <div className="w-12 h-12 bg-shoma-terracotta text-shoma-slate rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
-                  {step.num}
-                </div>
-                <h3 className="font-bold text-shoma-slate mb-2">{step.title}</h3>
-                <p className="text-sm text-shoma-slate/75">{step.desc}</p>
-              </div>
-            ))}
-          </div>
+          <HowItWorksRoad
+            steps={[
+              { title: 'Voetafdruk invoeren', lines: ['Vlieguren, kilometers', 'of jaarlijkse CO₂'], desc: 'Vlieguren, gereden kilometers of jaarlijkse CO₂-uitstoot' },
+              { title: 'Donatie berekenen', lines: ['Wij rekenen CO₂ om', 'naar aantal bomen'], desc: 'Wij berekenen de CO₂ en hoeveel bomen daarvoor nodig zijn' },
+              { title: 'Impact zien', lines: ['Uw certificaat en', 'updates over de groei'], desc: 'Uw persoonlijke certificaat en updates over de boomgroei' },
+              { title: 'Betalen en planten', lines: ['Betalen met iDEAL,', 'de bomen groeien in Rubya'], desc: 'Betaling met iDEAL, de bomen groeien in Rubya' },
+            ]}
+          />
         </div>
       </section>
 

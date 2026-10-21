@@ -4,6 +4,7 @@ import {
   ArrowRight, BarChart3, Users, FileText, Shield, TrendingUp, Award, Zap
 } from 'lucide-react';
 import CompenseerB2BForm from '@/components/compenseer/CompenseerB2BForm';
+import TeamStepsWalkthrough from '@/components/bedrijven/TeamStepsWalkthrough';
 
 // ─── Compenseer & Leer voor Bedrijven ──────────────────────────────────────
 // Onderdeel van de pagina Voor Bedrijven (/voor-bedrijven#compenseer-en-leer)
@@ -265,48 +266,13 @@ export default function CompenseerBedrijvenSections() {
 
       {/* ─── How It Works ─────────────────────────────────────────────────────── */}
       <section className="bg-shoma-sand py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-shoma-slate mb-4">
               Hoe het werkt
             </h2>
           </div>
-          <div className="space-y-8">
-            {[
-              {
-                step: '1',
-                title: 'Maak team-account',
-                desc: 'Registreer uw bedrijf, voeg een beheerder toe, kies uw CO₂-scope (kantoor/reizen/custom).',
-              },
-              {
-                step: '2',
-                title: 'Nodig team uit',
-                desc: 'Stuur uitnodigingslinks naar medewerkers. Zij vullen voetafdruk in, zien bomen-impact.',
-              },
-              {
-                step: '3',
-                title: 'Monitor in real-time',
-                desc: 'Beheerders zien live-dashboard: hoeveel CO₂ gecompenseerd, hoeveel bomen, schoolbijdrage.',
-              },
-              {
-                step: '4',
-                title: 'Ontvang rapportage',
-                desc: 'Maandelijks rapport met details, foto\'s van bomen in Tanzania, schoolupdates. Jaarlijks ESG-certificaat.',
-              },
-            ].map((item) => (
-              <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-shoma-teal text-white font-bold text-lg">
-                    {item.step}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-shoma-slate mb-1">{item.title}</h3>
-                  <p className="text-shoma-slate/75">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamStepsWalkthrough />
         </div>
       </section>
 
