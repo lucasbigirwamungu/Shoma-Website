@@ -31,6 +31,7 @@ export function createRateLimiter(config: Partial<RateLimitConfig> = {}) {
     const key = ip;
 
     const now = Date.now();
+    cleanupExpired(now);
     const record = store[key];
 
     if (!record || record.resetTime < now) {
@@ -56,6 +57,9 @@ export function createRateLimiter(config: Partial<RateLimitConfig> = {}) {
  * Get client IP from request
  */
 function getClientIp(request: Request): string {
+  const cfIp = request.headers.get('cf-connecting-ip');
+  if (cfIp) return cfIp;
+
   const forwarded = request.headers.get('x-forwarded-for');
   if (forwarded) {
     return forwarded.split(',')[0].trim();
@@ -89,20 +93,17 @@ export function rateLimitExceeded(remaining: number): Response {
 }
 
 /**
- * Cleanup old entries every hour
+ * Verlopen entries opruimen. Gebeurt tijdens een request: Cloudflare Workers
+ * staat geen timers (setInterval) buiten een handler toe.
  */
-export function startRateLimitCleanup(intervalMs = 3600000) {
-  setInterval(() => {
-    const now = Date.now();
-    for (const key in store) {
-      if (store[key].resetTime < now) {
-        delete store[key];
-      }
-    }
-  }, intervalMs);
-}
+let lastCleanup = 0;
 
-// Start cleanup on module load
-if (typeof globalThis !== 'undefined') {
-  startRateLimitCleanup();
+function cleanupExpired(now: number, intervalMs = 3600000) {
+  if (now - lastCleanup < intervalMs) return;
+  lastCleanup = now;
+  for (const key in store) {
+    if (store[key].resetTime < now) {
+      delete store[key];
+    }
+  }
 }
