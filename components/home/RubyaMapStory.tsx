@@ -2,7 +2,8 @@
 
 /**
  * Scroll-kaartverhaal: Afrika -> Tanzania -> Rubya (overgenomen van Vrienden van Rubya).
- * Scrollen TRIGGERT alleen een tijdgestuurde autoplay (heen 6,2 s); pas na dieper
+ * Scrollen TRIGGERT alleen een tijdgestuurde autoplay (heen 6,2 s, start al bij het inschuiven,
+ * korte sticky-fase van 70vh zodat er geen 'dode zone' ontstaat); pas na dieper
  * doorscrollen en weer omhoog speelt hij omgekeerd af (3,6 s, uitzoomen).
  * Inline SVG wordt in de effect gebouwd uit lib/rubya-map-data (lazy geladen).
  */
@@ -157,8 +158,8 @@ export default function RubyaMapStory() {
       function onScroll() {
         const r = sec!.getBoundingClientRect(), vh = innerHeight, y = -r.top; // y = px voorbij de sectietop (stage sticky zolang 0<y<travel)
         const travel = r.height - vh;
-        if (y < -vh * .5) rearm = true; // sectie naar boven verlaten -> heen mag opnieuw
-        if (state === 'start' && rearm && y > -vh * .12) go(1);
+        if (y < -vh * .8) rearm = true; // sectie naar boven verlaten -> heen mag opnieuw
+        if (state === 'start' && rearm && y > -vh * .5) go(1); // start al terwijl de kaart in beeld schuift
         if (state === 'end') {
           if (y > travel * .55) armedBack = true; // flink voorbij de eindstand gescrold
           if (armedBack && y < travel * .3) go(-1); // ...en nu weer omhoog -> uitzoomen
