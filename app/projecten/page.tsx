@@ -157,7 +157,7 @@ export default function ProjectenPage() {
                 <p className="text-sm text-shoma-slate/75 leading-relaxed mb-4">
                   KEMPS is gestart in 2016 met 13 leerlingen en telt nu <strong>257 leerlingen</strong>.
                   De school biedt hoogwaardig Engelstalig onderwijs, de voertaal van het Tanzaniaans
-                  vervolgonderwijs. Shoma sponsort <strong>55 leerlingen</strong>{' '}
+                  vervolgonderwijs. Shoma sponsort <strong>74 leerlingen</strong>{' '}
                   voor wie de kosten onbetaalbaar zijn.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">

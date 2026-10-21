@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     category: 'education',
     summary: 'Kwalitatief Engelstalig basisonderwijs als sleutel naar een betere toekomst',
     description:
-      'De Kashasha English Medium Primary School (KEMPS) is in 2016 gestart met 13 leerlingen en telt nu 257 leerlingen. De school biedt hoogwaardig onderwijs in het Engels, de voertaal van het Tanzaniaanse vervolgonderwijs. De school beschikt over een bibliotheek, elektriciteit, een keuken en een betegelde binnenplaats. Shoma sponsort 55 leerlingen verdeeld over Nursery t/m Klas 4. Hoog scorende leerlingen worden door de overheid geselecteerd voor geavanceerde sterklassen. Sponsoring kost €350 per kind per jaar.',
+      'De Kashasha English Medium Primary School (KEMPS) is in 2016 gestart met 13 leerlingen en telt nu 257 leerlingen. De school biedt hoogwaardig onderwijs in het Engels, de voertaal van het Tanzaniaanse vervolgonderwijs. De school beschikt over een bibliotheek, elektriciteit, een keuken en een betegelde binnenplaats. Shoma sponsort 74 leerlingen verdeeld over Nursery t/m Klas 7. Hoog scorende leerlingen worden door de overheid geselecteerd voor geavanceerde sterklassen. Sponsoring kost €350 per kind per jaar.',
     currentFunding: 18600,
     targetFunding: 25000,
     impactMultiplier: 350,
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     sdgGoals: [1, 4],
     stats: [
       { label: 'Leerlingen op KEMPS', value: '257', unit: 'totaal' },
-      { label: 'Door Shoma gesponsord', value: '55', unit: 'leerlingen' },
+      { label: 'Door Shoma gesponsord', value: '74', unit: 'leerlingen' },
       { label: 'Sponsorkosten p.j.', value: '€350', unit: '/kind/jaar' },
     ],
   },
