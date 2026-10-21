@@ -1,9 +1,17 @@
-import { createClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from '@supabase/supabase-js';
+import { createBrowserClient } from '@/lib/supabase';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+// Lui aangemaakt: tijdens `next build` (page data verzamelen) mogen de
+// omgevingsvariabelen ontbreken, dus pas bij het eerste echte gebruik aanmaken.
+let client: SupabaseClient | undefined;
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = new Proxy({} as SupabaseClient, {
+  get(_target, prop) {
+    client ??= createBrowserClient();
+    const value = Reflect.get(client, prop);
+    return typeof value === 'function' ? value.bind(client) : value;
+  },
+});
 
 /**
  * Create a new donation record

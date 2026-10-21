@@ -39,3 +39,11 @@ next-env.d.ts
 
 # Tooling cache
 .impeccable/
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
