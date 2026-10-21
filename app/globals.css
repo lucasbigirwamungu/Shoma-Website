@@ -431,3 +431,25 @@
   .ws-scene,.ws-type,.ws-chip,.ws-avatars span,.ws-sent,.ws-bar i,.ws-spark path,.ws-doc,.ws-seal,.ws-chip.pick{animation-duration:1ms;animation-delay:0s;animation-iteration-count:1}
 }
 .kb .kb-narrow .kb-name{font-size:19px}.kb .kb-narrow .kb-pages{font-size:15px}.kb .kb-narrow .kb-n{font-size:24px}
+
+/* ---- Totaaloverzicht: 210 kinderen splitsen zich (SponsoredSplit) ---- */
+.sp{--sp-ease:cubic-bezier(.22,1,.36,1)}
+.sp svg{width:100%;height:auto;display:block;overflow:visible}
+.sp .sp-narrow{display:none;max-width:420px;margin:0 auto}
+@media(max-width:700px){.sp .sp-wide{display:none}.sp .sp-narrow{display:block}}
+.sp text{font-family:var(--font-sans),system-ui,sans-serif;text-anchor:middle}
+.sp-n{font-size:40px;font-weight:800;fill:#fff;font-variant-numeric:tabular-nums}
+.sp-nk{fill:#ef9403}
+.sp-l{font-size:15px;fill:rgb(255 255 255 / .72)}
+.sp-dot{fill:#f1e3c6;transform:translate(calc(var(--fx)*1px),calc(var(--fy)*1px)) scale(0);transition:transform .5s var(--sp-ease) calc(var(--p)*1s)}
+.sp.in .sp-dot{transform:translate(calc(var(--fx)*1px),calc(var(--fy)*1px)) scale(1)}
+.sp.split .sp-dot{transform:translate(calc(var(--tx)*1px),calc(var(--ty)*1px));transition:transform 1.1s var(--sp-ease) calc((var(--d) - 2.4)*1s),fill .5s calc((var(--d) - 2.4)*1s + .7s)}
+.sp.split .sp-k{fill:#ef9403}
+.sp-all{transition:opacity .5s}
+.sp.split .sp-all{opacity:0}
+.sp-grp{opacity:0;transition:opacity .6s var(--sp-ease)}
+.sp-grp.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.sp-dot,.sp.split .sp-dot,.sp-all,.sp-grp{transition:none}}
+.sp-sum{font-size:17px;font-weight:700;fill:#fff;opacity:0;transition:opacity .9s var(--sp-ease) .3s}
+.sp.done .sp-sum{opacity:1}
+@media(prefers-reduced-motion:reduce){.sp-sum{transition:none}}

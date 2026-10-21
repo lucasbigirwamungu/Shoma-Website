@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { PROJECTS } from '@/lib/projects';
 import { PROJECT_STORIES } from '@/lib/project-stories';
 import type { ProjectCategory } from '@/types';
-import { ArrowRight, CheckCircle, BookOpen, GraduationCap, Users, Droplets, Sun, type LucideIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, BookOpen, GraduationCap, Droplets, Sun, type LucideIcon } from 'lucide-react';
 import KempsClassChartToggle from '@/components/projecten/KempsClassChartToggle';
+import SponsoredSplit from '@/components/projecten/SponsoredSplit';
 
 export const metadata: Metadata = {
   title: 'Onze projecten',
@@ -443,26 +444,7 @@ export default function ProjectenPage() {
       <section className="bg-shoma-teal-dark py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl font-bold mb-6 text-center">Totaaloverzicht gesponsorde leerlingen 2025</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <div className="bg-white/10 rounded-2xl p-5 text-center">
-                <GraduationCap className="w-8 h-8 mx-auto mb-2 text-shoma-terracotta-light" />
-                <p className="text-3xl font-extrabold">74</p>
-                <p className="text-sm text-white/70 mt-1">KEMPS-leerlingen gesponsord</p>
-                <p className="text-xs text-white/75 mt-0.5">Nursery t/m Klas 7</p>
-              </div>
-              <div className="bg-white/10 rounded-2xl p-5 text-center">
-                <BookOpen className="w-8 h-8 mx-auto mb-2 text-shoma-terracotta-light" />
-                <p className="text-3xl font-extrabold">136</p>
-                <p className="text-sm text-white/70 mt-1">Reguliere leerlingen gesponsord</p>
-                <p className="text-xs text-white/75 mt-0.5">€40/jaar per kind</p>
-              </div>
-              <div className="bg-shoma-terracotta rounded-2xl p-5 text-center text-shoma-slate">
-                <Users className="w-8 h-8 mx-auto mb-2 text-shoma-slate" />
-                <p className="text-3xl font-extrabold">229</p>
-                <p className="text-sm mt-1">Totaal kinderen geholpen</p>
-                <p className="text-xs mt-0.5">Schooljaar 2025</p>
-              </div>
-            </div>
+            <SponsoredSplit />
 
             {/* KEMPS klasgrafiek – verschijnt pas na een klik */}
             <KempsClassChartToggle />
