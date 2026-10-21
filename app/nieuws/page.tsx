@@ -49,7 +49,7 @@ const featuredNews = [
     year: 2025,
     title: '210 kinderen gesponsord in schooljaar 2025',
     summary:
-      'Dankzij de steun van onze donateurs ondersteunen we in schooljaar 2025 in totaal 210 kinderen: 155 op reguliere overheidsscholen (€40/jaar) en 55 via de KEMPS-school (€350/jaar). Het vermogen van de stichting is gegroeid naar €21.188.',
+      'Dankzij de steun van onze donateurs ondersteunen we in schooljaar 2025 in totaal 210 kinderen: 136 op reguliere overheidsscholen (€40/jaar) en 74 via de KEMPS-school (€350/jaar). Het vermogen van de stichting is gegroeid naar €21.188.',
     category: 'Jaarverslag',
     categoryColor: 'bg-shoma-teal/10 text-shoma-teal',
   },

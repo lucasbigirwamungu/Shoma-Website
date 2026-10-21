@@ -107,7 +107,7 @@ ${PROJECTS.map((p) => `## ${p.title}\n\n${p.description}\n\n${p.stats.map((s) =>
 
 ## Regulier onderwijs
 
-Hoewel de overheid basisonderwijs gratis noemt, zijn er bijdragen voor uniformen en materialen (€35-€40 per jaar). Shoma betaalt dit voor 155 kinderen per jaar, voor €40 per kind per jaar.
+Hoewel de overheid basisonderwijs gratis noemt, zijn er bijdragen voor uniformen en materialen (€35-€40 per jaar). Shoma betaalt dit voor 136 kinderen per jaar, voor €40 per kind per jaar.
 
 ## Sponsoren
 

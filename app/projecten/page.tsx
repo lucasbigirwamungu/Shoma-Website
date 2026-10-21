@@ -220,11 +220,11 @@ export default function ProjectenPage() {
                 <p className="text-sm text-shoma-slate/75 leading-relaxed mb-4">
                   Hoewel de overheid basisonderwijs gratis noemt, zijn er bijdragen voor uniformen en
                   materialen (€35-€40/jaar). Voor arme gezinnen is dit onbetaalbaar. Shoma betaalt dit voor{' '}
-                  <strong>155 kinderen</strong> per jaar.
+                  <strong>136 kinderen</strong> per jaar.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
-                    <p className="font-extrabold text-shoma-terracotta-ink text-xl">155</p>
+                    <p className="font-extrabold text-shoma-terracotta-ink text-xl">136</p>
                     <p className="text-xs text-shoma-slate/75 mt-0.5">kinderen (2025)</p>
                   </div>
                   <div className="bg-shoma-sand rounded-xl p-3 text-center">
@@ -452,7 +452,7 @@ export default function ProjectenPage() {
               </div>
               <div className="bg-white/10 rounded-2xl p-5 text-center">
                 <BookOpen className="w-8 h-8 mx-auto mb-2 text-shoma-terracotta-light" />
-                <p className="text-3xl font-extrabold">155</p>
+                <p className="text-3xl font-extrabold">136</p>
                 <p className="text-sm text-white/70 mt-1">Reguliere leerlingen gesponsord</p>
                 <p className="text-xs text-white/75 mt-0.5">€40/jaar per kind</p>
               </div>
